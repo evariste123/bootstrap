@@ -14,13 +14,85 @@
                 font-family: Arial, sans-serif;
                 color: white;
             }
-              .contact {
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    z-index: 1050; /* above other content */
-              }
+            .contact {
+                width: 20vw;
+                height: auto;
+                position: relative;
+                overflow-wrap: break-word;
+                justify-self: left;
+                top: 100px;
+                transform: translate(-70%);
+                animation-duration: 2s;
+                animation-name: contact;
+                animation-iteration-count: 1;
+                animation-delay: 1s;
+                animation-direction: normal;
+            }
+            @keyframes contact {
+                from {
+                    opacity: 0;
+                    transform: scale(0.01) scale(0.01);
+                    background-color: turquoise;
+                   overflow-wrap: break-word;
+                   box-shadow: 0 0 20px rgba(82, 165, 3, 0.5);
+
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1) scale(1);
+                    background-color: rgba(82, 165, 3, 0.4);
+                    
+                }
+            }
+
+            @media(max-width:600px){
+                .contact{
+                    position: relative;
+                    width: 80vw;
+                    height: auto;
+                    background-color: rgba(82, 165, 3, 0.4);
+                    overflow-wrap: break-word;
+                    justify-self: center;
+                    top: 100px;
+                    transform: translate(0%);
+                }
+            }
+            .contact {
+                background-image: url('./image/eva.png');
+                background-size: cover;
+                 background-position: center;
+                 background-repeat: no-repeat;
+                padding: 20px;
+                border-radius: 8px;
+                border: 1px solid #52a503;
+                 box-shadow: 0 0 20px rgba(82, 165, 3, 0.5);
+                margin-top: 40px;
+                color: #0307ec;
+            }
+            .contact button{
+                background-color: #183101;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: 900;
+                 margin-top: 20px;
+                cursor: pointer;
+            }
+             .contact button:hover {
+                background-color: #3d7a02;
+                transition: all 0.3s ease;
+                color: black;
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+            .contact a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .contact-callout a:hover {
+                color: #ffc107;
+            }
               .navbar {
                 position:fixed;
                     background-color: #333;
@@ -61,7 +133,7 @@
               @media(min-width: 769px) {
                     body {
                         color: white !important;
-                        background-color: #200222;
+                        background-color: #2f2f30;
                         font-family: Arial, sans-serif;
                         margin: 0;
                     }
@@ -94,7 +166,7 @@
                     background-color: #555;
                 }
                 .container {
-                    margin-top: 80px; /* to avoid content being hidden behind navbar */
+                    margin-top: 80px; 
                 }
                  @media(max-width: 768px) {
                     .collapse ul {
@@ -108,8 +180,8 @@
                 }
                  @media(max-width: 480px) {
                     .collapse ul {
-                        flex-direction: column;
-                        gap: 10px;
+                        flex-direction: row;
+                        gap: 5px;
                     }
                     .nav-link {
                         margin-right: 0;
@@ -118,15 +190,61 @@
                 }
                  @media(min-width: 769px) {
                     .container {
-                        margin-top: 80px; /* to avoid content being hidden behind navbar */
+                        margin-top: 80px; 
                     }
                 }
                     .home {
-                        background-color: #222;
+                        background-image: url('./image/IMG_20251210_164950_618.jpg');
                         padding: 40px 20px;
+                        background-position: center;
+                        background-size: cover;
+                         background-repeat: no-repeat;
                         border-radius: 8px;
+                        opacity: 1;
+                        text-align: center;
                         margin-bottom: 40px;
+                        animation-duration: 2s;
+                        animation-name: fadeIn;
+                        animation-iteration-count: 1;
+                        animation-delay: 1s;
+                        animation-direction: normal;
                     }
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-20px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                    .home img{
+                        width: 20vw;
+                        height: 30vh;
+                        border-radius: 10px;
+                        background-color: transparent;
+                        animation-duration: 2s;
+                        animation-name: eva;
+                        animation-iteration-count: 1;
+                        animation-delay: 1s;
+                        animation-direction: normal;
+                    }
+                    .home img:hover{
+                        transform: scale(1.1);
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+                    @keyframes eva {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-20px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }       
                     @media(max-width: 768px) {
                         .home {
                             padding: 30px 15px;
@@ -143,6 +261,36 @@
                             padding: 40px 20px;
                             border-radius: 8px;
                             margin-bottom: 40px;
+                        }
+                    }
+                    @media(max-width: 768px) {
+                        .home img {
+                            width: 20vw;
+                            height: 10vh;
+                        }
+                    }
+                    @media(max-width: 480px) {
+                        .home {
+                            padding: 20px 10px;
+                        }
+                    }
+                    @media(min-width: 769px) {
+                        .home {
+                            background-color: #222;
+                            padding: 40px 20px;
+                            border-radius: 0px;
+                            margin-bottom: 40px;
+                        }
+                    }
+                    .home p{
+                        font-size: 1.25rem;
+                        text-align: center;
+                        color: #080808;
+                    }
+                    @media(max-width: 768px) {
+                        .home p {
+                            font-size: 1rem;
+                            color: #000000;
                         }
                     }
                     .display {
@@ -169,16 +317,661 @@
                     .lead {
                         font-size: 1.25rem;
                         text-align: center;
-                        color: #ccc;
+                        color: #5c5959;
                     }
                     @media(max-width: 768px) {
                         .lead {
                             font-size: 1rem;    
                         }}
+                        .about {
+                            background-color: #222;
+                            padding: 40px 20px;
+                            border-radius: 8px;
+                            margin-bottom: 40px;
+                        }
+                        @media(max-width: 768px) {
+                            .about {
+                                padding: 30px 15px;
+                            }
+                        }
+                        @media(max-width: 480px) {
+                            .about {
+                                padding: 20px 10px;
+                            }
+                        }
+                        @media(min-width: 769px) {
+                            .about {
+                                background-color: #222;
+                                padding: 40px 20px;
+                                border-radius: 8px;
+                                margin-bottom: 40px;
+                            }}
+                            .about h2 {
+                                font-size: 2rem;
+                                font-weight: bold;
+                                color: #0affde;
+                                text-align: center;
+                                margin-bottom: 20px;
+                            }
+                            @media(max-width: 768px) {
+                                .about h2 {
+                                    font-size: 1.5rem;
+                                }
+                            }
+                            @media(max-width: 480px) {
+                                .about h2 {
+                                    font-size: 1.25rem;
+                                }}
+                                .card3{
+                                    width: 70vw;
+                                    height: 40vh;
+                                    background-color: #2c2b2b;
+                                    color: rgb(194, 195, 199);
+                                    justify-self: center;
+                                    position: relative;
+                                    overflow-wrap: break-word;
+                                    bottom: 10px;
+                                    border-radius: 0 10px 10px 0;
+                                    border: 1px solid transparent;
+                                }
+                                .card3:hover{
+                                    background-color: #016391;
+                                    color: black;
+                                    border: 1px solid cyan;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                }
+                                @media(max-width:600px){
+                                    .card3{
+                                        position: relative;
+                                        width: 80vw;
+                                        height: auto;
+                                        justify-self: center;
+                                        background-color: #0056b3;
+                                        border: 1px solid #0affde;
+                                        border-radius: 10px;
+                                        color: black;
+                                    }
+                                }
+                                @media(max-width:600px){
+                                    .card3 p{
+                                        position: relative;
+                                        margin-left: 0px;
+                                        font-weight: 500;
+                                        top: 0px;
+                                         overflow-wrap: break-word;
+                                    }
+                                }
+                                .card3 p{
+                                    top: 20px;
+                                    position: relative;
+                                    font-weight: 500;
+                                    margin-left: 20px;
+                                    overflow-wrap: break-word;
+                                }
+                                .card4{
+                                    width: 90vw;
+                                    height: 40vh;
+                                    background-color: #2c2a2a;
+                                    color: rgb(104, 102, 102);
+                                    justify-self: center;
+                                    border: none;
+                                    margin-left: 20px;
+                                    text-align: center;
+                                    border-radius: 10px;
+                                    border: 1px solid transparent;
+                                }
+                                .card4:hover{
+                                    background-color: #009985;
+                                    color: black;
+                                    border: 1px solid cyan;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                }   
+                                .card4 p{
+                                    position: relative;
+                                    top: 40px;
+                                    font-weight: 500;
+                                    overflow-wrap: break-word;
+                                    margin-left: 20px;
+                                }
+                                @media(max-width:600px){
+                                    .card4{
+                                        width: 80vw;
+                                        height: auto;
+                                        top: 20px;
+                                        position: relative;
+                                        border-radius: 10px;
+                                        font-size: 15px;
+                                         overflow-wrap: break-word;
+                                         justify-self: center;
+                                        background-color: #ffffff;
+                                        border: 1px solid cyan;
+                                        color: rgb(32, 32, 32);
+                                        margin-left: 0px;
+                                    }
+                                }
+                                @media(max-width:600px){
+                                    .card4 p{
+                                        position: relative;
+                                        margin-left: 10px;
+                                        top: 0px;
+                                    }
+                                } 
+                                     .card1{
+                                        width: 40vw;
+                                        height: 30vh;
+                                        position: relative;
+                                         overflow-wrap: break-word;
+                                         top: 10px;
+                                        background-color: #292828;
+                                        color: rgb(156, 154, 154);
+                                        justify-self: center;
+                                        border: none;
+                                        margin-left: 20px;
+                                        border-radius: 10px 0 0 10px;
+                                        border: 1px solid transparent;
+                                    }
+                                    .card1:hover{
+                                        background-color: #013b34;
+                                        color: black;
+                                        border: 1px solid cyan;
+                                        cursor: pointer;
+                                        transition: all 0.3s ease;
+                                    }
+                                    @media(max-width:600px){
+                                        .card1{
+                                            width: 80vw;
+                                            height: auto;
+                                            top: 30px;
+                                            position: relative;
+                                            font-size: 15px;
+                                             overflow-wrap: break-word;
+                                            justify-self: center;
+                                            border-radius: 10px;
+                                            background-color: #39045c;
+                                            overflow-wrap: break-word;
+                                            color: white;
+                                            margin-left: 0px;
+                                            border: 1px solid rgb(1, 66, 47);
+                                        }
+                                    }
+                                    @media(max-width:300px){
+                                        .card1{
+                                            width: 95vw;
+                                            height: 80vh;
+                                        }
+                                    }   
+                                    @media(max-width:250px){
+                                        .card1{
+                                            width: 98vw;
+                                            height: 90vh;
+                                        }
+                                    }
+                                    .card1 h3{
+                                        position: relative;
+                                        top: 0px;
+                                        text-align: center;
+                                        left: 0px;
+                                        color: #0affde;
+                                    }
+                                    @media(max-width:300px){
+                                        .card1 h3{
+                                            position: relative;
+                                            top: 0px;
+                                            text-align: center;
+                                            
+                                        }
+                                    }   
+                                .card1 ul{
+                                    position: relative;
+                                    overflow-wrap: break-word;
+                                    top: 10px;
+                                    
+                                }
+                                .card1 li{
+                                    margin: 5px 0;
+                                    overflow-wrap: break-word;
+                                }   
+                                .card1 strong{
+                                    color: #0044ff;
+                                }
+                                @media(max-width:300px){
+                                    .card1 strong{
+                                        color: #ffcc00;
+                                        font-size: 14px;
+                                    }
+                                }
+                                @media(max-width:600px){
+                                    .card1 ul{
+                                        position: relative;
+                                        margin-left: 0px;
+                                       overflow-wrap: break-word;
+                                    }
+                                }
+                                .card2{
+                                    position: relative;
+                                    width: 80vw;
+                                    text-align: center;
+                                    height: 30vh;
+                                    justify-self: center;
+                                    top: 20px;
+                                    border-radius: 10px;
+                                    background-color: #1b2130;
+                                    overflow-wrap: break-word;
+                                    color: white;
+                                    margin-left: 0px;
+                                    border: 1px solid transparent;
+                                }
+                                .card2:hover{
+                                    background-color: #00221d;
+                                    color: rgb(66, 65, 65);
+                                    border: 1px solid cyan;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                }
+                                @media(max-width:600px){
+                                    .card2{
+                                        text-align: center;
+                                        background-color: transparent;
+                                        font-size: 15px;
+                                        font-weight: 500;
+                                        width: 80vw;
+                                        height: auto;
+                                        font-style: italic;
+                                        border:none;
+                                        border-left: none;
+
+                                    }
+                                }
+                                .card2 p{
+                                    position: relative;
+                                    top: 50px;
+
+                                }
+                                @media(max-width:600px){
+                                    .card2 p{
+                                        position: relative;
+                                        top: 30px;
+                                    }
+                                }
+                                .card5{
+                                    position: relative;
+                                    width: 100px;
+                                    height: 100px;
+                                    text-align: center;
+                                    animation-duration: 2s;
+                                    animation-name: card;
+                                    color: black;
+                                    animation-direction: alternate;
+                                    animation-delay: 2s;
+                                    background-image: url('./image/eva.png');
+                                    background-size: cover;
+                                    border-radius: 50%;
+                                    margin: 20px auto;
+                                }
+                                .card5 span{
+                                    color: #ffffff;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                }
+                                @keyframes card{
+                                    0%{
+                                        transform: scale(0.1);
+                                        opacity: 0;
+                                        color: #3d0046;
+                                    }
+                                    100%{
+                                        transform: scale(2);
+                                        opacity: 1;
+                                        color: #014769;
+                                        text-transform: capitalize;
+                                    }
+                                }   
+                                @media(max-width:600px){
+                                    .card5{
+                                        width: 80px;
+                                        height: 80px;
+                                        text-align: center;
+                                        margin: 10px auto;
+                                        background-image: url('./image/eva.png');
+                                        background-size: cover;
+                                        border-radius: 80px;
+                                    }
+                                }
+                                .card5 i{
+                                    position: relative;
+                                    top: 20px;
+                                    color: #0affde;
+                                }
+                                .service{
+                                    position: relative;
+                                justify-self: center;
+                                    border-radius: 10px;
+                                    margin-top: 20px;
+                                    color: black;
+                                }
+                                .btn6{
+                                    background-color: #007bff;
+                                    color: white;
+                                    width: 40vw;
+                                    position: relative;
+                                    height: 40vh;
+                                    border: 1px solid #0affde;
+                                    top: 0px;
+                                    justify-self: center;
+                                    border: none;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                                @media(max-width:600px){
+                                    .btn6{
+                                        width: 80vw;
+                                        height: auto;
+                                        background-color: violet;
+                                        color: black;
+                                    }
+                                }
+                                .btn6 h2{
+                                    position: relative;
+                                    top: 10px;
+                                    text-align: center;
+                                }
+                                .btn6 p{
+                                    position: relative;
+                                    top: 20px;
+                                    text-align: center;
+                                
+                                }
+                                .btn4{
+                                    background-color:#000f3a;
+                                    color: rgb(255, 254, 254);
+                                    padding: 10px 20px;
+                                    width: 50vw;
+                                    position: relative;
+                                    margin-left: 20px;
+                                    height: auto;
+                                    border-left: 1px solid cyan;
+                                    top: 50px;
+                                    justify-self: center;
+                                    border: none;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                                @media(max-width:600px){
+                                    .btn4{
+                                        width: 80vw;
+                                        height: auto;
+                                        background-color: #203320;
+                                        color: white;
+                                        margin-left: 0px;
+                                    }
+                                }
+                                .btn4 h3{
+                                   color: #00cab9;
+                                   font-family: 500;
+                                   font-style: italic;
+                                }
+                                .btn4 p{
+                                    font-weight: 500;
+                                    position: relative;
+                                    font-size: medium;
+                                }
+                                .btn4 strong{
+                                    color: hsl(187, 100%, 50%);
+                                } 
+
+                                .btn2{
+                                    background-color: #000f3a;
+                                    color: white;
+                                    padding: 10px 20px;
+                                    width: 60vw;
+                                    border: 1px solid #0affde;
+                                    position: relative;
+                                    margin-left: 20px;
+                                    height: auto;
+                                    top: 80px;
+                                    justify-self: center;
+                                    border: none;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    border: 1px solid cyan;
+                                }
+                                @media(max-width:600px){
+                                    .btn2{
+                                        width: 80vw;
+                                        height: auto;
+                                        background-color: #292033;
+                                        color: white;
+                                        margin-left: 0px;
+                                    }
+                                }
+                                .btn2 h2{
+                                    color: #0affde;
+                                    position: relative;
+                                    font-size: 1.2em;
+                                }   
+                                .btn{
+                                     background-color: #000f3a;
+                                    color: white;
+                                    padding: 10px 20px;
+                                    width: 50vw;
+                                    position:relative;
+                                    margin-left: 20px;
+                                    height: auto;
+                                    top: 120px;
+                                    justify-self: center;
+                                    border: none;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    border: 1px solid cyan;
+                                }
+
+                                    @media(max-width:600px){
+                                        .btn{
+                                            width: 80vw;
+                                            height: auto;
+                                            background-color: #202d33;
+                                            color: white;
+                                            margin-left: 0px;
+                                        }   
+                                    }
+                                   @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .blog-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        border: 1px solid #f0f0f0;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 50px rgba(0, 123, 255, 0.15);
+    }
+
+    .img-container {
+        height: 220px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .blog-card:hover .img-container img {
+        transform: scale(1.1);
+    }
+
+    .date-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(5px);
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #007BFF;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .category {
+        color: #007BFF;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: #1a1a1a;
+        line-height: 1.3;
+    }
+
+    .content p {
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .read-more {
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: 700;
+        transition: color 0.3s ease;
+        display: inline-block;
+    }
+
+    .read-more:hover {
+        color: #0056b3;
+    }
+
+  
+    @media (max-width: 768px) {
+        #blog { padding: 60px 15px; }
+        .content h3 { font-size: 1.25rem; }
+    }
+   
+
+
+.footer-gradient {
+    background: linear-gradient(180deg, #1a1d20 0%, #080808 100%);
+    border-top: 2px solid #0dcaf0;
+}
+
+
+.hover-info {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.hover-info:hover {
+    color: #0dcaf0 !important;
+    transform: translateX(8px); 
+}
+
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(13, 202, 240, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    color: #0dcaf0;
+}
+
+.social-icon:hover {
+    background: #0dcaf0;
+    color: #000 !important;
+    transform: translateY(-8px) rotate(360deg);
+    box-shadow: 0 10px 20px rgba(13, 202, 240, 0.3);
+}
+
+
+.btn-outline-info {
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-info:hover {
+    box-shadow: 0 0 15px rgba(13, 202, 240, 0.5);
+    transform: scale(1.05);
+}
+
+
+.text-secondary {
+    color: #8892b0 !important; 
+}
+
+.hover-white:hover {
+    color: #ffffff !important;
+}
+
+
+@media (max-width: 768px) {
+    .footer-gradient {
+        text-align: center;
+    }
+    .hover-info:hover {
+        transform: none;
+    }
+}
+.d{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+.d img{
+    position: relative;
+    width: 30px;
+    height:30px;
+    border-radius:30px;
+}
+.text{
+    position: relative;
+    text-align: right;
+    color: white;
+    margin-right: 20px;
+}
+.col{
+display: grid;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.col a{
+    position: relative;
+    text-decoration: none;
+}
         </style>
 </head>
 <body>
-    <!-- primary navigation bar -->
+   
     <nav class="navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><b>MySite</b></a></div>
@@ -197,105 +990,428 @@
     <main class="container">
         <header class="text-center">
             <h1 class="display">Welcome to my Bootstrap project</h1>
+            <div class="card5"><i>Evariste<span>B</span></i></div>
             <p class="lead">A simple, responsive website built with Bootstrap.</p>
         </header>
 
         <section id="home" class="home">
             <h2>welcome to mysite</h2>
             <img src="./image/download (1).jpeg" alt="image">
-            <p>This is the home section. You can put any introductory content here.</p>
+            <p>welcome to mysite of learning code & web development in easiest way. <br>
+            and we recognize to be atouched to our website and  get all resources <br>
+        you could know all every things are shown in this website and make all <br>
+    details you need to know from in tthis website and get all things that are unknown to <br>
+this website.all things you will accessed by free no premium and all are free and cources <br>
+</p>
         </section>
 
-        <section id="about" class="mb-5">
-            <h2>About</h2>
-            <p>Write something about yourself or your company.</p>
-        </section>
+      
+<section id="about" class="about">
+    <h2>About Our Journey</h2>
+    <div class="card3">
+    <p>
+        Welcome to <strong>[Company Name]</strong>, where innovation meets passion. Founded in [Year],  <br>
+and has been on a relentless pursuit of excellence ever since. Our journey began with a simple mission: <br>
+ to revolutionize the way [Industry Name] operates and to create solutions that truly make a difference in people's lives. <br>
+         we began as a small team of visionaries dedicated to solving [Problem your company solves].  <br>
+         Over the years, we have grown into a leading force in the [Industry Name] industry, <br>
+          driven by a commitment to excellence and a deep understanding of our customers' needs. <br>
 
-        <section id="services" class="mb-5">
-            <h2>Services</h2>
-            <p>Describe the services you offer.</p>
-        </section>
+    </p>
+</div>
+<div class="card4">
+    <p>
+        Our philosophy is simple: we believe that high-quality service should be accessible, <br>
+        transparent, and personalized. Whether we are developing cutting-edge [Product/Service] <br>
+        or providing expert consultation, our goal is to empower our clients to reach their full potential. <br>
+         We don’t just deliver results; we build lasting partnerships based on trust and mutual growth. <br>
+            At [Company Name], we are not just a company; we are a community of innovators, thinkers, and doers. <br>
+             We are proud of our heritage and excited about the future, as we continue to push the boundaries of what’s possible. <br>
+              Join us on this exciting journey as we continue to innovate and make a positive impact on the world. <br>
+    </p>
+</div>
+    <div class="card1">
+        <h3>Our Core Values</h3>
+        <ul>
+            <li><strong>Integrity:</strong> We do what is right, even when no one is watching.</li>
+            <li><strong>Innovation:</strong> We constantly challenge the status quo to find better solutions.</li>
+            <li><strong>Customer Focus:</strong> Your success is the benchmark of our own success.</li>
+        </ul>
+    </div>
+<div class="card2">
+    <p>
+        Today, we are proud to serve a global community, yet we remain true to our roots by treating  <br>
+        every project with the same care and attention as our very first. <br>
+        Thank you for being a part of our story. We look forward to helping you write yours. <br>
+    </p>
+    </div>
+</section>
 
-        <section id="portfolio" class="mb-5">
-            <h2>Portfolio</h2>
-            <p>Showcase your work or projects.</p>
-        </section>
+        <section id="services" class="service">
+    
+ 
+    <div class="btn6">
+        <h2>Our Specialized Services</h2>
+        <p>
+            We don't just provide services; we deliver measurable growth. <br>
+             By combining technical expertise with creative strategy, <br>
+              we help your brand outpace the competition and achieve  <br>
+              sustainable digital excellence. <br>
 
-        <!-- contact form moved here for layout consistency -->
-        <section id="contact" class="mb-5">
-            <h2 class="text-center">Contact</h2>
-            <form id="contactForm" class="row g-3 justify-content-center">
-                <div class="col-md-6">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="number" class="form-label">Phone</label>
-                    <input type="tel" class="form-control" id="number" placeholder="Enter your number" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="country" class="form-label">Country</label>
-                    <select id="country" class="form-select">
-                        <option value="rwanda">Rwanda</option>
-                        <option value="uganda">Uganda</option>
-                        <option value="kenya">Kenya</option>
-                        <option value="tanzania">Tanzania</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <label class="form-label">Languages</label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="langRw" value="rw">
-                        <label class="form-check-label" for="langRw">Kinyarwanda</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="langEn" value="en">
-                        <label class="form-check-label" for="langEn">English</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="langFr" value="fr">
-                        <label class="form-check-label" for="langFr">French</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="langEs" value="es">
-                        <label class="form-check-label" for="langEs">Spanish</label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <label class="form-label">Gender</label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
-                        <label class="form-check-label" for="male">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
-                        <label class="form-check-label" for="female">Female</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="other" value="other" required>
-                        <label class="form-check-label" for="other">Other</label>
-                    </div>
-                </div>
-                <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </section>
+        </p>
+    </div>
 
-        <section id="blog" class="mb-5">
-            <h2>Blog</h2>
-            <p>Update this section with your latest posts or news.</p>
-        </section>
+   
+        <div class="btn4">
+            <div class="btn3">🚀</div>
+            <h3>Digital Transformation</h3>
+            <p>
+                We guide organizations through the complex journey of modernizing their <br>
+                 legacy systems. Our team audits your existing infrastructure to identify <br>
+                  bottlenecks, then implements cloud-native solutions that scale with your growth. <br>
+            </p>
+            <p>
+                <strong>Key Outcome:</strong> 40% average increase in operational  <br>
+                efficiency and significant reduction in technical debt. <br>
+
+
+            </p>
+        </div>
+
+
+        <div class="btn2">
+            <div class="btn1">🎨</div>
+            <h3>Creative Design & UX</h3>
+            <p>
+                Design is more than just aesthetics; it's about solving problems. <br>
+                 We conduct deep user research and behavioral analysis to create <br>
+                  journey maps that lead to high-converting, intuitive interfaces for web and mobile. <br>
+            </p>
+            <p>
+                <strong>Key Outcome:</strong> Reduced bounce rates and a frictionless  <br>
+                experience that turns visitors into brand advocates. <br>
+            </p>
+        </div>
+
+        <div class="btn">
+            <div class="image5">📈</div>
+            <h3>Strategic Marketing</h3>
+            <p>
+                Our marketing approach is rooted in psychology and data.  <br>
+                We craft multi-channel strategies—from SEO and content  <br>
+                clusters to precision-targeted social ads—that resonate <br>
+                 with your ideal customer profile. <br>
+            </p>
+            <p>
+                <strong>Key Outcome:</strong> Higher Quality Scores, lower Customer <br>
+                 Acquisition Costs (CAC), and sustainable organic growth. <br>
+            </p>
+        </div>
+
+
+  
+    <div class="contact">
+        <p>
+            Don't see exactly what you're looking for?  <br>
+            <a href="#contact">Contact us</a>  <br>
+            for a custom consultation tailored to your unique challenges. <br>
+                We are here to help you succeed. <br>
+                my contact number is 0785786547 and email is <br>
+                 <a href="mailto:bapfekureraevariste@gmail.com">bapfekureraevariste@gmail.com</a>. <br>
+                 Let's build something amazing together! <br>
+        </p>
+        <a href="./index1.html"><button type="button">login</button></a>
+        <a href="./index2.html"><button type="button">join</button></a>
+    </div>
+</section>
+
+
+        <section id="portfolio" class="mb-5" style="padding: 80px 20px; max-width: 1200px; margin: 0 auto; font-family: 'Segoe UI', Arial, sans-serif; color: #333;">
+    
+   
+    <div style="text-align: center; margin-bottom: 60px;">
+        <h2 style="font-size: 3rem; color: #222; margin-bottom: 20px; font-weight: 800;">Featured Work</h2>
+        <p style="font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+            A curated selection of our most impactful projects. From conceptualization to final delivery, we take pride in creating solutions that blend aesthetic beauty with functional excellence.
+        </p>
+    </div>
+
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+        
+        <div style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee;">
+            <div style="height: 250px; background: #e9ecef; overflow: hidden;">
+                <img src="./image/1.jpeg" alt="E-commerce Project" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 30px;">
+                <span style="background: #e7f1ff; color: #007BFF; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase;">E-Commerce</span>
+                <h3 style="font-size: 1.5rem; margin: 15px 0; color: #1a1a1a;">The Global Marketplace</h3>
+                <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                    A full-scale digital storefront designed to handle 50,000+ monthly active users. This project involved deep integration of secure payment gateways, a dynamic inventory management system, and an AI-driven personalized recommendation engine.
+                </p>
+                <div style="border-top: 1px solid #eee; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-weight: 600; color: #333;">Tech Stack:</span>
+                    <span style="font-size: 0.9rem; color: #777;">React, Node.js, MongoDB</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee;">
+            <div style="height: 250px; background: #e9ecef; overflow: hidden;">
+                <img src="./image/2.jpeg" alt="Data Analytics Project" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 30px;">
+                <span style="background: #fff3e0; color: #ff9800; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase;">Data Visualization</span>
+                <h3 style="font-size: 1.5rem; margin: 15px 0; color: #1a1a1a;">InsightFlow Dashboard</h3>
+                <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                    Developed a real-time data monitoring tool for a leading logistics firm. The dashboard translates millions of raw data points into actionable visual insights, allowing stakeholders to optimize supply chain routes in seconds.
+                </p>
+                <div style="border-top: 1px solid #eee; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-weight: 600; color: #333;">Tech Stack:</span>
+                    <span style="font-size: 0.9rem; color: #777;">D3.js, Python, AWS</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee;">
+            <div style="height: 250px; background: #e9ecef; overflow: hidden;">
+                <img src="./image/3.jpeg" alt="Corporate Branding" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 30px;">
+                <span style="background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase;">Branding & UI/UX</span>
+                <h3 style="font-size: 1.5rem; margin: 15px 0; color: #1a1a1a;">Aura Wellness App</h3>
+                <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                    A complete brand identity and mobile application design for a health-tech startup. We focused on calming color theory and accessibility-first navigation to ensure a stress-free experience for users tracking their mental health.
+                </p>
+                <div style="border-top: 1px solid #eee; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-weight: 600; color: #333;">Tech Stack:</span>
+                    <span style="font-size: 0.9rem; color: #777;">Figma, Flutter, Firebase</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+ 
+    <div style="text-align: center; margin-top: 60px;">
+        <p style="font-size: 1.1rem; color: #555; margin-bottom: 25px;">Want to see more of our success stories?</p>
+        <a href="#case-studies" style="padding: 15px 35px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1rem; transition: background 0.3s ease;">View All Case Studies</a>
+    </div>
+</section>
+
+
+    
+<section id="contact" style="padding: 80px 20px; max-width: 900px; margin: 0 auto; font-family: 'Segoe UI', Roboto, sans-serif; color: #333;">
+    
+  
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-size: 2.5rem; color: #222; margin-bottom: 10px;">Get In Touch</h2>
+        <p style="color: #666;">Have a project in mind? Fill out the form below and our team will get back to you within 24 hours.</p>
+    </div>
+
+  
+    <form id="contactForm" style="background: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid #eee;">
+        
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 25px;">
+            
+            
+            <div>
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem;">Full Name</label>
+                <input type="text" id="name" placeholder="full name" required style="width: 30vw; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; transition: border-color 0.3s;">
+            </div>
+
+            <div>
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem;">Email Address</label>
+                <input type="email" id="email" placeholder="example@gmail.com" required style="width: 30vw; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none;">
+            </div>
+
+            <div>
+                <label for="number" style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem;">Phone Number</label>
+                <input type="tel" id="number" placeholder="+250 ..." required style="width: 30vw; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none;">
+            </div>
+
+            <div>
+                <label for="country" style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem;">Country</label>
+                <select id="country" style="width: 30vw; padding: 12px; border: 1px solid #ddd; border-radius: 8px; background-color: white; outline: none;">
+                    <option value="rwanda">Rwanda</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="tanzania">Tanzania</option>
+                </select>
+            </div>
+        </div>
+
+      
+        <div style="margin-bottom: 25px;">
+            <label style="display: block; margin-bottom: 12px; font-weight: 600; font-size: 0.9rem; color: #555;">Preferred Languages</label>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <label style="display: flex; align-items: center; cursor: pointer; font-size: 0.95rem;">
+                    <input type="checkbox" id="langRw" value="rw" style="margin-right: 8px; width: 18px; height: 18px;"> Kinyarwanda
+                </label>
+                <label style="display: flex; align-items: center; cursor: pointer; font-size: 0.95rem;">
+                    <input type="checkbox" id="langEn" value="en" style="margin-right: 8px; width: 18px; height: 18px;"> English
+                </label>
+                <label style="display: flex; align-items: center; cursor: pointer; font-size: 0.95rem;">
+                    <input type="checkbox" id="langFr" value="fr" style="margin-right: 8px; width: 18px; height: 18px;"> French
+                </label>
+                <label style="display: flex; align-items: center; cursor: pointer; font-size: 0.95rem;">
+                    <input type="checkbox" id="langEs" value="es" style="margin-right: 8px; width: 18px; height: 18px;"> Spanish
+                </label>
+            </div>
+        </div>
+
+      
+        <div style="margin-bottom: 35px;">
+            <label style="display: block; margin-bottom: 12px; font-weight: 600; font-size: 0.9rem; color: #555;">Gender</label>
+            <div style="display: flex; flex-wrap: wrap; gap: 25px;">
+                <label style="display: flex; align-items: center; cursor: pointer; font-size: 0.95rem;">
+                    <input type="radio" name="gender" id="male" value="male" required style="margin-right: 8px; width: 18px; height: 18px;"> Male
+                </label>
+                <label style="display: flex; align-items: center; cursor: pointer; font-size: 0.95rem;">
+                    <input type="radio" name="gender" id="female" value="female" required style="margin-right: 8px; width: 18px; height: 18px;"> Female
+                </label>
+                <label style="display: flex; align-items: center; cursor: pointer; font-size: 0.95rem;">
+                    <input type="radio" name="gender" id="other" value="other" required style="margin-right: 8px; width: 18px; height: 18px;"> Other
+                </label>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit" style="background-color: #007BFF; color: white; border: none; padding: 15px 50px; font-size: 1rem; font-weight: bold; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);">
+                Send Message
+            </button>
+        </div>
+    </form>
+</section>
+
+<section id="blog" style="padding: 100px 20px; background: #fdfdfd; font-family: 'Segoe UI', system-ui, sans-serif; overflow: hidden;">
+    
+  
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 70px auto; animation: fadeInUp 1s ease-out;">
+        <h2 style="font-size: 3rem; color: #1a1a1a; margin-bottom: 15px; font-weight: 800; letter-spacing: -1px;">Latest Insights</h2>
+        <p style="font-size: 1.25rem; color: #666; line-height: 1.6;">
+            Explore our latest thoughts on digital innovation, design philosophy, and the future of technology. Stay updated with deep dives and industry news.
+        </p>
+    </div>
+
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+        
+    
+        <article class="blog-card" style="animation: fadeInUp 1s ease-out 0.2s both;">
+            <div class="img-container">
+                <img src="./image/5.jpeg" alt="Tech Future">
+                <div class="date-badge">Feb 24, 2026</div>
+            </div>
+            <div class="content">
+                <span class="category">Technology</span>
+                <h3>The Era of AI Personalization</h3>
+                <p>In 2026, AI is no longer just a tool; it's a co-pilot. We explore how hyper-personalization is redefining the user journey from landing pages to final conversion.</p>
+                <a href="#" class="read-more">Read Full Post →</a>
+            </div>
+        </article>
+
+        
+        <article class="blog-card" style="animation: fadeInUp 1s ease-out 0.4s both;">
+            <div class="img-container">
+                <img src="./image/6.jpeg" alt="Design Trends">
+                <div class="date-badge">Feb 18, 2026</div>
+            </div>
+            <div class="content">
+                <span class="category">Design</span>
+                <h3>Beyond Minimalist Interfaces</h3>
+                <p>Why "Neo-Brutalism" and maximalist layouts are making a comeback. Discover how to balance "controlled chaos" with high-performance UX standards.</p>
+                <a href="#" class="read-more">Read Full Post →</a>
+            </div>
+        </article>
+
+       
+        <article class="blog-card" style="animation: fadeInUp 1s ease-out 0.6s both;">
+            <div class="img-container">
+                <img src="./image/IMG_20251210_164950_618.jpg" alt="Team Growth">
+                <div class="date-badge">Feb 10, 2026</div>
+            </div>
+            <div class="content">
+                <span class="category">Culture</span>
+                <h3>The Hybrid Work Revolution</h3>
+                <p>Three years into the global shift, we analyze the metrics of remote-first productivity and how company culture survives across decentralized teams.</p>
+                <a href="#" class="read-more">Read Full Post →</a>
+            </div>
+        </article>
+
+    </div>
+</section>
     </main>
 
-    <footer class="bg-dark text-light text-center py-3">
-        <small>&copy; 2026 MySite. All rights reserved.</small>
-    </footer>
-    <!-- Bootstrap JS bundle (Popper included) -->
+   
+<footer class="text-light pt-5 pb-4" style="background: linear-gradient(180deg, #1a1d20 0%, #0a0a0a 100%); border-top: 2px solid #0dcaf0;">
+    <div class="container text-center text-md-start">
+        <div class="row g-4">
+            
+            
+            <div class="col-md-5 col-lg-4">
+                <h5 class="text-uppercase mb-4 fw-bold text-info" style="letter-spacing: 2px;">
+                    <i class="bi bi-tree-fill me-2"></i>Hope Tree Eva
+                </h5>
+                <p class="text-secondary lh-lg">
+                    Redefining global growth. We empower businesses through high-end digital transformation and specialized explorer services.
+                </p>
+            </div>
+
+            
+            <div class="col-md-3 col-lg-2 offset-lg-1">
+                <h5 class="text-uppercase mb-4 fw-bold text-info small">Solutions</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-info">Digital Strategy</a></li>
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-info">Explorer Hub</a></li>
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-info">Global Roaming</a></li>
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-info">Premium Help</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-4 col-lg-4">
+                <h5 class="text">Global Network/social-media links</h5>
+                <div class="d">
+                    <a href="https://facebook.com" class="social-icon bg-secondary bg-opacity-10 text-info border border-info border-opacity-25 rounded-circle d-flex align-items-center justify-content-center"  style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i><img src="./image/facebook.png" alt="facebook"></a>
+                    <a href="https://twitter.com" class="social-icon bg-secondary bg-opacity-10 text-info border border-info border-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i><img src="./image/twitter.png" alt="twitter"></a>
+                    <a href="https://instagram.com" class="social-icon bg-secondary bg-opacity-10 text-info border border-info border-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i><img src="./image/instagram.jpeg" alt="instagram"></a>
+                    <a href="https://linkedin.com" class="social-icon bg-secondary bg-opacity-10 text-info border border-info border-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i><img src="./image/linkedin.png" alt="linkedin"></a>
+                    <a href="https://youtube.com" class="social-icon bg-secondary bg-opacity-10 text-info border border-info border-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-youtube"></i><img src="./image/youtube.png" alt="youtube"></a>
+                </div>
+                <p class="small text-secondary">Join our worldwide network for exclusive updates.</p>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-4 border-top border-secondary border-opacity-25">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                    <p class="small text-secondary mb-0">
+                        &copy; 2026 <span class="text-info fw-bold">Hope Tree Eva</span>. Growing Businesses Globally. 
+                        Designed for <a href="https://hopetreesolution.com" class="text-info text-decoration-none">Success</a>.
+                    </p>
+                </div>
+                <div class="col">
+                    <a href="#" class="text-secondary small text-decoration-none mx-2 hover-white">Privacy</a>
+                    <a href="#" class="text-secondary small text-decoration-none mx-2 hover-white">Terms</a>
+                    <a href="#" class="text-secondary small text-decoration-none mx-2 hover-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .hover-info:hover { color: #0dcaf0 !important; padding-left: 5px; transition: 0.3s; }
+        .hover-white:hover { color: #fff !important; }
+        .social-icon:hover { background: #0dcaf0 !important; color: #000 !important; transform: translateY(-5px); transition: 0.4s; }
+        .transition-all { transition: all 0.3s ease; }
+    </style>
+</footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeo6lhmN0VKM9e9wG1z6fFhEAs5yU5K/5e3z0GPfF5d02Q9k" crossorigin="anonymous"></script>
     <!-- custom script -->
