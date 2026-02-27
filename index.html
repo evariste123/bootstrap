@@ -296,8 +296,31 @@
                     .display {
                         font-size: 2.5rem;
                         font-weight: bold;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-transform: uppercase;
+                         color: #0affde;
+                         text-shadow: 0 0 10px #0affde, 0 0 20px #0affde, 0 0 30px #0affde;
                         text-align: center;
+                        animation-duration: 2s;
+                        animation-name: fadeInDown;
+                        animation-iteration-count: 1;
+                        animation-delay: 1s;
+                        animation-direction: normal;
                     }
+                    @keyframes fadeInDown {
+                        from {
+                            opacity: 0;
+                            transform: scale(0.9);
+                            
+                        }
+                        to {
+                            opacity: 1;
+                            transform:scale(1);  
+                            
+                        }
+                    }   
                     @media(max-width: 768px) {
                         .display {
                             font-size: 2rem;
@@ -606,6 +629,7 @@
                                     animation-direction: alternate;
                                     animation-delay: 2s;
                                     background-image: url('./image/eva.png');
+                                    animation-iteration-count: infinite;
                                     background-size: cover;
                                     border-radius: 50%;
                                     margin: 20px auto;
@@ -617,15 +641,16 @@
                                 }
                                 @keyframes card{
                                     0%{
-                                        transform: scale(0.1);
+                                        transform: scale(0.1) rotate(0deg);
                                         opacity: 0;
                                         color: #3d0046;
                                     }
                                     100%{
-                                        transform: scale(2);
+                                        transform: scale(1) rotate(360deg);
                                         opacity: 1;
                                         color: #014769;
                                         text-transform: capitalize;
+                                        box-shadow: 0 0 20px cyan;
                                     }
                                 }   
                                 @media(max-width:600px){
@@ -974,22 +999,22 @@ display: grid;
    
     <nav class="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><b>MySite</b></a></div>
+        <a class="navbar-brand" href="#"><b>🔕 MySite</b></a></div>
         <div class="collapse " id="navbarNav">
           <ul>
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#home"> 🏠 Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about"> 👨‍💼 About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services"> 🧑‍💼 Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio"> 📁 Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"> 📞 Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog"> 📝 Blog</a></li>
           </ul>
         </div>
     </nav>
 
     <main class="container">
         <header class="text-center">
-            <h1 class="display">Welcome to my Bootstrap project</h1>
+            <h1 class="display"> 🎄 Welcome to my Bootstrap project 🍃</h1>
             <div class="card5"><i>Evariste<span>B</span></i></div>
             <p class="lead">A simple, responsive website built with Bootstrap.</p>
         </header>
