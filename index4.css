@@ -55,6 +55,13 @@ body{
     font-weight:bold;
     padding: 10px;
 }
+.logo a{
+    position: relative;
+    text-decoration: none;
+    color: #0affde;
+    text-shadow: 0 0 10px cyan;
+    box-shadow: 0 0 15px cyan;
+}
 .navbar{
     position: relative;
     justify-self: right;
