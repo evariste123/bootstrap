@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evai Assistance</title>
+    <link rel="stylesheet" href="./index4.css">
+    <style>
+    #ai-chat-container {
+        position: relative;
+        top: 200px;
+        right: 20px;
+        justify-self: right;
+        flex-wrap: wrap;
+        width: 320px;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        font-family: Arial, sans-serif;
+        z-index: 9999;
+    }
+
+    @media(max-width:600px){
+        #ai-chat-container{
+            position: relative;
+            width: 80vw;
+            height: 30vh;
+            top:300px;
+            right: 0px;
+            z-index: none;
+            justify-self: center;
+        }
+    }
+    #ai-chat-header {
+        background: #0078d7;
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px 8px 0 0;
+        font-weight: bold;
+        text-align: center;
+    }
+    #ai-chat-messages {
+        height: 220px;
+        overflow-y: auto;
+        padding: 10px;
+        background: #f9f9f9;
+        font-size: 14px;
+    }
+    @media(max-width:600px){
+        #ai-chat-messages{
+            position: relative;
+            width: 3vw;
+            padding: 0px;
+            height: 6vh;
+            margin-top: 10px;
+        }
+    }
+    .ai-chat-msg {
+        margin-bottom: 10px;
+    }
+    .ai-chat-user {
+        color: #0078d7;
+        font-weight: bold;
+    }
+    .ai-chat-ai {
+        color: #333;
+        font-weight: bold;
+    }
+    #ai-chat-input {
+        display: flex;
+        border-top: 1px solid #eee;
+        padding: 8px;
+        background: #fafafa;
+        border-radius: 0 0 8px 8px;
+    }
+    #ai-chat-text {
+        flex: 1;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    #ai-chat-send {
+        margin-left: 8px;
+        padding: 6px 12px;
+        background: #0078d7;
+        color: #fff;
+        overflow-wrap: break-word;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+@media(max-width:600px){
+     #ai-chat-send{
+        position: relative;
+        width: 20vw;
+        font-size: 5px;
+        text-align: left;
+        margin-left: 10px;
+        height: 6vh;
+     }
+}
+</style>
+</head>
+<body>
+    <section class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>Evai Assistance</h1>
+                <p class="tagline">Your AI-Powered Support Solution</p>
+            </div>
+            <nav class="navbar">
+                <div class="menu">
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Evai Assistance</h2>
+                 <p>Experience seamless support with our advanced AI assistance platform. Evai Assistance leverages state-of-the-art artificial intelligence to deliver fast, reliable, and personalized help for all your needs. Whether you require technical troubleshooting, customer service, or instant access to a knowledge base, our platform is designed to make your experience effortless and efficient.</p>
+                 <p>Our intuitive interface and robust features ensure that you get the answers you need, when you need them. Explore the site to discover how Evai Assistance can transform your support experience and empower you to solve problems quickly.</p>
+                <a href=""><button type="button">Get Started Now</button></a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Why Choose Evai Assistance?</h2>
+           
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered</h3>
+                    <p>Intelligent responses powered by advanced EVAI technology. <br>
+                    and also make more things powered by Evai new version tech. <br>
+                and work for whatever you want to get from Evai 2026</p>
+                </div>
+                <div class="feature-card1">
+                    <div class="feature-icon1">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>Get instant answers to your questions 24/7 <br>
+                    day per day.get free Evai in the 30 days <br>
+                and after 30 days you must pay trial</p>
+                </div>
+                <div class="feature-card2">
+                    <div class="feature-icon2">🔒</div>
+                    <h3>Secure</h3>
+                    <p>Your data is protected with enterprise-level security. <br>
+                    and don't worry for our website and be hummber all are safe <br>
+                and secure with us.🫵</p>
+                </div>
+                <div class="feature-card3">
+                    <div class="feature-icon3">📱</div>
+                    <h3>Mobile Ready</h3>
+                    <p>Access assistance from any device, anywhere, anytime <br>
+                    with different devices from any where any devices <br>
+                and follow us on different social medial</p>
+                </div>
+             <div class="service-item">
+                    <h3>Live Chat💻</h3>
+                    <p>Connect with our team through real-time chat support <br>
+                    ask Evai any time you want.it is stand by for you to provide <br>
+                your answer from your question Evai asked by you.</p>
+                </div>
+        </section>
+
+
+        <section id="about" class="about">
+            <h2>About Evai Assistance</h2>
+            <div class="about-content">
+                 <p>Evai Assistance is a cutting-edge AI-powered support platform designed to provide instant, accurate, and helpful responses to your questions and concerns. Our mission is to revolutionize customer support through intelligent automation and human expertise.</p>
+                 <p>We utilize advanced natural language processing and machine learning algorithms to understand your queries and deliver precise solutions. Our team is dedicated to continuous improvement, ensuring that our AI evolves to meet the changing needs of users.</p>
+                 <p>With years of experience in artificial intelligence and customer service, we've built a platform that combines the best of both worlds to deliver exceptional support experiences. Our commitment to security, privacy, and user satisfaction sets us apart as a trusted partner for individuals and businesses alike.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Full name">
+                </div>
+                <br>
+                <div class="form-group1">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <br>
+                <div class="form-group2">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Your subject">
+                </div>
+                <br>
+                <div class="form-group3">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Type here message..."></textarea>
+                </div>
+                <br>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+<div id="ai-chat-container">
+    <div id="ai-chat-header">Evai Chat 🤖 </div>
+    <div id="ai-chat-messages"></div>
+    <form id="ai-chat-input" autocomplete="off">
+        <input type="text" id="ai-chat-text" placeholder="Type your message..." required />
+        <button type="submit" id="ai-chat-send">Send</button>
+    </form>
+</div>
+        <footer class="footer">
+            <div class="link">
+                <h2>Quick-links</h2>
+                <div class="btn">
+                      <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    </div>
+            </div>
+            <div class="social">
+                <h2>social-links</h2>
+                <div class="link1">
+                    <a href="https://x.com/EBapfekure3"> <img src="./image/twitter.png" alt="twitter"></a>
+             <a href="https://www.facebook.com/evariste.arrogent.ever"><img src="./image/facebook.png" alt="facebook"></a>
+              <a href="https://www.linkedin.com/in/evariste-bapfekurera-a3700b2b0/"><img src="./image/linkedin.png" alt="linkedin"></a>
+             <a href="https://www.instagram.com/evariste_truly_ever/"><img src="./image/instagram.jpeg" alt="instagram"></a>
+              <a href="https://www.youtube.com/@evaristebapfekurera5995"><img src="./image/youtube.png" alt="you tube"></a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#social">Follow Us👆</a>
+            </div>
+            </div>
+            <p>&copy; 2026 Evai Assistance. All rights reserved.</p>
+        </footer>
+    </section>
+<script>
+    const messagesDiv = document.getElementById('ai-chat-messages');
+    const chatForm = document.getElementById('ai-chat-input');
+    const chatText = document.getElementById('ai-chat-text');
+
+    function appendMessage(sender, text) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'ai-chat-msg';
+        msgDiv.innerHTML = `<span class="${sender === 'You' ? 'ai-chat-user' : 'ai-chat-ai'}">${sender}:</span> ${text}`;
+        messagesDiv.appendChild(msgDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    function mockAIResponse(userMsg) {
+       
+        return "I'm an AI assistant. You said: " + userMsg;
+    }
+
+    chatForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const userMsg = chatText.value.trim();
+        if (!userMsg) return;
+        appendMessage('You', userMsg);
+        chatText.value = '';
+        setTimeout(() => {
+            const aiMsg = mockAIResponse(userMsg);
+            appendMessage('AI', aiMsg);
+        }, 600);
+    });
+</script>
+
+
+</body>
+</html>

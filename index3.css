@@ -7,8 +7,21 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    background:linear-gradient(to bottom,rgb(27, 39, 44),rgb(1, 10, 10));
     padding: 20px;
+    animation-duration: 1s;
+    animation-name: conta;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+@keyframes conta{
+    from{
+        transform: scale(0.1) translateX(0px);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1) translateX(50px);
+        opacity: 1;
+    }
 }
 @media(max-width: 600px) {
     .container {
@@ -18,12 +31,46 @@ body {
 .display {
     font-size: 2rem;
     font-weight: bold;
+    width: 10vw;
+    height: 10vh;
+    border-radius: 10px;
     color: #fff;
-    text-shadow: 0 0 10px cyan;
+    text-align: center;
+    text-shadow: 0 0 15px cyan;
     animation-duration: 2s;
     animation-name: glow;
+    background-color: #00adb3;
     animation-iteration-count: 1;
     animation-delay: 2s;
+    box-shadow: 0 0 20px cyan;
+    }
+    .display b{
+        position: relative;
+        top: 10px;
+        text-align: center;
+        animation-duration: 2s;
+        width: 15vw;
+        height: 8vh;
+        background-color: honeydew;
+        border-radius: 5px;
+        animation-name: b;
+        box-shadow: 0 0 15px indianred;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes b{
+        from{
+            transform: scale(0.1) rotate(0deg);
+            opacity: 1;
+            color: black;
+            text-shadow: 0 0 10px white;
+        }
+        to{
+            transform: scale(1.2) rotate(360deg);
+            opacity: 1;
+            text-shadow: 0 0 10px blue;
+        }
     }
 @keyframes glow {
     from{
@@ -34,6 +81,7 @@ body {
         transform: scale(1) rotate(360deg);
         opacity: 1;
          color: #014769;
+         background-color: #00b377;
          text-align: center;
          text-transform: capitalize;
          box-shadow: 0 0 20px cyan;
@@ -41,8 +89,7 @@ body {
 }
 .lead {
     font-size: 1.25rem;
-    color: #bbbaba;
-    text-shadow: 0 0 5px cyan;
+    color: #817f7f;
     animation-duration: 2s;
     animation-name: fadeIn;
     font-style: italic;
@@ -85,6 +132,7 @@ body {
     transform: scale(1.1);
     opacity: 0.9;
     cursor: pointer;
+    border: 1px solid cyan;
     box-shadow: 0 0 10px rgb(2, 255, 255);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -105,9 +153,7 @@ body {
 }
 .card {
     font-size: 1.5rem;
-    font-weight: bold;
     color: #fff;
-    text-shadow: 0 0 5px cyan;
     position: relative;
     top: 80px;
     background-color: #0b1a22;
@@ -122,13 +168,17 @@ body {
 .card:hover {
     background-color: #014769;
     transform: scale(1.05);
-    box-shadow: 0 0 15px cyan;
+    box-shadow: 0 0 5px cyan;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .card h2{
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     color: #00adb3;
+}
+.card ul li{
+    position: relative;
+    font-size: 20px;
 }
 @media(max-width: 600px) {
     .card {
@@ -266,10 +316,54 @@ body {
     .footer{
         position: relative;
         width: 100%;
-        height:50vh;
+        height:60vh;
         top: 120px;
-        background-color: #0b1a22;
+        background-color: #000;
         justify-self: center;
+    }
+    .line{
+        position: relative;
+        top: 120px;
+        width: 400px;
+        justify-self: center;
+        animation-duration: 2s;
+        animation-name: lin;
+        animation-delay: 2s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+    }
+    @keyframes lin{
+        from{
+            transform: translateY(0px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(10px);
+            opacity: 1;
+        }
+    }
+    @media(max-width:600px){
+        .line{
+            position: relative;
+            width: 100px;
+        }
+    }
+    .line hr{
+        position: relative;
+        padding: 2px;
+        background-color: green;
+        border: 1px solid green;
+        border-radius: 5px;
+         transform: scale(1.05);
+        box-shadow: 0 0 15px cyan;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    @media(max-width:600px){
+        .line hr{
+            position: relative;
+            background-color: cyan;
+            box-shadow: 0 0 15px #0aff16;
+        }
     }
     .link{
         position: relative;
@@ -295,9 +389,13 @@ body {
     }
     .links li a:hover{
         transition: all ease 0.3s;
-        transform: translateX(20px);
+        transform:scale(0.9);
+        opacity: 1;
         margin-left: 30px;
+        text-indent: 2;
         color: cyan;
+        text-shadow: 0 0 15px cyan;
+        transition: transform 0.3s ease;
     }
     .card4{
         position: absolute;
@@ -313,6 +411,38 @@ body {
         padding: 10px;
         color:#00adb3;
     }
+    .card4 img{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        border: 2px dotted cyan;
+        animation-duration: 2s;
+        animation-name: card4;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes card4{
+        from{
+            transform: scale(0.1) rotate(0deg);
+            opacity: 0;
+        }
+        to{
+            transform: scale(1) rotate(360deg);
+            opacity: 1;
+            box-shadow: 0 0 15px cyan;
+        }
+    }
+    .card4 img:hover{
+         background-color: #014769;
+        transform: scale(1.05);
+        margin-left: 20px;
+        cursor: pointer;
+        border: 2px solid cyan;
+        box-shadow: 0 0 15px cyan;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
     .card3{
         position: absolute;
         justify-self: right;
@@ -327,9 +457,45 @@ body {
         color: #00adb3;
         padding: 10px;
     }
+    .card3 p{
+        position: relative;
+        overflow-wrap: break-word;
+        font-style: italic;
+        font-family: 'Arial', sans-serif;
+    }
     .para{
         position: relative;
-        top: 50px;
+        top: 130px;
         justify-self: center;
-        color: #424141;
+        color: #646262;
+        overflow-wrap: break-word;
+    }
+    @media(max-width:600px){
+        .footer{
+            position: relative;
+            height:125vh;
+        }
+    }
+    @media(max-width:600px){
+        .card4{
+            position: relative;
+            justify-self: left;
+            top: 40px;
+        }
+    }
+    @media(max-width:600px){
+        .card3{
+            position: relative;
+            justify-self: left;
+            top: 70px;
+        }
+    }
+    @media(max-width:600px){
+        .para{
+            position: relative;
+            justify-self: left;
+            top: 70px;
+            color: white;
+            font: 20px bold;
+        }
     }
