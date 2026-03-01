@@ -1,0 +1,1178 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:linear-gradient(to left,lightblue,rgb(74, 139, 139),rgb(90, 143, 90));
+}
+.header{
+    position: relative;
+    width: 100%;
+    justify-self: center;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(2, 54, 54);
+    animation-duration: 5s;
+    top: 0px;
+    animation-name: header;
+    animation-delay: 1s;
+    animation-direction: alternate-reverse;
+}
+@media(max-width:600px){
+    .header{
+        position: fixed;
+        width: 90vw;
+        padding: 10px;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        justify-self: center;
+        background-color: #23012c;
+    }
+}
+@keyframes header{
+    from{
+        transform: scale(0.9);
+        opacity: 0;
+        border-radius: 10px;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.header h1{
+    position: relative;
+    color: rgb(3, 167, 104) ; 
+    overflow-wrap: break-word;
+}
+.header h2{
+    position: relative;
+    color: #7979e9;
+    overflow-wrap: break-word;
+}
+.header p{
+    position: relative;
+    font: 20px bold;
+    color: white;
+}
+.navbar{
+    position: relative;
+    top: 0px;
+    width: 90vw;
+    padding: 15px;
+    justify-items: center;
+    justify-self: center;
+     border-radius: 0 30px 0 30px;
+    flex-wrap: wrap;
+    background-color: hsl(219, 98%, 16%);
+}
+@media(max-width:600px){
+    .navbar{
+        position: relative;
+        top: 260px;
+        width: 80vw;
+        transform: translate(-5px);
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.menu a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.menu a:hover{
+    color: #000000;
+    border-radius: 5px;
+    padding: 8px 10px;
+    background-color: #2a2a2b;
+    box-shadow: 0 0 15px cyan;
+}
+
+.card{
+    position: relative;
+    top: 20px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: left;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.card h2{
+    position: relative;
+    color: #2afaa3;
+    margin-left: 30px;
+}
+.card h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+@media(max-width:600px){
+    .card{
+        position: relative;
+        margin-left: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 270px;
+        background-color: #2a2a2b;
+    }
+}
+.card1{
+     position: absolute;
+    top: 300px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: center;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+}
+
+@media(max-width:600px){
+    .card1{
+        position: relative;
+        margin-left: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 280px;
+        background-color: #2a2a2b;
+    }
+}
+.card1 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card1 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card1 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card1 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card1:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card2{
+     position: absolute;
+    top: 300px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: right;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+@media(max-width:600px){
+    .card2{
+        position: relative;
+        margin-right: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 290px;
+        background-color: #2a2a2b;
+    }
+}
+.card2 h2{
+    position: relative;
+    color: #2afaa3;
+    margin-left: 30px;
+}
+.card2 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card2 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card2 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card2 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card2 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card2:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+
+
+.card3{
+     position: absolute;
+    top: 650px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: left;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+@media(max-width:600px){
+    .card3{
+        position: relative;
+        margin-left: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 300px;
+        background-color: #2a2a2b;
+    }
+}
+.card3 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card3 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card3 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card3 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card3 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card3:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card4{
+     position: absolute;
+    top: 650px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: center;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+}
+
+@media(max-width:600px){
+    .card4{
+        position: relative;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 310px;
+        background-color: #2a2a2b;
+    }
+}
+.card4 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card4 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card4 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card4 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card4 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card4:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card5{
+     position: absolute;
+    top: 650px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: right;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+@media(max-width:600px){
+    .card5{
+        position: relative;
+        margin-right: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 320px;
+        background-color: #2a2a2b;
+    }
+}
+.card5 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card5 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card5 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card5 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card5 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card5:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+
+.card6{
+     position: absolute;
+    top: 1000px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: left;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+@media(max-width:600px){
+    .card6{
+        position: relative;
+        margin-right: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 330px;
+        background-color: #2a2a2b;
+    }
+}
+.card6 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card5 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card6 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card6 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card6 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card6:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+
+.card7{
+     position: absolute;
+    top: 950px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: center;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+}
+
+@media(max-width:600px){
+    .card7{
+        position: relative;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        margin-left: 0px;
+        top: 340px;
+        background-color: #2a2a2b;
+    }
+}
+.card7 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card7 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card7 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card7 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card7 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card7:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+
+.card8{
+     position: absolute;
+    top: 950px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: right;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+@media(max-width:600px){
+    .card8{
+        position: relative;
+        margin-right: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 360px;
+        background-color: #2a2a2b;
+    }
+}
+.card8 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card8 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card8 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card8 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card8 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card8:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+
+
+.card9{
+     position: absolute;
+    top: 1350px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self:left;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+@media(max-width:600px){
+    .card9{
+        position: relative;
+        margin-left: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 370px;
+        background-color: #2a2a2b;
+    }
+}
+.card9 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card9 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card9 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card9 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card9 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card9:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+
+
+.card10{
+     position: absolute;
+    top: 1280px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: center;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+}
+
+@media(max-width:600px){
+    .card10{
+        position: relative;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 380px;
+        background-color: #2a2a2b;
+    }
+}
+.card10 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card10 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card10 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card10 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card10 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card10:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+
+.card11{
+     position: absolute;
+    top: 1300px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: right;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+@media(max-width:600px){
+    .card11{
+        position: relative;
+        margin-right: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 390px;
+        background-color: #2a2a2b;
+    }
+}
+.card11 h3{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card11 h4{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card11 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card11 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card11 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card11:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+
+.card12{
+     position: relative;
+    top: 1050px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: left;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+@media(max-width:600px){
+    .card12{
+        position: relative;
+        margin-left: 0px;
+        justify-self: center;
+        width: 80vw;
+        height: auto;
+        top: 400px;
+        background-color: #2a2a2b;
+    }
+}
+.card12 h2{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card12 i{
+      position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card12 p strong{
+  position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card12 button{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #34ff19;
+    color: rgb(10, 10, 10);
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    bottom: 5px;
+}
+.card12 button:hover{
+    transform: scale(1.05);
+    background-color: #23012c;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.card12:hover{
+     transform: scale(1.05);
+    background-color: #6f4d79;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+.form{
+    position: relative;
+    top: 700px;
+    width: 60vw;
+    height: auto;
+    justify-self: right;
+    border-radius: 10px;
+    margin-right: 30px;
+    text-align: center;
+    background-color: rgb(119, 116, 116);
+}
+.form h3{
+    position: relative;
+    color: #2701ff;
+    font: 20px bold;
+    top: 5px;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+.form label{
+    position: relative;
+    color: #02345e;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+.form input{
+    position: relative;
+    width: 30vw;
+    height: 6vh;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid cyan;
+}
+.form input::placeholder{
+    color: black;
+    font: bold;
+}
+.form textarea{
+    position: relative;
+     width: 30vw;
+    height: 10vh;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid cyan;
+}
+.form textarea::placeholder{
+    color: black;
+    font: bold;
+}
+.form textarea:hover{
+    transform: scale(1.05);
+    border: 1px solid hotpink;
+    border-radius: 0px;
+    transition: all ease 0.3s;
+}
+.form input:hover{
+    transform: scale(1.05);
+    border: 1px solid hotpink;
+    border-radius: 0px;
+    transition: all ease 0.3s;
+}
+.form button{
+    position: relative;
+    padding: 10px 15px;
+    background-color: rgb(30, 144, 255);
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    bottom: 20px;
+}
+.form button:hover{
+     transform: scale(1.05);
+    border: 1px solid hotpink;
+    border-radius: 0px;
+    transition: all ease 0.3s;
+    box-shadow: 0 0 15px cyan;
+}
+
+@media(max-width:600px){
+    .form{
+        position: relative;
+        width: 90vw;
+        height: auto;
+        justify-self: center;
+        margin-right: 0px;
+        background-color: #051120;
+        top: 400px;
+    }
+}
+@media(max-width:600px){
+    .form input{
+        position: relative;
+        width: 40vw;
+        height: 6vh;
+    }
+}
+.card13{
+    position: relative;
+    top: 150px;
+    background-color: #1f395f;
+    width: 25vw;
+    justify-self: left;
+    height: auto;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.card13 h2{
+     position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+}
+.card13 b{
+      position: relative;
+    color: #0e0d0d;
+    margin-left: 30px;
+    bottom: 5px;
+}
+.card13 p{
+  position: relative;
+    color: #009200;
+    margin-left: 20px;
+}
+.card13 h3{
+    position: relative;
+    color: #2afaa3;
+    margin-left: 20px;
+    font: 20px bold;
+}
+.card13:hover{
+    transform: scale(1.05);
+    background-color: #d87df1;
+    color: white !important;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+@media(max-width:600px){
+    .card13{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        margin-left: 0px;
+        top: 420px;
+    }
+}
+.card14{
+    position: relative;
+    top: 170px;
+    background-color: #01302d;
+    width: 25vw;
+    justify-self: left;
+    height:25vh;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.card14 label{
+    position: relative;
+    top: 10px;
+    color:#00fd2a;
+    overflow-wrap: break-word;
+    font: 20px bold;
+}
+.card14 input{
+    position: relative;
+    top: 20px;
+    width: 20vw;
+    height: 6vh;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid purple;
+    cursor: pointer;
+}
+.card14 button{
+    position: relative;
+    top: 40px;
+    padding: 10px 15px;
+    background-color: cyan;
+    color: black;
+    font: 20px bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card14 input::placeholder{
+    color: black;
+    font: bold;
+}
+.card14 button:hover{
+     transform: scale(1.05);
+    background-color: #d87df1;
+    color: white !important;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+}
+@media(max-width:600px){
+    .card14{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+        justify-self: center;
+        margin-left: 0px;
+        top: 450px;
+    }
+}
