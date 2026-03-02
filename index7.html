@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🍎Access-to-our-API</title>
+  <link rel="stylesheet" href="./index7.css">
+  <meta name="description" content="Sign up for a free 3-month trial to access OurAPI. Get an API key, sample code, and quick start docs." />
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="brand">
+        <div class="logo" ><a href="./index3.html">🍏Evapi</a></div>
+        <div class="logo1">
+          <h1>OurAPI💼</h1>
+          <p class="lead">Powerful REST APIs for developers — start with a free 3-month trial.</p>
+        </div>
+      </div>
+      <nav class="top">
+        <div class="menu">
+        <a class="small docs-link" href="#docs">Docs</a>
+        <span>-•-</span>
+        <a class="small docs-link" href="#faq">FAQ</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+        
+          <div class="card">
+            <h2>Get instant access to OurAPI — Free for 3 months</h2>
+            <p>No credit card required. Full endpoint access, generous rate limits for trial users, and production-ready SDK examples.</p>
+          </div>
+              <div class="feature">
+                <div class="dot">1</div>
+                  <strong>Full API access</strong>
+                  <p>All public endpoints are enabled for the duration of the 3-month trial. Trial keys are rate-limited to prevent abuse while still allowing real integration and end-to-end testing.</p>
+                  <p>Includes read and write APIs (for example <code>GET /data</code> and <code>POST /items</code>), usage and quota endpoints, and health checks — ideal for validating integrations, SDKs, and migration paths.</p>
+              </div>
+
+              <div class="feature1">
+                <div class="dot1">2</div>
+                  <strong>Production-ready docs</strong>
+                  <p>Interactive reference and quick-start samples for JavaScript, Python, curl, and our official SDKs — designed to help you integrate confidently and ship faster.</p>
+                  <p>Includes endpoint schemas, parameter descriptions, example requests/responses, and a "Try it" console so you can test calls directly with your trial key.</p>
+              </div>
+
+              <div class="feature2">
+                <div class="dot2">3</div>
+                <div>
+                  <strong>Support & migration</strong>
+                  <p>Priority email support during the trial plus hands-on migration guidance for teams moving from older systems or other providers. Our onboarding team can help with integration checklists, data export/import patterns, and migration best practices.</p>
+                  <p>Includes email onboarding, migration playbooks, and upgrade assistance — contact us to discuss SSO, SLA needs, or a managed migration plan.</p>
+                </div>
+              </div>
+        
+
+            <div class="cta" role="region" aria-label="Primary actions">
+              <button class="btn" id="startBtn" onclick="document.getElementById('signupForm').scrollIntoView({behavior:'smooth'})">Start Free Trial</button>
+              <a>View Docs</a>
+            </div>
+        
+
+    
+            <div class="car1">
+                  <div class="muted0">Trial</div>
+                  <div class="font">3 months</div>
+                
+                <div class="pill">No CC</div>
+              <div  class="muted1">Includes 100K free requests per month. Upgrade plans available with higher limits and SLAs.</div>
+            </div>
+        
+
+    </section>
+
+    <div class="card1" aria-labelledby="signup-title">
+      <h2>Sign up for 3-month Free Trial</h2>
+      <p>Complete the form to get a trial API key. This is a demo HTML-only implementation — integrate with your backend to provision real keys.</p>
+      <div class="form">
+       <form id="signupForm" onsubmit="handleSignup(event)" autocomplete="on" novalidate>
+        <div class="name">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="evariste eva" />
+        </div>
+        <br>
+        <div class="email">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" required placeholder="you@company.com" />
+        </div>
+        <br>
+        <div class="company">
+          <label for="company">Company (optional)</label>
+          <input id="company" name="company" type="text" placeholder="Company name" />
+        </div>
+        <br>
+        <div class="usage">
+          <label for="usage">Intended usage</label>
+          <select id="usage" name="usage" required>
+            <option value="" disabled selected>Choose use case</option>
+            <option>Prototype / POC</option>
+            <option>Internal tooling</option>
+            <option>Customer-facing app</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <br>
+        <div class="hero1">
+          <input id="agree" type="checkbox" required />
+          <label for="agree">I agree to the <a href="#terms">trial terms</a>.</label>
+        </div>
+        <br>
+        <div class="margin">
+          <button  type="submit">Generate Trial Key</button>
+          <button type="button" onclick="fillDemo()">Fill demo</button>
+        </div>
+        <br>
+        </form>
+    </div>
+      <div id="result" style="display:none" class="card3">
+          <div class="muted3">Your trial API key (keep it secret):</div>
+          <div class="key" id="keyBox">
+            <code id="apiKey">—</code>
+            <div class="key1">
+              <button class="btn ghost" onclick="copyKey()">Copy</button>
+              <button class="btn ghost" onclick="revokeKey()">Revoke</button>
+            </div>
+          </div>
+
+          <div  class="muted4">
+            Trial expires on <strong id="expiry">—</strong>
+            <p>Use the sample requests below to get started. This page simulates key generation; in production, your backend must issue keys and enforce rate limits.</p>
+          </div>
+          <div class="butto">
+          <button>Quick start</button>
+          </div>
+          <div class="muted5">Replace <code>YOUR_API_KEY</code> with the key above.</div>
+
+          <div class="btn2">
+            <div class="url">curl</div>
+            <div class="snippet" aria-label="Sample curl">
+curl -H "Authorization: Bearer YOUR_API_KEY" \ <br>
+  "https://api.ourapi.example/v1/data?limit=10"
+            </div>
+
+            <div class="btn3">JavaScript (fetch)</div>
+            <div class="snippet1">
+fetch("https://api.ourapi.example/v1/data?limit=10", { <br>
+  headers: { "Authorization": "Bearer YOUR_API_KEY" } <br>
+}).then(r => r.json()).then(console.log)
+            </div>
+
+            <div class="py">Python (requests)</div>
+            <div class="snippet3">
+import requests
+r = requests.get("https://api.ourapi.example/v1/data?limit=10", <br>
+                 headers={"Authorization":"Bearer YOUR_API_KEY"})
+print(r.json())
+            </div>
+          </div>
+          <div class="muted6">
+        <strong>Note:</strong> This page is a static HTML prototype. To provision real API keys you must:
+        
+          <i>POST signup details to your backend</i>
+          <i>Verify email / prevent abuse</i>
+          <i>Store keys securely and rotate them periodically</i>
+      
+      </div>
+      </div>
+
+    </div>
+
+    <section class="card0" id="docs" aria-labelledby="docs-title">
+      <h2 id="docs-title">Documentation & endpoints</h2>
+      <p class="muted">Base URL: <code style="font-family:var(--mono)">https://api.ourapi.example/v1</code></p>
+     
+        <b><strong>GET /data</strong> — Fetch data. Query params: <code>limit</code>, <code>cursor</code>.</b>
+        <b><strong>POST /items</strong> — Create item. Send JSON body.</b>
+        <b><strong>GET /status</strong> — Service health and quota usage.</b>
+      
+
+      <h3>Authentication</h3>
+      <p class="muted">Send your API key in the Authorization header: <code>Authorization: Bearer &lt;API_KEY&gt;</code>. Do not share keys publicly.</p>
+
+      <h3>Rate limits</h3>
+      <p class="muted">Trial accounts: 100K requests per month, burst-friendly but subject to fair use. Production plans offer higher limits and SLA.</p>
+    </section>
+
+    <section class="car" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ</h2>
+        <div class="item">
+          <strong>Do I need a credit card?</strong>
+          <p>No — the 3-month trial requires no credit card. Abuse prevention may require verification.</p>
+        </div>
+
+        <div class="item1">
+          <strong>Can I upgrade before trial ends?</strong>
+          <p>Yes. Upgrading preserves your usage and allows higher limits and SLA guarantees.</p>
+        </div>
+
+        <div class="item2">
+          <strong>Is support included?</strong>
+         <p>Trial users get priority email support for onboarding and migration help.</p>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="api">
+      <h5>© <strong>OurAPI</strong> — Trial valid for 3 months from issuance</h5>
+      <p>Questions? <a href="mailto:bapfekureraevariste@gmail.com" class="docs-link">bapfekureraevariste@gmail.com</a></p>
+      <p> 📞 Contact:+250 785786547</p>
+      </div>
+      <div class="k">
+        <h2>Quick-links</h2>
+        <div class="eva">
+          <a  href="#home"> 🏠 Home</a>
+            <a  href="#about"> 👨‍💼 About</a>
+            <a  href="#services"> 🧑‍💼 Services</a>
+            <a  href="#portfolio"> 📁 Portfolio</a>
+            <a  href="#contact"> 📞 Contact</a>
+            <a  href="#blog"> 📝 Blog</a>
+        </div>
+      </div>
+      <div class="social">
+            <h2>Follow us on🔗</h2>
+            <div class="social-media">
+            <a href="https://x.com/EBapfekure3"> <img src="./image/twitter.png" alt="twitter"></a>
+             <a href="https://www.facebook.com/evariste.arrogent.ever"><img src="./image/facebook.png" alt="facebook"></a>
+              <a href="https://www.linkedin.com/in/evariste-bapfekurera-a3700b2b0/"><img src="./image/linkedin.png" alt="linkedin"></a>
+             <a href="https://www.instagram.com/evariste_truly_ever/"><img src="./image/instagram.jpeg" alt="instagram"></a>
+              <a href="https://www.youtube.com/@evaristebapfekurera5995"><img src="./image/youtube.png" alt="you tube"></a>
+        </div>
+        </div>
+    </section>
+  </main>
+  <script src="./index7.js"></script>
+</body>
+</html>
