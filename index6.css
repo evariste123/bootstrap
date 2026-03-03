@@ -906,7 +906,7 @@ body{
 
 .card12{
      position: relative;
-    top: 1050px;
+    top: 1020px;
     background-color: #1f395f;
     width: 25vw;
     justify-self: left;
@@ -1072,7 +1072,7 @@ body{
 }
 .card13{
     position: relative;
-    top: 150px;
+    top: 170px;
     background-color: #1f395f;
     width: 25vw;
     justify-self: left;
@@ -1125,7 +1125,7 @@ body{
 }
 .card14{
     position: relative;
-    top: 170px;
+    top: 190px;
     background-color: #01302d;
     width: 25vw;
     justify-self: left;
@@ -1154,7 +1154,7 @@ body{
 }
 .card14 button{
     position: relative;
-    top: 40px;
+    top: 30px;
     padding: 10px 15px;
     background-color: cyan;
     color: black;
