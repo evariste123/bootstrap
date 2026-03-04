@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍏Learning Platform</title>
+    <link rel="stylesheet" href="./index11.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">EduLearning📚</div>
+            <div class="nav-links">
+                <a href="#courses">Courses</a>
+                <a href="./index9.html">Books Library</a>
+                <a href="./index10.html">Partner With Us</a>
+                <a href="./index3.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Learn, Grow, Succeed</h1>
+            <p>Discover world-class courses and educational resources</p>
+            <button class="btn btn-primary" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">Explore Courses</button>
+        </div>
+    </section>
+
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <div class="add-course-btn">
+                <button class="btn btn-success" onclick="openAddCourseModal()">+ Add New Course</button>
+            </div>
+            <div class="courses-grid" id="coursesGrid">
+     
+            </div>
+        </div>
+    </section>
+
+
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCourseModal()">&times;</span>
+            <h2>Add New Course</h2>
+            <form id="courseForm">
+                <div class="form-group">
+                    <label for="courseName">Course Name:</label>
+                    <input type="text" id="courseName" required>
+                </div>
+                <div class="form-group">
+                    <label for="courseDesc">Description:</label>
+                    <textarea id="courseDesc" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="coursePrice">Price ($):</label>
+                    <input type="number" id="coursePrice" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="courseImage">Course Image:</label>
+                    <input type="file" id="courseImage" accept="image/*" required>
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+                <div class="form-group">
+                    <label for="courseDocument">Course Document (PDF):</label>
+                    <input type="file" id="courseDocument" accept=".pdf">
+                </div>
+                <div class="form-group">
+                    <label for="courseInstructor">Instructor:</label>
+                    <input type="text" id="courseInstructor" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Course</button>
+            </form>
+        </div>
+    </div>
+
+  
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About EduHub</h4>
+                <p>Providing quality education and learning resources worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="./index9.html">Books Library</a></li>
+                    <li><a href="./index10.html">Become a Partner</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: eduLearning@gmail.com</p>
+                <p>Phone: +250 785786547</p>
+                <p>Address: 123 Education St, Learning City, LC 12345</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <a href="">you tube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduLearning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./index11.js"></script>
+</body>
+</html>

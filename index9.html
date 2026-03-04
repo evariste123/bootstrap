@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍏Books-Library</title>
+    <link rel="stylesheet" href="./index9.css">
+</head>
+<body>
+
+    <nav class="navbar">
+            <div class="logo"><b>EduLibrary🔖</b></div>
+            <div class="nav-links">
+                <a href="./index11.html">Courses</a>
+                <a href="#library"> Library</a>
+                <a href="./index10.html">Partner</a>
+                <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="library-header">
+        <div class="container">
+            <h1>Books & Resources Library</h1>
+            <p>Access our comprehensive collection of educational books and documents</p>
+        </div>
+    </section>
+
+    <section id="library" class="library-section">
+            <div class="library-controls">
+                <h2>Our Library</h2>
+                <button class="btn btn-success" onclick="openUploadModal()" inputmode="file"> Upload Book/Document</button>
+            </div>
+            <br>
+            <div class="search-bar">
+                <form action="">
+                <input type="text" id="searchBooks" placeholder="Search books..." required>
+                <button type="submit">search</button>
+                </form>
+                <br>
+                <select id="categoryFilter" onchange="filterBooks()">
+                    <option value="">All Categories</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Business">Business</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <br>
+            <div class="books-grid" id="booksGrid">
+                <p>No books available yet. Click "Upload Book/Document" to add one.</p>
+            </div>
+    </section>
+
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeUploadModal()">&times;</span>
+            <h2>Upload Book/Document</h2>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label for="bookTitle">Book Title:</label>
+                    <input type="text" id="bookTitle" required placeholder="Book Title">
+                </div>
+                <br>
+                <div class="form-group5">
+                    <label for="bookAuthor">Author:</label>
+                    <input type="text" id="bookAuthor" required placeholder="Author Name">
+                </div>
+                <br>
+                <div class="form-group1">
+                    <label for="bookCategory">Category:</label>
+                    <select id="bookCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Science">Science</option>
+                        <option value="History">History</option>
+                        <option value="Business">Business</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group2">
+                    <label for="bookDescription">Description:</label>
+                    <textarea id="bookDescription" rows="4" required placeholder="your Descriptions"></textarea>
+                </div>
+                <br>
+                <div class="form-group3">
+                    <label for="bookDocument">Upload PDF/Document:</label>
+                    <input type="file" id="bookDocument" accept=".pdf,.doc,.docx" required>
+                </div>
+                <br>
+                <div class="form-group4">
+                    <label for="bookCover">Book Cover Image:</label>
+                    <input type="file" id="bookCover" accept="image/*">
+                    <div id="coverPreview" class="image-preview"></div>
+                </div>
+                <button type="submit">Upload Book</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <section class="footer">
+            <div class="footer-section">
+                <h4>About EduLibrary🔖</h4>
+                <p>Providing quality education and learning resources worldwide.</p>
+            </div>
+            <div class="footer-section1">
+                <h4>Quick Links</h4>
+                <div class="menu">
+                    <a href="./index11.html">Courses</a>
+                    <a href="#library">Books Library</a>
+                    <a href="./index10.html">Partner</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-section2">
+                <h4>Contact Info</h4>
+                <p>Email: bapfekureraevariste@gmail.com</p>
+                <p>Phone: +250 785786547</p>
+                <p>Address: 123 Education St, Learning City, LC 12345</p>
+            </div>
+            <div class="footer-section3">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://x.com/EBapfekure3"> <img src="./image/twitter.png" alt="twitter"></a>
+             <a href="https://www.facebook.com/evariste.arrogent.ever"><img src="./image/facebook.png" alt="facebook"></a>
+              <a href="https://www.linkedin.com/in/evariste-bapfekurera-a3700b2b0/"><img src="./image/linkedin.png" alt="linkedin"></a>
+             <a href="https://www.instagram.com/evariste_truly_ever/"><img src="./image/instagram.jpeg" alt="instagram"></a>
+              <a href="https://www.youtube.com/@evaristebapfekurera5995"><img src="./image/youtube.png" alt="you tube"></a>
+                </div>
+            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduLibrary🔖. All rights reserved.</p>
+        </div>
+    </section>
+
+    <script src="./index9.js"></script>
+</body>
+</html>
