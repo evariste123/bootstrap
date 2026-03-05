@@ -161,3 +161,17 @@ function getApplicationStats() {
 
     return stats;
 }
+
+// Preview benefit card images
+function previewBenefitImage(inputId, imgId) {
+    const file = document.getElementById(inputId).files[0];
+    const img = document.getElementById(imgId);
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+}

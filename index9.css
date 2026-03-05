@@ -17,22 +17,22 @@ body{
         background-color: #000000;
         color: white;
         justify-items: right;
-        padding: 10px;
+        padding: 20px;
         flex-wrap: wrap;
     }
 }
 @media(max-width:600px){
     .nav-links a{
         position: relative;
-        margin-left:60px;
         color:white;
+        margin-left: 10px;
+
     }
 }
 
 @media(max-width:600px){
     .nav-links{
         flex-wrap: wrap;
-        gap: 0px;
         display: grid;
     }
 }
@@ -72,8 +72,9 @@ body{
     .logo{
         position: relative;
         top: 0px;
-        padding: 10px 10px;
-        justify-self: center;
+        width: 15vw;
+        height: 6vh;
+        justify-self: right;
         overflow-wrap: break-word;
     }
 }
