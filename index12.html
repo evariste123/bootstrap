@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍏Tutorials</title>
+    <link rel="stylesheet" href="./index12.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="./index8.html">📚 EduTutorials</a></div>
+            <ul class="nav-links">
+                <li><a href="./index11.html">Courses</a></li>
+                <li><a href="./index9.html">Library</a></li>
+                <li><a href="./index10.html">Partners</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="./index13.html">vacation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1><span>🌐</span>Learning & Lifestyle Tutorials</h1>
+            <p>Master essential skills for studying, traveling, and working globally</p>
+        </div>
+    </section>
+
+   
+    <section id="tutorials" class="tutorials-section">
+        <div class="container">
+            <h2>Select a Tutorial Category</h2>
+            <div class="tutorials-grid">
+                
+                <div class="tutorial-card" onclick="openTutorial('reading')">
+                    <div class="tutorial-header">
+                        <div class="tutorial-icon">📖</div>
+                        <h3>Reading Books & Study Tips</h3>
+                    </div>
+                    <div class="tutorial-content">
+                        <p class="tutorial-description">Learn effective reading techniques and strategies to maximize comprehension and retention while studying books for academic and personal growth.</p>
+                        <button class="tutorial-btn">View Tutorial</button>
+                    </div>
+                </div>
+
+                <div class="tutorial-card" onclick="openTutorial('video')">
+                    <div class="tutorial-header">
+                        <div class="tutorial-icon">🎥</div>
+                        <h3>Video Learning Guide</h3>
+                    </div>
+                    <div class="tutorial-content">
+                        <p class="tutorial-description">Master the art of learning through video content. Discover techniques to take notes, stay focused, and extract maximum value from online video courses.</p>
+                        <button class="tutorial-btn">View Tutorial</button>
+                    </div>
+                </div>
+
+                <div class="tutorial-card" onclick="openTutorial('visa')">
+                    <div class="tutorial-header">
+                        <div class="tutorial-icon">🛂</div>
+                        <h3>How to Get a Visa</h3>
+                    </div>
+                    <div class="tutorial-content">
+                        <p class="tutorial-description">Complete step-by-step guide on obtaining student, tourist, and work visas. Learn about requirements, documentation, and the application process for different countries.</p>
+                        <button class="tutorial-btn">View Tutorial</button>
+                    </div>
+                </div>
+
+                <div class="tutorial-card" onclick="openTutorial('ticket')">
+                    <div class="tutorial-header">
+                        <div class="tutorial-icon">✈️</div>
+                        <h3>Buying Travel Tickets</h3>
+                    </div>
+                    <div class="tutorial-content">
+                        <p class="tutorial-description">Learn how to book flights and travel tickets at the best prices. Discover tips for finding deals, understanding fare classes, and comparing travel options.</p>
+                        <button class="tutorial-btn">View Tutorial</button>
+                    </div>
+                </div>
+
+                <div class="tutorial-card" onclick="openTutorial('delivery')">
+                    <div class="tutorial-header">
+                        <div class="tutorial-icon">🚚</div>
+                        <h3>Delivery & Shipping Services</h3>
+                    </div>
+                    <div class="tutorial-content">
+                        <p class="tutorial-description">Comprehensive guide on using various delivery and shipping services. Learn about tracking, packaging, costs, and how to ship items domestically and internationally.</p>
+                        <button class="tutorial-btn">View Tutorial</button>
+                    </div>
+                </div>
+
+                <div class="tutorial-card" onclick="openTutorial('online')">
+                    <div class="tutorial-header">
+                        <div class="tutorial-icon">💻</div>
+                        <h3>Working Online Guide</h3>
+                    </div>
+                    <div class="tutorial-content">
+                        <p class="tutorial-description">Start your remote work journey. Learn about finding online jobs, freelancing platforms, best practices for remote work, and building a successful online career.</p>
+                        <button class="tutorial-btn">View Tutorial</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  
+    <div id="readingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📖 Reading Books & Study Tips</h2>
+                <button class="close-btn" onclick="closeTutorial('reading')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Effective Reading</div>
+                <p class="section-text">Reading is a fundamental skill that forms the foundation of education and personal growth. Whether you're studying for exams, pursuing knowledge for professional development, or simply enjoying literature, mastering effective reading techniques can significantly enhance your comprehension, retention, and overall learning experience. This comprehensive guide will help you develop strategies to become a more efficient and effective reader.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Key Reading Techniques</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>SQ3R Method:</strong> Survey, Question, Read, Recite, Review. This proven technique helps you approach reading systematically and retain information effectively.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Skimming:</strong> Quickly scan the text to identify main ideas, headings, and key points. Use this before detailed reading to understand the structure.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Scanning:</strong> Search for specific information quickly. Move your eyes rapidly to locate particular words, names, or dates you need.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>Active Reading:</strong> Engage with the text by highlighting, annotating, and questioning. This keeps your mind active and improves retention.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text"><strong>Chunking:</strong> Break the text into smaller, manageable sections. This makes complex material easier to understand and remember.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Preparing for Reading Sessions</div>
+                <p class="section-text">Create an optimal reading environment to maximize comprehension and focus:</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Choose a quiet location</strong> away from distractions like phones, television, or loud environments
+                    </div>
+                    <div class="step-item">
+                        <strong>Ensure proper lighting</strong> to reduce eye strain and maintain alertness
+                    </div>
+                    <div class="step-item">
+                        <strong>Have necessary materials</strong> like highlighters, notebooks, and reference materials nearby
+                    </div>
+                    <div class="step-item">
+                        <strong>Set a time limit</strong> and take breaks every 25-30 minutes to maintain focus
+                    </div>
+                    <div class="step-item">
+                        <strong>Minimize digital distractions</strong> by turning off notifications and closing irrelevant browser tabs
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Effective Note-Taking While Reading</div>
+                <p class="section-text">Taking effective notes helps you engage with the material and creates a valuable reference for future review:</p>
+                <div class="tip-box">
+                    <strong>✓ Use the Cornell Method:</strong> Divide your page into notes section, cues section, and summary. This structured approach makes reviewing and testing yourself easier.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Paraphrase, don't transcribe:</strong> Write key ideas in your own words to enhance understanding and retention rather than copying verbatim from the text.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Avoid over-highlighting:</strong> Highlight only main ideas (about 10% of the text). Over-highlighting reduces effectiveness and wastes time.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Review regularly:</strong> Review your notes within 24 hours and again before exams. Regular review strengthens long-term memory.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Improving Comprehension Speed</div>
+                <p class="section-text">Gradually increase your reading speed while maintaining comprehension through practice and technique:</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Reduce subvocalization:</strong> Avoid reading every word aloud in your head. Train yourself to recognize words visually without saying them.
+                    </div>
+                    <div class="step-item">
+                        <strong>Expand eye span:</strong> Train your eyes to take in more words per fixation by looking at word clusters rather than individual words.
+                    </div>
+                    <div class="step-item">
+                        <strong>Eliminate regression:</strong> Avoid re-reading words you've already covered unless absolutely necessary for comprehension.
+                    </div>
+                    <div class="step-item">
+                        <strong>Practice regularly:</strong> Consistent practice with challenging material helps build reading speed naturally.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Best Books for Different Learning Goals</div>
+                <p class="section-text">Choose books strategically based on your learning objectives. Academic textbooks build foundational knowledge, research papers provide specialized insights, classic literature develops critical thinking, and self-help books offer practical life skills. Combine different types of reading materials for well-rounded learning.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎥 Video Learning Guide</h2>
+                <button class="close-btn" onclick="closeTutorial('video')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Video Learning</div>
+                <p class="section-text">Video learning has become one of the most popular and effective educational methods. Unlike traditional reading, video learning combines visual, audio, and sometimes interactive elements to create a multi-sensory learning experience. This guide will help you maximize your learning from video content and develop strategies to stay engaged and focused throughout video courses and tutorials.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Preparing for Video Learning</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Set up proper environment:</strong> Use a device with good screen quality, clear audio, and stable internet connection. Eliminate background noise and distractions.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Gather materials:</strong> Have notebook, pen, headphones, and relevant reference materials ready before starting.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Plan your schedule:</strong> Watch videos in blocks of 45-60 minutes with 10-15 minute breaks to maintain focus and retention.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>Preview the content:</strong> Check the video length, topics covered, and prerequisites before starting to watch.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Effective Video Note-Taking Strategies</div>
+                <p class="section-text">Taking notes during video content is crucial for retention and understanding. Here are proven strategies:</p>
+                <div class="tip-box">
+                    <strong>✓ Use timestamps:</strong> Note the time when important concepts are discussed. This helps you quickly locate and review key sections later.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Pause and write:</strong> Don't try to write everything. Pause periodically to jot down key points in your own words.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Watch twice if possible:</strong> First watch for overall understanding, then watch again while taking more detailed notes on specific concepts.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Avoid transcribing:</strong> Don't try to write everything the speaker says. Focus on main ideas and important details instead.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Staying Engaged During Videos</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Ask questions:</strong> As you watch, formulate questions about the content. Try to answer them as you continue watching.
+                    </div>
+                    <div class="step-item">
+                        <strong>Predict outcomes:</strong> When concepts are introduced, try to predict how they'll develop or be applied.
+                    </div>
+                    <div class="step-item">
+                        <strong>Connect to previous knowledge:</strong> Relate new information to concepts you already know to deepen understanding.
+                    </div>
+                    <div class="step-item">
+                        <strong>Use playback speed strategically:</strong> Speed up parts you understand well, slow down complex sections, and rewatch crucial concepts.
+                    </div>
+                    <div class="step-item">
+                        <strong>Take breaks strategically:</strong> Use the timer function to pause at natural breaks in the content rather than random times.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Post-Video Learning Activities</div>
+                <p class="section-text">What you do after watching is crucial for long-term retention:</p>
+                <div class="success-box">
+                    <strong>✓ Review notes within 24 hours:</strong> Revisit your notes the day after watching while the content is still fresh in memory.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Create summary notes:</strong> Condense your notes into a one-page summary highlighting the most important points.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Teach someone else:</strong> Explain the concepts to a friend or colleague. Teaching reinforces learning.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Apply the knowledge:</strong> Practice the skills or apply the concepts from the video to real-world situations.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Choosing Quality Video Content</div>
+                <p class="section-text">Not all video content is created equal. Look for courses from reputable platforms like Coursera, Udemy, edX, and YouTube channels with verified credentials. Check reviews, instructor qualifications, and course structure. Ensure content is regularly updated and provides certificates upon completion when needed for your goals.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="visaModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛂 How to Get a Visa</h2>
+                <button class="close-btn" onclick="closeTutorial('visa')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Understanding Visa Types</div>
+                <p class="section-text">A visa is an official permission granted by a country allowing you to enter, stay, and potentially work within that country. Different countries offer various visa types depending on your purpose of travel. Understanding the type you need is the crucial first step in the application process.</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Student Visa:</strong> Required for pursuing education. Typically requires proof of enrollment, financial support, and accommodation arrangements.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Work Visa:</strong> For employment purposes. Requires a job offer from a company in the destination country and proof of qualifications.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Tourist Visa:</strong> For temporary visits and sightseeing. Usually requires proof of funds and return ticket.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>Business Visa:</strong> For business meetings and conferences. Requires invitation letter from the host company.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">General Visa Application Requirements</div>
+                <p class="section-text">While requirements vary by country and visa type, most visa applications require:</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Valid passport:</strong> Must be valid for at least 6 months beyond your intended stay
+                    </div>
+                    <div class="step-item">
+                        <strong>Completed visa application form:</strong> Available from embassy/consulate websites
+                    </div>
+                    <div class="step-item">
+                        <strong>Recent passport-sized photos:</strong> Usually 2-4 color photos meeting specific dimensions
+                    </div>
+                    <div class="step-item">
+                        <strong>Proof of financial means:</strong> Bank statements showing sufficient funds for your stay
+                    </div>
+                    <div class="step-item">
+                        <strong>Travel itinerary:</strong> Details of your planned stay including accommodation and activities
+                    </div>
+                    <div class="step-item">
+                        <strong>Health insurance:</strong> International health coverage for your duration of stay
+                    </div>
+                    <div class="step-item">
+                        <strong>Supporting documents:</strong> Employment letter, admission letter, or invitation letter depending on visa type
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step-by-Step Visa Application Process</div>
+                <div class="tip-box">
+                    <strong>Step 1 - Determine Your Visa Type:</strong> Research the country's visa requirements and identify which type suits your purpose.
+                </div>
+                <div class="tip-box">
+                    <strong>Step 2 - Check Requirements:</strong> Visit the official embassy or consulate website to get a complete list of required documents.
+                </div>
+                <div class="tip-box">
+                    <strong>Step 3 - Gather Documents:</strong> Collect all required documents well in advance (2-3 months before travel).
+                </div>
+                <div class="tip-box">
+                    <strong>Step 4 - Fill Application Form:</strong> Complete the visa application form accurately. Errors can cause delays or rejection.
+                </div>
+                <div class="tip-box">
+                    <strong>Step 5 - Schedule Appointment:</strong> Book an appointment at the embassy/consulate through their online portal.
+                </div>
+                <div class="tip-box">
+                    <strong>Step 6 - Attend Interview:</strong> Be prepared to answer questions about your travel purpose, financial situation, and ties to your home country.
+                </div>
+                <div class="tip-box">
+                    <strong>Step 7 - Pay Fees:</strong> Visa fees vary by country. Payment is usually required at the time of application.
+                </div>
+                <div class="tip-box">
+                    <strong>Step 8 - Wait for Processing:</strong> Processing times vary from 5-30 days depending on the country and type of visa.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Important Tips for Successful Visa Application</div>
+                <div class="success-box">
+                    <strong>✓ Apply early:</strong> Submit your application at least 2-3 months before your intended departure date to account for processing time and potential delays.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Be honest and consistent:</strong> Provide truthful information in your application. Inconsistencies can lead to rejection.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Prepare thoroughly for interview:</strong> Practice explaining your purpose of visit, financial situation, and ties to your home country.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Avoid common mistakes:</strong> Don't submit incomplete applications, use poor quality photos, or leave gaps in your travel history.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Keep copies:</strong> Make copies of all documents submitted and maintain records of application status.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Popular Visa Destinations & Processing Times</div>
+                <p class="section-text">Common study destinations include USA (4-12 weeks), UK (4-8 weeks), Canada (4-8 weeks), Australia (2-4 weeks), and European countries (2-6 weeks). Always check the current processing times as they can vary based on application volume and season.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="ticketModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>✈️ Buying Travel Tickets</h2>
+                <button class="close-btn" onclick="closeTutorial('ticket')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Understanding Flight Ticket Options</div>
+                <p class="section-text">Flight tickets are available in different classes offering varying levels of comfort and amenities. Understanding these options helps you make informed decisions and get the best value for your budget.</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Economy Class:</strong> Most affordable option. Includes basic amenities, standard seat size, and carry-on plus checked baggage.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Premium Economy:</strong> Enhanced economy with extra legroom, better meals, and improved entertainment. 20-30% more expensive than economy.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Business Class:</strong> Lie-flat seats, premium meals, dedicated check-in, and increased baggage allowance. Suitable for long-haul flights.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>First Class:</strong> Highest luxury level with exclusive amenities, fine dining, and personal attention. Often 3-5 times the price of economy.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Finding the Best Ticket Prices</div>
+                <p class="section-text">Booking strategies can save you significant money on airfare:</p>
+                <div class="tip-box">
+                    <strong>✓ Book in advance:</strong> Generally, booking 6-8 weeks before your flight gets better prices. Avoid booking last-minute when fares are highest.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Be flexible with dates:</strong> Mid-week flights (Tuesday-Thursday) are often cheaper than weekend flights. Flying on off-peak times also costs less.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Use flight comparison tools:</strong> Websites like Skyscanner, Google Flights, Kayak, and Expedia allow you to compare prices across multiple airlines and booking platforms.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Set price alerts:</strong> Most booking sites offer alerts for your desired routes, notifying you when prices drop.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Clear browser cookies:</strong> Some airlines track your searches and increase prices for repeat visitors. Use private browsing or clear cookies before searching again.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step-by-Step Flight Booking Process</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Visit a reliable booking website or compare prices across multiple platforms</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Enter your departure city, destination, dates, and number of passengers</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Choose between round-trip, one-way, or multi-city options based on your travel plans</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text">Review available flights, comparing price, duration, and number of stops</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text">Select your preferred flights and review seat selections, baggage, and insurance options</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">6</span>
+                        <span class="step-text">Enter passenger information and contact details accurately</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">7</span>
+                        <span class="step-text">Choose payment method and complete the transaction securely</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">8</span>
+                        <span class="step-text">Receive and save your confirmation email with booking reference and e-ticket</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Things to Consider When Buying Tickets</div>
+                <div class="success-box">
+                    <strong>✓ Check baggage allowance:</strong> Different airlines and fare types include different baggage limits. Verify what's included to avoid extra fees.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Review cancellation policy:</strong> Understand refund and change policies before booking, especially for non-refundable fares.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Consider travel insurance:</strong> Optional insurance can protect your booking in case of cancellations due to emergencies.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Beware of hidden fees:</strong> Watch for seat selection fees, baggage fees, and resort fees that aren't included in the base price.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Book directly when possible:</strong> While booking sites are convenient, airlines sometimes offer better prices and customer service when booking directly.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Budget Airlines vs Full-Service Carriers</div>
+                <p class="section-text">Budget airlines offer cheaper fares but charge for extras like baggage, seat selection, and meals. Full-service carriers charge more but include these amenities. Calculate total costs including all add-ons before deciding. Budget airlines work best for short trips with minimal baggage.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="deliveryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🚚 Delivery & Shipping Services</h2>
+                <button class="close-btn" onclick="closeTutorial('delivery')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Understanding Delivery Services</div>
+                <p class="section-text">Delivery and shipping services are essential for e-commerce and long-distance commerce. Whether you're receiving packages or sending items, understanding different shipping options helps you choose the most cost-effective and reliable option for your needs.</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Standard Delivery:</strong> Most economical option. Takes 5-10 business days. Suitable for non-urgent items.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Express Delivery:</strong> Faster option, 2-3 business days. Costs more but ideal for time-sensitive items.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Overnight/Next-Day Delivery:</strong> Premium option for urgent items. Costs significantly more.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>International Shipping:</strong> For cross-border deliveries. Requires customs documentation and takes longer.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Major Courier & Shipping Companies</div>
+                <p class="section-text">Major providers include DHL, FedEx, UPS, and local postal services. Each offers different service levels and coverage areas. Research rates and reviews for your specific shipping needs. Some e-commerce platforms have partnerships offering discounted shipping rates.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">How to Send a Package</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Prepare your package by wrapping items securely with appropriate cushioning material</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Measure and weigh your package to determine shipping costs and category</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Clearly write or print the recipient's address on the package</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text">Choose a shipping service and delivery speed based on your budget and timeline</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text">Purchase postage or shipping label from the carrier</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">6</span>
+                        <span class="step-text">Attach the label securely to the package</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">7</span>
+                        <span class="step-text">Drop off at a post office, carrier office, or arrange pickup from your address</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">8</span>
+                        <span class="step-text">Keep your tracking number and receipt for reference and insurance purposes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Tracking Your Shipment</div>
+                <p class="section-text">Most carriers provide tracking numbers allowing you to monitor your shipment in real-time. Enter your tracking number on the carrier's website to see current location and estimated delivery date. Many services offer SMS or email notifications at each step of the journey.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Packaging Best Practices</div>
+                <div class="success-box">
+                    <strong>✓ Use appropriate box size:</strong> The box should be large enough to allow cushioning material on all sides, but not excessively large.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Cushion fragile items:</strong> Use bubble wrap, foam peanuts, or crumpled paper for protection. Fill empty spaces completely.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Label properly:</strong> Use clear, large labels. Write "FRAGILE" or "THIS SIDE UP" if applicable.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Avoid prohibited items:</strong> Don't ship liquids, batteries, flammables, or weapons without proper documentation and special handling.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Secure the box:</strong> Use proper tape (not staples) to seal all seams securely.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Cost Optimization Tips</div>
+                <div class="tip-box">
+                    <strong>✓ Compare carriers:</strong> Different carriers offer different rates. Compare prices before choosing one.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Use regional services:</strong> For local deliveries, local couriers often cost less than international carriers.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Consolidate shipments:</strong> Shipping multiple items together costs less than separate shipments.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Look for discounts:</strong> Many carriers offer discounts for frequent shippers or bulk shipping.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="onlineModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💻 Working Online Guide</h2>
+                <button class="close-btn" onclick="closeTutorial('online')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Online Work</div>
+                <p class="section-text">Online work offers flexibility, freedom, and opportunities to earn from anywhere in the world. Whether you're looking for full-time employment, part-time income, or freelancing, the digital economy provides numerous possibilities. This guide will help you navigate the world of online work and build a successful career.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Types of Online Work</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Freelancing:</strong> Work on a project basis for multiple clients. Common fields include writing, design, programming, and consulting.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Remote Employment:</strong> Full-time or part-time jobs with companies. Work from home with regular salary and benefits.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Content Creation:</strong> Blogging, YouTube, podcasting, or social media. Earn through ads, sponsorships, and monetization.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>Online Teaching/Tutoring:</strong> Teach languages, academic subjects, or skills. Offer lessons through platforms or your own channel.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text"><strong>E-commerce:</strong> Sell products online through your own store or marketplaces like Amazon, Etsy, or eBay.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">6</span>
+                        <span class="step-text"><strong>Virtual Assistance:</strong> Provide administrative support to businesses remotely. Handle emails, scheduling, and customer service.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Popular Freelancing Platforms</div>
+                <p class="section-text">Major platforms include Upwork, Fiverr, Freelancer, PeoplePerHour, and Toptal. Each has different specialties, commission rates, and client bases. Upwork and Freelancer are best for beginners, while Toptal focuses on high-skilled professionals. Fiverr works well for service-based gigs. Create profiles on multiple platforms to maximize opportunities.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Setting Up Your Online Work Profile</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Create professional email address for business communications</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Build a portfolio or personal website showcasing your best work and skills</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Upload a professional photo to all your profiles</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text">Write a compelling bio highlighting your experience, skills, and unique value proposition</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text">List your services, rates, and turnaround times clearly</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">6</span>
+                        <span class="step-text">Get initial testimonials or certifications to build credibility</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Finding Your First Online Work</div>
+                <div class="tip-box">
+                    <strong>✓ Start with small projects:</strong> Building reviews and ratings is crucial. Accept smaller projects initially to establish credibility.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Apply strategically:</strong> Tailor your applications to match job requirements. Generic applications rarely succeed.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Bid competitively but fairly:</strong> Research market rates for your skills. Underpricing hurts your credibility; overpricing loses clients.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Build relationships:</strong> Provide excellent work to build long-term client relationships, which lead to recurring income.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Network actively:</strong> Join online communities, forums, and social media groups in your field to find opportunities and learn.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Remote Work Best Practices</div>
+                <div class="success-box">
+                    <strong>✓ Create a dedicated workspace:</strong> Set up a quiet, organized area for work to maintain productivity and professionalism.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Establish routine:</strong> Work during set hours to maintain work-life balance and keep yourself accountable.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Use project management tools:</strong> Tools like Trello, Asana, or Monday.com help organize tasks and meet deadlines.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Communicate clearly:</strong> Keep clients updated on progress, ask clarifying questions, and respond promptly to messages.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Meet deadlines consistently:</strong> Reliability is crucial in online work. Late deliveries damage reputation.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Setting Appropriate Rates</div>
+                <p class="section-text">Research industry standards for your field and experience level. Consider your expertise, market demand, and cost of living. Start competitively but increase rates as you gain experience and positive reviews. Offer package deals and retainer options for regular clients. Clearly communicate what's included in your rates.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Building Long-Term Online Success</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Specialize in a niche:</strong> Deep expertise in a specific area makes you more valuable and allows premium pricing.
+                    </div>
+                    <div class="step-item">
+                        <strong>Continuously upgrade skills:</strong> Take courses and certifications to stay relevant and competitive in your field.
+                    </div>
+                    <div class="step-item">
+                        <strong>Request testimonials:</strong> Ask satisfied clients for detailed reviews highlighting your strengths and professionalism.
+                    </div>
+                    <div class="step-item">
+                        <strong>Maintain work-life balance:</strong> Set boundaries to prevent burnout. Work shouldn't consume your entire life.
+                    </div>
+                    <div class="step-item">
+                        <strong>Keep financial records:</strong> Track income and expenses carefully for tax purposes and business planning.
+                    </div>
+                    <div class="step-item">
+                        <strong>Build passive income streams:</strong> Create products, courses, or templates that generate income without constant work.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Common Mistakes to Avoid</div>
+                <div class="warning-box">
+                    <strong>⚠ Working without contracts:</strong> Always have written agreements specifying scope, timeline, and payment terms.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Accepting every project:</strong> Don't take work outside your expertise or for clients who seem problematic.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Ignoring taxes:</strong> Keep proper records and set aside money for taxes. Consult an accountant about your obligations.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Spending excessive money on tools:</strong> Start with free or affordable tools. Upgrade as your business grows.
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About EduHub</h4>
+                <p>Providing quality education and comprehensive guides for lifelong learning and professional development worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="./index11.html">Courses</a>
+                <a href="./index9.html">Books Library</a>
+                <a href="./index10.html">Partner With Us</a>
+                <a href="#tutorials">Tutorials</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@eduhub.com</p>
+                <p>Phone: +250 785786547</p>
+                <p>Address: 123 Education St, Learning City, LC 12345</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://www.youtube.com/@evaristebapfekurera5995">you tube</a>
+                <a href="https://www.facebook.com/evariste.arrogent.ever">Facebook</a>
+                <a href="https://x.com/EBapfekure3">Twitter</a>
+                <a href="https://www.linkedin.com/in/evariste-bapfekurera-a3700b2b0/">LinkedIn</a>
+                <a href="https://www.instagram.com/evariste_truly_ever/">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./index12.js"></script>
+</body>
+</html>

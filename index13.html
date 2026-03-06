@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍏Vacation-EduHub</title>
+    <link rel="stylesheet" href="./index13.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌴 Vacation Planner</div>
+            <ul class="nav-links">
+                <li><a href="./index11.html">Courses</a></li>
+                <li><a href="./index9.html">Library</a></li>
+                <li><a href="./index10.html">Partners</a></li>
+                <li><a href="#vacation">Vacation Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Plan Your Perfect Vacation</h1>
+            <p>Complete guide to planning, budgeting, and enjoying your dream vacation</p>
+        </div>
+    </section>
+
+    <section id="vacation" class="vacation-section">
+        <div class="container">
+            <h2>Vacation Planning Categories</h2>
+            <div class="vacation-grid">
+                
+                <div class="vacation-card" onclick="openVacation('planning')">
+                    <div class="vacation-header">
+                        <div class="vacation-icon">📋</div>
+                        <h3>Vacation Planning</h3>
+                    </div>
+                    <div class="vacation-content">
+                        <p class="vacation-description">Learn the essential steps to plan your vacation from start to finish. Discover how to choose destinations, set dates, and organize every detail of your trip.</p>
+                        <button class="vacation-btn">View Guide</button>
+                    </div>
+                </div>
+
+                <div class="vacation-card" onclick="openVacation('budget')">
+                    <div class="vacation-header">
+                        <div class="vacation-icon">💰</div>
+                        <h3>Budget Planning</h3>
+                    </div>
+                    <div class="vacation-content">
+                        <p class="vacation-description">Master vacation budgeting. Learn how to estimate costs, save money, track expenses, and get the best value for your vacation investment.</p>
+                        <button class="vacation-btn">View Guide</button>
+                    </div>
+                </div>
+
+                <div class="vacation-card" onclick="openVacation('packing')">
+                    <div class="vacation-header">
+                        <div class="vacation-icon">🧳</div>
+                        <h3>Smart Packing</h3>
+                    </div>
+                    <div class="vacation-content">
+                        <p class="vacation-description">Pack like a pro! Learn essential packing tips, what to bring, how to organize luggage, and travel smart with minimal baggage.</p>
+                        <button class="vacation-btn">View Guide</button>
+                    </div>
+                </div>
+
+                <div class="vacation-card" onclick="openVacation('activities')">
+                    <div class="vacation-header">
+                        <div class="vacation-icon">🎯</div>
+                        <h3>Activities & Attractions</h3>
+                    </div>
+                    <div class="vacation-content">
+                        <p class="vacation-description">Discover and plan exciting activities. Learn how to find attractions, book tours, manage itineraries, and make the most of your vacation time.</p>
+                        <button class="vacation-btn">View Guide</button>
+                    </div>
+                </div>
+
+                <div class="vacation-card" onclick="openVacation('accommodation')">
+                    <div class="vacation-header">
+                        <div class="vacation-icon">🏨</div>
+                        <h3>Accommodation Guide</h3>
+                    </div>
+                    <div class="vacation-content">
+                        <p class="vacation-description">Choose the right accommodation. Compare hotels, hostels, Airbnb, resorts, and other options. Find deals and ensure comfortable stays.</p>
+                        <button class="vacation-btn">View Guide</button>
+                    </div>
+                </div>
+
+                <div class="vacation-card" onclick="openVacation('safety')">
+                    <div class="vacation-header">
+                        <div class="vacation-icon">🛡️</div>
+                        <h3>Travel Safety</h3>
+                    </div>
+                    <div class="vacation-content">
+                        <p class="vacation-description">Travel safely and confidently. Learn security measures, health precautions, travel insurance, and how to stay safe during your vacation.</p>
+                        <button class="vacation-btn">View Guide</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div id="planningModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📋 Complete Vacation Planning Guide</h2>
+                <button class="close-btn" onclick="closeVacation('planning')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Vacation Planning</div>
+                <p class="section-text">Proper vacation planning is essential to ensure a stress-free, enjoyable experience. Whether you're planning a weekend getaway or a two-week international adventure, following a systematic approach helps you make the most of your time and budget. This comprehensive guide covers all aspects of vacation planning from choosing your destination to returning home.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step 1: Choose Your Destination</div>
+                <p class="section-text">The first step in planning your vacation is selecting where you want to go. Consider these factors:</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Climate and weather:</strong> Research the weather during your planned travel dates. Avoid monsoon seasons, extreme heat, or heavy snowfall unless intentional.
+                    </div>
+                    <div class="step-item">
+                        <strong>Your interests:</strong> Choose destinations that match your interests - beaches for relaxation, mountains for hiking, cities for culture, or countryside for nature.
+                    </div>
+                    <div class="step-item">
+                        <strong>Travel difficulty:</strong> Consider how easy it is to travel to the destination. Direct flights are more convenient than multiple connections.
+                    </div>
+                    <div class="step-item">
+                        <strong>Language and culture:</strong> Research the local language and customs. Some travelers prefer destinations where English is widely spoken.
+                    </div>
+                    <div class="step-item">
+                        <strong>Visa requirements:</strong> Check if you need a visa and how long the application takes.
+                    </div>
+                    <div class="step-item">
+                        <strong>Local attractions:</strong> Research what there is to do. Ensure the destination offers activities you'll enjoy.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step 2: Set Your Travel Dates</div>
+                <p class="section-text">Once you've chosen a destination, decide when to travel. Consider:</p>
+                <div class="tip-box">
+                    <strong>✓ Peak vs. off-season:</strong> Peak season means more tourists, higher prices, but better weather. Off-season offers lower prices and fewer crowds but may have weather issues.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Length of trip:</strong> Decide between a weekend getaway (2-3 days), short vacation (5-7 days), or extended trip (2+ weeks).
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Flexibility:</strong> If possible, be flexible with dates. Traveling on Tuesday-Thursday is cheaper than weekends.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Festival seasons:</strong> Some destinations have unique festivals. Plan around them if you want to experience local culture.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step 3: Create a Preliminary Budget</div>
+                <p class="section-text">Estimate your vacation costs early to ensure it's feasible:</p>
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Expense Category</th>
+                            <th>Estimated Cost</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Flights/Transportation</td>
+                            <td>$200-$1000+</td>
+                            <td>Varies by destination and distance</td>
+                        </tr>
+                        <tr>
+                            <td>Accommodation</td>
+                            <td>$50-$300/night</td>
+                            <td>Depends on type and location</td>
+                        </tr>
+                        <tr>
+                            <td>Food & Dining</td>
+                            <td>$30-$100/day</td>
+                            <td>Mix of eating in and dining out</td>
+                        </tr>
+                        <tr>
+                            <td>Activities & Tours</td>
+                            <td>$20-$150/day</td>
+                            <td>Optional activities and attractions</td>
+                        </tr>
+                        <tr>
+                            <td>Insurance</td>
+                            <td>$20-$200</td>
+                            <td>Travel and health insurance</td>
+                        </tr>
+                        <tr>
+                            <td>Miscellaneous</td>
+                            <td>$50-$200</td>
+                            <td>Tips, souvenirs, emergencies</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step 4: Book Accommodations Early</div>
+                <p class="section-text">Book accommodations 2-3 months in advance to get better rates and more options:</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Search on booking platforms like Booking.com, Expedia, Airbnb, or Hotels.com</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Compare prices, location, and guest reviews</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Check cancellation policies and what's included</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text">Book with a credit card and save confirmation email</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step 5: Plan Transportation</div>
+                <p class="section-text">Arrange flights, trains, car rentals, or other transportation needed for your vacation.</p>
+                <div class="success-box">
+                    <strong>✓ Flights:</strong> Book 6-8 weeks in advance for better prices. Compare airlines and include baggage costs in your calculation.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Local transport:</strong> Research public transportation, rental cars, or ride-sharing options at your destination.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Airport transfers:</strong> Pre-arrange airport pickup or plan your route from airport to accommodation.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step 6: Create a Rough Itinerary</div>
+                <p class="section-text">Plan your daily activities and attractions, but leave room for spontaneity:</p>
+                <div class="tip-box">
+                    <strong>✓ Day-by-day planning:</strong> Outline what you'll do each day, including meals, attractions, and free time.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Flexibility:</strong> Don't over-schedule. Leave 20-30% of your time unplanned for discoveries and relaxation.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Local recommendations:</strong> Research local restaurants, hidden gems, and must-see attractions before arrival.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Opening hours:</strong> Check museum hours, restaurant closures, and attraction schedules beforehand.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step 7: Handle Documentation</div>
+                <div class="warning-box">
+                    <strong>⚠ Passport:</strong> Ensure your passport is valid for at least 6 months beyond your travel dates.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Visas:</strong> Apply for required visas well in advance (2-3 months).
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Travel insurance:</strong> Purchase comprehensive travel insurance covering cancellations, medical issues, and emergencies.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Copies of documents:</strong> Make copies of your passport, insurance, and important documents. Store digital copies in cloud storage.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Step 8: Final Preparations (1-2 weeks before)</div>
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1">
+                        <label for="check1">Confirm flight, hotel, and activity bookings</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2">
+                        <label for="check2">Notify your bank of travel dates to prevent card blocks</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3">
+                        <label for="check3">Download offline maps of your destination</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check4">
+                        <label for="check4">Check weather forecast and pack accordingly</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check5">
+                        <label for="check5">Arrange pet care or home sitting if needed</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check6">
+                        <label for="check6">Stop mail delivery or ask a friend to check mail</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check7">
+                        <label for="check7">Set out of office email if traveling for work</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="budgetModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💰 Vacation Budget Planning Guide</h2>
+                <button class="close-btn" onclick="closeVacation('budget')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Vacation Budgeting</div>
+                <p class="section-text">Effective budgeting ensures your vacation is financially stress-free. A well-planned budget allows you to enjoy your trip without worrying about money and helps you save money for future vacations. This guide will help you estimate costs, find deals, and manage vacation finances wisely.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Calculate Your Total Vacation Budget</div>
+                <p class="section-text">Your total vacation cost includes several categories:</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Flights/Transportation to destination:</strong> $200-$1500+ depending on distance and class
+                    </div>
+                    <div class="step-item">
+                        <strong>Accommodation:</strong> $50-$300+ per night depending on type and location
+                    </div>
+                    <div class="step-item">
+                        <strong>Food and beverages:</strong> $30-$100+ per day for eating
+                    </div>
+                    <div class="step-item">
+                        <strong>Activities and attractions:</strong> $20-$150+ per day for tours and attractions
+                    </div>
+                    <div class="step-item">
+                        <strong>Travel insurance:</strong> $20-$300 for comprehensive coverage
+                    </div>
+                    <div class="step-item">
+                        <strong>Transportation at destination:</strong> $10-$50+ per day for taxis, public transport, car rental
+                    </div>
+                    <div class="step-item">
+                        <strong>Miscellaneous:</strong> $50-$200+ for tips, souvenirs, emergency expenses
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Finding Budget-Friendly Deals</div>
+                <div class="tip-box">
+                    <strong>✓ Travel during off-season:</strong> Prices drop significantly during shoulder and off-seasons. Research when your destination is cheapest.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Use flight comparison tools:</strong> Compare airlines on Google Flights, Skyscanner, and Kayak. Set price alerts.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Book accommodation bundles:</strong> Many booking sites offer flight + hotel packages at discounted rates.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Free attractions:</strong> Many cities offer free museums, parks, and walking tours. Research these beforehand.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Eat like locals:</strong> Street food and local restaurants are cheaper and more authentic than tourist areas.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Public transportation:</strong> Use public transport instead of taxis. Buy multi-day passes for savings.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Saving Strategies for Vacation</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Start early:</strong> Begin saving 3-6 months before your vacation to spread costs over time.
+                    </div>
+                    <div class="step-item">
+                        <strong>Set a specific goal:</strong> Determine exactly how much you need and track progress toward that goal.
+                    </div>
+                    <div class="step-item">
+                        <strong>Automate savings:</strong> Set up automatic transfers to a vacation fund on payday.
+                    </div>
+                    <div class="step-item">
+                        <strong>Cut unnecessary expenses:</strong> Reduce dining out, subscriptions, or shopping before vacation to save money.
+                    </div>
+                    <div class="step-item">
+                        <strong>Use rewards programs:</strong> Collect airline miles, hotel points, and credit card rewards to offset costs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Daily Budget Examples</div>
+                <div class="destination-grid">
+                    <div class="destination-item">
+                        <h4>Budget Destination (Southeast Asia)</h4>
+                        <p><strong>Daily budget: $40-60</strong></p>
+                        <p>Accommodation: $15-20, Food: $10-15, Activities: $10-15, Transport: $5</p>
+                    </div>
+                    <div class="destination-item">
+                        <h4>Mid-Range Destination (Europe)</h4>
+                        <p><strong>Daily budget: $80-120</strong></p>
+                        <p>Accommodation: $40-50, Food: $20-30, Activities: $15-25, Transport: $10</p>
+                    </div>
+                    <div class="destination-item">
+                        <h4>Luxury Destination (North America)</h4>
+                        <p><strong>Daily budget: $150-250</strong></p>
+                        <p>Accommodation: $80-120, Food: $40-60, Activities: $20-40, Transport: $15-20</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Money Management During Vacation</div>
+                <div class="success-box">
+                    <strong>✓ Carry multiple payment methods:</strong> Use credit cards, debit cards, and cash as backup.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Notify your bank:</strong> Tell your bank about travel dates to prevent fraud blocks.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Use ATMs wisely:</strong> Withdraw larger amounts less frequently to minimize ATM fees.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Track expenses:</strong> Keep receipts and track spending to stay within budget.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Avoid currency exchange at airports:</strong> Rates are poor. Exchange money at banks or ATMs.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Travel Insurance Costs</div>
+                <p class="section-text">Travel insurance protects you from unexpected costs. Basic coverage costs $20-50, while comprehensive plans cost $100-300. Compare providers like World Nomads, IMG Global, or your credit card insurance. Ensure coverage includes trip cancellation, medical emergencies, and evacuation.</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="packingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🧳 Smart Packing Guide</h2>
+                <button class="close-btn" onclick="closeVacation('packing')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Smart Packing</div>
+                <p class="section-text">Packing efficiently saves luggage fees, makes travel easier, and reduces stress. Smart packing means bringing only essentials while maximizing space and keeping items organized. Whether you're traveling for a weekend or a month, these strategies help you pack like a pro.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Packing Essentials Checklist</div>
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack1">
+                        <label for="pack1">Passport and travel documents</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack2">
+                        <label for="pack2">Travel insurance documents</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack3">
+                        <label for="pack3">Credit/debit cards and cash</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack4">
+                        <label for="pack4">Phone charger and power bank</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack5">
+                        <label for="pack5">Medications and first aid kit</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack6">
+                        <label for="pack6">Toiletries and personal care items</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack7">
+                        <label for="pack7">Undergarments and socks</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack8">
+                        <label for="pack8">Weather-appropriate clothing</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack9">
+                        <label for="pack9">Comfortable walking shoes</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="pack10">
+                        <label for="pack10">Jacket or sweater</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Packing Strategies</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Roll, don't fold:</strong> Rolling clothes takes less space and prevents wrinkles. This is especially useful for jeans and shirts.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Use packing cubes:</strong> Organize clothes by type in packing cubes. This saves space and makes finding items easier.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Wear bulky items:</strong> Wear your heaviest shoes and jacket on the plane to save luggage space.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>Choose versatile clothing:</strong> Pack clothes that mix and match. Stick to a color scheme so everything coordinates.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text"><strong>Use every space:</strong> Stuff socks inside shoes, store small items in shoes, and use compression bags.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">What to Leave Behind</div>
+                <div class="warning-box">
+                    <strong>⚠ Unnecessary electronics:</strong> Leave behind tablets or extra devices you won't use regularly.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Full-size toiletries:</strong> Buy small sizes or use travel containers. Many hotels provide toiletries anyway.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Too many shoes:</strong> Pack only 3 pairs maximum - comfortable walking shoes, casual shoes, and dress shoes.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Books and heavy items:</strong> Use e-readers instead of physical books. Borrow books at your destination.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Excessive clothing:</strong> You can rewear items or do laundry. Pack less than you think you need.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Luggage Tips</div>
+                <div class="tip-box">
+                    <strong>✓ Use carry-on only:</strong> If traveling 5 days or less, try packing everything in a carry-on to avoid checked baggage fees.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Choose lightweight luggage:</strong> Your luggage weight counts toward weight limits. Select lightweight luggage to maximize packing capacity.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Label your luggage:</strong> Use luggage tags and bright colors to identify your luggage easily.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Keep valuables accessible:</strong> Keep jewelry, electronics, and important documents in your carry-on, never in checked luggage.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Climate-Specific Packing</div>
+                <div class="destination-grid">
+                    <div class="destination-item">
+                        <h4>Hot/Tropical Climate</h4>
+                        <p>Light, breathable clothing, sunscreen, hat, sunglasses, sandals, lightweight jacket for air-conditioning</p>
+                    </div>
+                    <div class="destination-item">
+                        <h4>Cold Climate</h4>
+                        <p>Warm coat, thermal underwear, sweaters, warm socks, gloves, hat, scarf, waterproof boots</p>
+                    </div>
+                    <div class="destination-item">
+                        <h4>Mixed Climate</h4>
+                        <p>Layering pieces, light and warm options, waterproof jacket, comfortable shoes for all weather</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <
+    <div id="activitiesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎯 Activities & Attractions Guide</h2>
+                <button class="close-btn" onclick="closeVacation('activities')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Vacation Activities</div>
+                <p class="section-text">Planning activities ahead ensures you make the most of your vacation time. Whether you prefer adventure, culture, relaxation, or food experiences, proper planning helps you discover hidden gems, book popular attractions in advance, and create memorable experiences.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Types of Vacation Activities</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Cultural attractions:</strong> Museums, historical sites, temples, and local markets that teach you about local culture and history.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Adventure activities:</strong> Hiking, rock climbing, zip-lining, water sports, and other adrenaline-pumping experiences.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Relaxation:</strong> Beach days, spa treatments, wellness retreats, and leisurely activities.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>Food tours:</strong> Local cuisine classes, food markets, cooking experiences, and restaurant dining.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text"><strong>Wildlife experiences:</strong> Safari tours, animal sanctuaries, bird watching, and nature reserves.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">6</span>
+                        <span class="step-text"><strong>Group tours:</strong> Guided city tours, day trips, multi-day excursions with other travelers.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Finding Activities & Booking</div>
+                <div class="tip-box">
+                    <strong>✓ Use activity booking platforms:</strong> Websites like GetYourGuide, Viator, and Klook offer thousands of activities with reviews.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Check destination tourism websites:</strong> Official tourism sites list attractions with hours, prices, and visitor information.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Read travel blogs and guides:</strong> Blogs and travel guides provide recommendations and insider tips for activities.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Ask locals and hotel staff:</strong> Hotel concierge and locals often know the best activities and hidden gems.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Book popular attractions in advance:</strong> Famous sites like Machu Picchu, museums, and shows often require pre-booking.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Creating Your Itinerary</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text">List all attractions you want to visit and activities you want to do</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Group activities by location to minimize travel time</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Check opening hours and book required tickets in advance</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text">Schedule activities realistically - don't try to see everything</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text">Leave flexibility for spontaneous discoveries and rest days</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">6</span>
+                        <span class="step-text">Balance activities with relaxation time</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Budget for Activities</div>
+                <div class="success-box">
+                    <strong>✓ Free attractions:</strong> Many cities offer free walking tours, public beaches, parks, and sometimes free museum hours.
+                </div>
+                <div class="success-box">
+                    <strong>✓ City passes:</strong> Many cities offer multi-day passes including museum and attraction entry. Calculate if you'll use them.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Group discounts:</strong> Look for discounts on attractions if visiting with groups or booking multiple activities together.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Off-peak hours:</strong> Visit attractions at non-peak hours to avoid crowds and sometimes receive discounts.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Activity Safety</div>
+                <div class="warning-box">
+                    <strong>⚠ Check operator credentials:</strong> Ensure tour operators are licensed and have good safety records.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Read reviews carefully:</strong> Check multiple sources including Google, TripAdvisor, and travel forums.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Ask about safety measures:</strong> For adventure activities, inquire about safety equipment and guides.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Follow guide instructions:</strong> During activities, always follow guide instructions and don't take unnecessary risks.
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div id="accommodationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🏨 Accommodation Guide</h2>
+                <button class="close-btn" onclick="closeVacation('accommodation')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Vacation Accommodation</div>
+                <p class="section-text">Choosing the right accommodation is crucial for a comfortable vacation. Whether you prefer luxury hotels, budget hostels, or home-sharing platforms, understanding your options helps you find the best place that matches your budget, location preferences, and travel style.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Types of Accommodation</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Hotels:</strong> Traditional hotels offer consistent service, daily housekeeping, and front desk support. Prices vary from budget ($30-50) to luxury ($200+).</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Hostels:</strong> Budget-friendly with shared dorms or private rooms. Great for budget travelers and solo travelers. ($10-40 per night).</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Airbnb/Home-sharing:</strong> Rent apartments or houses. Often cheaper for longer stays and offers local experiences. ($30-150+ per night).</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>Resorts:</strong> All-inclusive vacation packages with meals and activities included. Premium pricing ($150-500+).</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text"><strong>Vacation rentals:</strong> Fully equipped apartments with kitchens. Good for families or groups. ($40-200+ per night).</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">6</span>
+                        <span class="step-text"><strong>Bed & breakfasts:</strong> Small guesthouses with personalized service and local touch. ($50-150 per night).</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Choosing the Right Accommodation</div>
+                <div class="tip-box">
+                    <strong>✓ Consider location:</strong> Stay near main attractions, public transport, or in safe neighborhoods. Close proximity reduces travel time.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Check reviews thoroughly:</strong> Read recent reviews on multiple platforms. Look for patterns in positive and negative feedback.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Verify amenities:</strong> Confirm Wi-Fi, AC, heating, kitchen access, and other important amenities are available.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Understand cancellation policy:</strong> Flexible cancellation policies give you options if plans change.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Check photos carefully:</strong> Compare photos with reviews. Ask for clarification if anything looks unclear.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Finding the Best Accommodation Deals</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Book early:</strong> Prices are generally lower when booking 6-8 weeks in advance.
+                    </div>
+                    <div class="step-item">
+                        <strong>Use price comparison tools:</strong> Check booking platforms like Booking.com, Expedia, Hotels.com, and Kayak to compare prices.
+                    </div>
+                    <div class="step-item">
+                        <strong>Travel during off-season:</strong> Accommodation costs drop significantly during shoulder and off-seasons.
+                    </div>
+                    <div class="step-item">
+                        <strong>Stay longer:</strong> Weekly or monthly discounts are common. Staying 5+ days often provides better rates.
+                    </div>
+                    <div class="step-item">
+                        <strong>Use loyalty programs:</strong> Sign up for hotel loyalty programs to earn points and get discounts.
+                    </div>
+                    <div class="step-item">
+                        <strong>Bundle deals:</strong> Booking flight + hotel together often saves money.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">What to Check Upon Arrival</div>
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="acc1">
+                        <label for="acc1">Verify room matches the photos and booking description</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="acc2">
+                        <label for="acc2">Test all amenities - AC, heating, Wi-Fi, shower pressure</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="acc3">
+                        <label for="acc3">Locate exits and emergency procedures</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="acc4">
+                        <label for="acc4">Get Wi-Fi password and contact information</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="acc5">
+                        <label for="acc5">Report any damage or issues immediately</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="acc6">
+                        <label for="acc6">Lock valuable items in safe if available</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Accommodation for Different Travel Styles</div>
+                <div class="destination-grid">
+                    <div class="destination-item">
+                        <h4>Solo Travelers</h4>
+                        <p>Consider hostels for social atmosphere, or budget hotels for privacy. Location near public transport is important.</p>
+                    </div>
+                    <div class="destination-item">
+                        <h4>Couples/Families</h4>
+                        <p>Vacation rentals with kitchens and space. Hotels with family suites. Airbnb for local living experience.</p>
+                    </div>
+                    <div class="destination-item">
+                        <h4>Group Travel</h4>
+                        <p>Villas or large apartments split costs. Group hotel bookings for discounts. Houses with multiple rooms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div id="safetyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛡️ Travel Safety Guide</h2>
+                <button class="close-btn" onclick="closeVacation('safety')">&times;</button>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Introduction to Travel Safety</div>
+                <p class="section-text">Traveling safely allows you to fully enjoy your vacation without worry. This comprehensive guide covers physical safety, health precautions, financial security, and emergency preparedness to help you travel confidently around the world.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Personal Safety Tips</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="step-text"><strong>Be aware of surroundings:</strong> Stay alert, especially in crowded areas. Avoid displaying expensive items or large amounts of cash.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="step-text"><strong>Avoid traveling alone at night:</strong> Use official taxis, ride-sharing apps, or travel with groups after dark.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="step-text"><strong>Keep copies of documents:</strong> Store copies of passport, visa, travel insurance, and credit cards separately from originals.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <span class="step-text"><strong>Use hotel safe:</strong> Store valuables in hotel safe, not your room. Keep important documents on you.</span>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <span class="step-text"><strong>Register with your embassy:</strong> Register with your country's embassy if traveling to high-risk areas.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Health & Medical Safety</div>
+                <div class="tip-box">
+                    <strong>✓ Get vaccinations:</strong> Check CDC or WHO websites for recommended vaccinations for your destination.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Get travel insurance:</strong> Comprehensive insurance covers medical emergencies, evacuations, and trip cancellations.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Pack medications:</strong> Bring prescription medications in original containers with doctor's letter if needed.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Know healthcare options:</strong> Research hospitals and clinics at your destination.
+                </div>
+                <div class="tip-box">
+                    <strong>✓ Be careful with food and water:</strong> Drink bottled water, avoid ice, peel fruits, and eat cooked food.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Financial Safety</div>
+                <div class="success-box">
+                    <strong>✓ Notify your bank:</strong> Tell your bank about travel dates to prevent fraud holds on your cards.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Use ATMs wisely:</strong> Use ATMs in banks or well-lit areas. Withdraw during daylight in safe locations.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Carry multiple payment methods:</strong> Distribute money across credit cards, debit cards, and cash.
+                </div>
+                <div class="success-box">
+                    <strong>✓ Monitor accounts:</strong> Check credit card and bank statements regularly for unauthorized charges.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Document Safety</div>
+                <div class="warning-box">
+                    <strong>⚠ Keep originals safe:</strong> Store original passport in hotel safe. Carry photocopy for daily use.
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Cloud backup:</strong> Store digital copies of important documents in cloud storage (Google Drive, OneDrive, email).
+                </div>
+                <div class="warning-box">
+                    <strong>⚠ Report loss:</strong> If documents are lost, report immediately to police and your embassy.
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Emergency Preparedness</div>
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safe1">
+                        <label for="safe1">Know emergency numbers for police, ambulance, and fire</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safe2">
+                        <label for="safe2">Have embassy/consulate contact information</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safe3">
+                        <label for="safe3">Share itinerary with family or friends</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safe4">
+                        <label for="safe4">Have travel insurance documents accessible</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safe5">
+                        <label for="safe5">Know how to contact your hotel from outside</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safe6">
+                        <label for="safe6">Have International SOS number saved in phone</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Destination-Specific Safety</div>
+                <p class="section-text">Research your specific destination. Check government travel advisories from US State Department, UK Foreign Office, or Canadian Foreign Affairs. Read recent travel blogs and reviews. Join destination-specific travel groups on Facebook for local advice and current conditions.</p>
+            </div>
+
+            <div class="section-content">
+                <div class="section-title">Transportation Safety</div>
+                <div class="step-list">
+                    <div class="step-item">
+                        <strong>Use reputable transportation:</strong> Official taxis, ride-sharing apps, or public transport are safer than unlicensed vehicles.
+                    </div>
+                    <div class="step-item">
+                        <strong>Share your location:</strong> Let someone know where you are. Use location-sharing apps when traveling alone.
+                    </div>
+                    <div class="step-item">
+                        <strong>Check vehicle condition:</strong> Ensure seat belts work and vehicle is in good condition before getting in.
+                    </div>
+                    <div class="step-item">
+                        <strong>Avoid displaying valuables:</strong> Don't use your phone openly on public transport. Keep backpacks secure.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Vacation Planner</h4>
+                <p>Your comprehensive guide to planning perfect vacations worldwide. Enjoy stress-free travel with our expert tips and advice.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="./index11.html">Courses</a>
+                <a href="./index9.html">Books Library</a>
+                <a href="./index10.html">Partner With Us</a>
+                <a href="#vacation">Vacation Guide</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: vacation@eduhub.com</p>
+                <p>Phone: +250 785786547</p>
+                <p>Address: 123 Travel St, Adventure City, AC 12345</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vacation Planner. All rights reserved. Travel safely and enjoy!</p>
+        </div>
+    </footer>
+
+    <script src="./index13.js"></script>
+</body>
+</html>
