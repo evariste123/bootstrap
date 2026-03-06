@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍏EduHub Dashboard</title>
+    <link rel="stylesheet" href="./index14.css">
+</head>
+<body>
+    <div id="welcomeModal" class="welcome-modal">
+        <div class="modal-content">
+            <h2>🎓 Welcome to EduHub!</h2>
+            <p>Your journey to knowledge and growth starts here. Explore our comprehensive educational platform with interactive courses, digital library, and much more!</p>
+            <button class="modal-button" onclick="closeWelcomeModal()">Get Started</button>
+        </div>
+    </div>
+
+
+    <div id="fileModal" class="nav-modal">
+        <div class="nav-modal-content">
+            <div class="nav-modal-header">
+                <h3 class="nav-modal-title">📁 File Manager</h3>
+                <button class="nav-modal-close" onclick="closeModal('fileModal')">&times;</button>
+            </div>
+            <div class="file-grid">
+                <div class="file-item" onclick="openFile('document.pdf')">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">Course Syllabus.pdf</div>
+                    <div class="file-size">2.3 MB</div>
+                </div>
+                <div class="file-item" onclick="openFile('presentation.pptx')">
+                    <div class="file-icon">📊</div>
+                    <div class="file-name">Project Presentation.pptx</div>
+                    <div class="file-size">5.1 MB</div>
+                </div>
+                <div class="file-item" onclick="openFile('code.zip')">
+                    <div class="file-icon">💾</div>
+                    <div class="file-name">Source Code.zip</div>
+                    <div class="file-size">12.4 MB</div>
+                </div>
+                <div class="file-item" onclick="openFile('notes.txt')">
+                    <div class="file-icon">📝</div>
+                    <div class="file-name">Study Notes.txt</div>
+                    <div class="file-size">45 KB</div>
+                </div>
+                <div class="file-item" onclick="openFile('image.jpg')">
+                    <div class="file-icon">🖼️</div>
+                    <div class="file-name">Project Image.jpg</div>
+                    <div class="file-size">1.8 MB</div>
+                </div>
+                <div class="file-item" onclick="openFile('video.mp4')">
+                    <div class="file-icon">🎥</div>
+                    <div class="file-name">Tutorial Video.mp4</div>
+                    <div class="file-size">45.2 MB</div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn primary" onclick="uploadFile()">Upload File</button>
+                <button class="action-btn secondary" onclick="createFolder()">Create Folder</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="userModal" class="nav-modal">
+        <div class="nav-modal-content">
+            <div class="nav-modal-header">
+                <h3 class="nav-modal-title">👤 User Profile</h3>
+                <button class="nav-modal-close" onclick="closeModal('userModal')">&times;</button>
+            </div>
+            <div class="profile-header">
+                <div class="profile-avatar" id="userAvatar">👨‍🎓</div>
+                <h4 id="userName">Evariste Bapfekurera</h4>
+                <p id="userRole">Premium Student</p>
+            </div>
+            <div class="profile-info">
+                <div class="profile-field">
+                    <span class="profile-label">Email:</span>
+                    <span class="profile-value" id="userEmail">evariste.bapfekurera@eduhub.edu</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-label">Member Since:</span>
+                    <span class="profile-value" id="memberSince">January 2024</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-label">Courses Completed:</span>
+                    <span class="profile-value" id="coursesCompleted">12</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-label">Current Level:</span>
+                    <span class="profile-value" id="currentLevel">Advanced</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-label">Study Streak:</span>
+                    <span class="profile-value" id="studyStreak">45 days</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-label">Total Points:</span>
+                    <span class="profile-value" id="totalPoints">2,847</span>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn primary" onclick="editProfile()">Edit Profile</button>
+                <button class="action-btn secondary" onclick="viewAchievements()">View Achievements</button>
+                <button class="action-btn tertiary" onclick="cycleUser()">Switch User</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="messageModal" class="nav-modal">
+        <div class="nav-modal-content">
+            <div class="nav-modal-header">
+                <h3 class="nav-modal-title">💬 Messages</h3>
+                <button class="nav-modal-close" onclick="closeModal('messageModal')">&times;</button>
+            </div>
+            <div class="message-list">
+                <div class="message-item" onclick="openConversation('Dr. Smith')">
+                    <div class="message-sender">Dr.evariste Bapfekurera</div>
+                    <div class="message-preview">Your assignment feedback is ready for review...</div>
+                    <div class="message-time">2 min ago</div>
+                </div>
+                <div class="message-item" onclick="openConversation('EduHub Support')">
+                    <div class="message-sender">EduHub Support</div>
+                    <div class="message-preview">Welcome to EduHub! Here's how to get started...</div>
+                    <div class="message-time">1 hour ago</div>
+                </div>
+                <div class="message-item" onclick="openConversation('Study Group')">
+                    <div class="message-sender">JavaScript Study Group</div>
+                    <div class="message-preview">Hey everyone! Let's schedule our next meeting...</div>
+                    <div class="message-time">3 hours ago</div>
+                </div>
+                <div class="message-item" onclick="openConversation('Professor Johnson')">
+                    <div class="message-sender">Prof. Michael Johnson</div>
+                    <div class="message-preview">The lecture notes for Chapter 5 are now available...</div>
+                    <div class="message-time">1 day ago</div>
+                </div>
+                <div class="message-item" onclick="openConversation('Career Services')">
+                    <div class="message-sender">Career Services</div>
+                    <div class="message-preview">New internship opportunities posted...</div>
+                    <div class="message-time">2 days ago</div>
+                </div>
+            </div>
+            <div class="message-input-area">
+                <input type="text" class="message-input" placeholder="Type a message..." id="messageInput">
+                <button class="action-btn primary" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notificationModal" class="nav-modal">
+        <div class="nav-modal-content">
+            <div class="nav-modal-header">
+                <h3 class="nav-modal-title">🔔 Notifications</h3>
+                <button class="nav-modal-close" onclick="closeModal('notificationModal')">&times;</button>
+            </div>
+            <div class="notification-list">
+                <div class="notification-item unread" onclick="markAsRead(this)">
+                    <div class="notification-icon">📚</div>
+                    <div class="notification-content">
+                        <div class="notification-title">New Course Available</div>
+                        <div class="notification-text">"Advanced Machine Learning" course is now live!</div>
+                        <div class="notification-time">5 min ago</div>
+                    </div>
+                </div>
+                <div class="notification-item unread" onclick="markAsRead(this)">
+                    <div class="notification-icon">🏆</div>
+                    <div class="notification-content">
+                        <div class="notification-title">Achievement Unlocked</div>
+                        <div class="notification-text">Congratulations! You've completed 10 courses.</div>
+                        <div class="notification-time">1 hour ago</div>
+                    </div>
+                </div>
+                <div class="notification-item" onclick="markAsRead(this)">
+                    <div class="notification-icon">📅</div>
+                    <div class="notification-content">
+                        <div class="notification-title">Upcoming Deadline</div>
+                        <div class="notification-text">Project submission due in 2 days.</div>
+                        <div class="notification-time">3 hours ago</div>
+                    </div>
+                </div>
+                <div class="notification-item" onclick="markAsRead(this)">
+                    <div class="notification-icon">🤝</div>
+                    <div class="notification-content">
+                        <div class="notification-title">Partnership Approved</div>
+                        <div class="notification-text">Your partnership application has been approved!</div>
+                        <div class="notification-time">1 day ago</div>
+                    </div>
+                </div>
+                <div class="notification-item" onclick="markAsRead(this)">
+                    <div class="notification-icon">💰</div>
+                    <div class="notification-content">
+                        <div class="notification-title">Scholarship Opportunity</div>
+                        <div class="notification-text">New scholarship available for STEM students.</div>
+                        <div class="notification-time">2 days ago</div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn primary" onclick="markAllAsRead()">Mark All as Read</button>
+                <button class="action-btn secondary" onclick="clearNotifications()">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="locationModal" class="nav-modal">
+        <div class="nav-modal-content">
+            <div class="nav-modal-header">
+                <h3 class="nav-modal-title">📍 Location Services</h3>
+                <button class="nav-modal-close" onclick="closeModal('locationModal')">&times;</button>
+            </div>
+            <div class="location-info">
+                <h4>Your Current Location</h4>
+                <div class="location-map" id="locationMap">
+                    <div id="mapPlaceholder">🗺️ Interactive Map</div>
+                </div>
+            </div>
+            <div class="location-details">
+                <div class="location-field">
+                    <span class="profile-label">Latitude:</span>
+                    <span class="profile-value" id="latitude">--</span>
+                </div>
+                <div class="location-field">
+                    <span class="profile-label">Longitude:</span>
+                    <span class="profile-value" id="longitude">--</span>
+                </div>
+                <div class="location-field">
+                    <span class="profile-label">Accuracy:</span>
+                    <span class="profile-value" id="accuracy">-- meters</span>
+                </div>
+                <div class="location-field">
+                    <span class="profile-label">City:</span>
+                    <span class="profile-value" id="city">--</span>
+                </div>
+                <div class="location-field">
+                    <span class="profile-label">Country:</span>
+                    <span class="profile-value" id="country">--</span>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn primary" onclick="getCurrentLocation()">Get My Location</button>
+                <button class="action-btn secondary" onclick="findNearbySchools()">Find Nearby Schools</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="graphModal" class="nav-modal">
+        <div class="nav-modal-content">
+            <div class="nav-modal-header">
+                <h3 class="nav-modal-title">📊 Analytics Dashboard</h3>
+                <button class="nav-modal-close" onclick="closeModal('graphModal')">&times;</button>
+            </div>
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <div class="analytics-value" id="totalCourses">12</div>
+                    <div class="analytics-label">Courses Completed</div>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-value" id="studyHours">247</div>
+                    <div class="analytics-label">Study Hours</div>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-value" id="certificates">8</div>
+                    <div class="analytics-label">Certificates Earned</div>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-value" id="averageScore">92%</div>
+                    <div class="analytics-label">Average Score</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h4>Learning Progress Over Time</h4>
+                <div class="chart-placeholder" id="progressChart">
+                    📈 [Interactive Chart: Monthly Progress - Jan: 85%, Feb: 88%, Mar: 92%]
+                </div>
+            </div>
+            <div class="chart-container">
+                <h4>Subject Performance</h4>
+                <div class="chart-placeholder" id="subjectChart">
+                    🥧 [Pie Chart: Programming: 40%, Math: 25%, Science: 20%, Languages: 15%]
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn primary" onclick="exportAnalytics()">Export Report</button>
+                <button class="action-btn secondary" onclick="viewDetailedAnalytics()">View Details</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="main-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-logo">🎓</span>
+                <h2 class="sidebar-title">EduHub</h2>
+                <p class="sidebar-subtitle">Learning Platform</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-item" onclick="handleHome()" title="Home">
+                    🏠
+                </div>
+                <div class="nav-item" onclick="handleFile()" title="Files">
+                    📁
+                </div>
+                <div class="nav-item" onclick="handleUser()" title="User Profile">
+                    👤
+                </div>
+                <div class="nav-item" onclick="handleMessage()" title="Messages">
+                    💬
+                </div>
+                <div class="nav-item" onclick="handleNotification()" title="Notifications">
+                    🔔
+                    <div class="nav-badge">3</div>
+                </div>
+                <div class="nav-item" onclick="handleLocation()" title="Location">
+                    📍
+                </div>
+                <div class="nav-item" onclick="handleGraph()" title="Analytics">
+                    📊
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="theme-toggle">
+                <button class="theme-btn" onclick="setTheme('light')" id="lightTheme">☀️ Light</button>
+                <button class="theme-btn active" onclick="setTheme('dark')" id="darkTheme">🌙 Dark</button>
+            </div>
+
+            <div class="language-selector">
+                <select class="lang-btn" id="languageSelect" onchange="changeLanguage()">
+                    <option value="en">🇺🇸 English</option>
+                    <option value="sw">🇹🇿 Kiswahili</option>
+                    <option value="rw">🇷🇼 Kinyarwanda</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="pt">🇵🇹 Português</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <header class="header">
+                    <h1>🎓 EduHub Dashboard</h1>
+                    <p>Your comprehensive educational platform for learning and growth</p>
+                </header>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Learning Sections</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Knowledge Resources</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Hours Access Available</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Interactive Learning</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="dashboard-grid">
+            <a href="index11.html" class="dashboard-card">
+                <span class="card-icon">📚</span>
+                <h3 class="card-title">Courses</h3>
+                <p class="card-description">Dive deep into comprehensive courses covering programming, design, business, and more. Our interactive learning modules feature video lectures, hands-on projects, quizzes, and progress tracking with certificates upon completion.</p>
+                <ul class="card-features">
+                    <li>Interactive video lessons</li>
+                    <li>Hands-on coding projects</li>
+                    <li>Progress certificates</li>
+                    <li>Expert instructors</li>
+                </ul>
+                <button class="card-button" onclick="showNotification('Courses section opened!')">Explore Courses</button>
+            </a>
+
+            <a href="index9.html" class="dashboard-card">
+                <span class="card-icon">📖</span>
+                <h3 class="card-title">Books Library</h3>
+                <p class="card-description">Access our vast digital library with thousands of books across all disciplines. Browse by category, author, or use advanced search. Create personal reading lists, add notes, and track your reading progress with our intuitive interface.</p>
+                <ul class="card-features">
+                    <li>Advanced search & filtering</li>
+                    <li>Personal reading lists</li>
+                    <li>Note-taking capabilities</li>
+                    <li>Progress tracking</li>
+                </ul>
+                <button class="card-button" onclick="showNotification('Library section opened!')">Browse Library</button>
+            </a>
+
+            <a href="index10.html" class="dashboard-card">
+                <span class="card-icon">🤝</span>
+                <h3 class="card-title">Partner Applications</h3>
+                <p class="card-description">Connect with leading educational institutions and organizations. Submit partnership applications, track approval status, collaborate on joint programs, and access exclusive resources available only to our partners.</p>
+                <ul class="card-features">
+                    <li>Streamlined application process</li>
+                    <li>Real-time status tracking</li>
+                    <li>Exclusive partner resources</li>
+                    <li>Collaboration tools</li>
+                </ul>
+                <button class="card-button" onclick="showNotification('Partner applications opened!')">Apply Now</button>
+            </a>
+
+            <a href="index12.html" class="dashboard-card">
+                <span class="card-icon">🎯</span>
+                <h3 class="card-title">Tutorials</h3>
+                <p class="card-description">Master new skills with our step-by-step tutorials and guides. From beginner basics to advanced techniques, our tutorials include interactive exercises, code examples, and practical projects to reinforce your learning.</p>
+                <ul class="card-features">
+                    <li>Step-by-step guides</li>
+                    <li>Interactive exercises</li>
+                    <li>Code examples & projects</li>
+                    <li>Skill assessment quizzes</li>
+                </ul>
+                <button class="card-button" onclick="showNotification('Tutorials section opened!')">Start Learning</button>
+            </a>
+
+            <a href="index13.html" class="dashboard-card">
+                <span class="card-icon">✈️</span>
+                <h3 class="card-title">Vacation Planning</h3>
+                <p class="card-description">Plan educational vacations and study abroad experiences. Get comprehensive guides for cultural immersion, language learning trips, academic exchanges, and adventure-based learning experiences around the world.</p>
+                <ul class="card-features">
+                    <li>Cultural immersion guides</li>
+                    <li>Study abroad planning</li>
+                    <li>Language learning programs</li>
+                    <li>Adventure-based learning</li>
+                </ul>
+                <button class="card-button" onclick="showNotification('Vacation planning opened!')">Plan Your Trip</button>
+            </a>
+
+            <a href="index14.html" class="dashboard-card">
+                <span class="card-icon">📊</span>
+                <h3 class="card-title">Progress Tracker</h3>
+                <p class="card-description">Monitor your educational journey with detailed analytics and progress tracking. Set learning goals, track achievements, view performance metrics, and get personalized recommendations for your continued growth.</p>
+                <ul class="card-features">
+                    <li>Detailed progress analytics</li>
+                    <li>Goal setting & tracking</li>
+                    <li>Performance metrics</li>
+                    <li>Personalized recommendations</li>
+                </ul>
+                <button class="card-button" onclick="showNotification('Progress tracker opened!')">View Progress</button>
+            </a>
+        </div>
+
+        <section class="recent-activity">
+            <h3 style="margin-bottom: 20px; color: #2c3e50;">Recent Activity</h3>
+            <ul class="activity-list" id="activityList">
+                <li class="activity-item" onclick="bounceElement(this)">
+                    <div class="activity-icon">📚</div>
+                    <div class="activity-content">
+                        <div class="activity-title">New Course Added: Advanced JavaScript</div>
+                        <div class="activity-time" data-timestamp="2026-03-06T14:00:00">2 hours ago</div>
+                    </div>
+                </li>
+                <li class="activity-item" onclick="bounceElement(this)">
+                    <div class="activity-icon">📖</div>
+                    <div class="activity-content">
+                        <div class="activity-title">Book Review Submitted: "The Art of Programming"</div>
+                        <div class="activity-time" data-timestamp="2026-03-05T10:30:00">1 day ago</div>
+                    </div>
+                </li>
+                <li class="activity-item" onclick="bounceElement(this)">
+                    <div class="activity-icon">🤝</div>
+                    <div class="activity-content">
+                        <div class="activity-title">Partner Application Approved</div>
+                        <div class="activity-time" data-timestamp="2026-03-03T16:45:00">3 days ago</div>
+                    </div>
+                </li>
+                <li class="activity-item" onclick="bounceElement(this)">
+                    <div class="activity-icon">🎯</div>
+                    <div class="activity-content">
+                        <div class="activity-title">Tutorial Completed: React Fundamentals</div>
+                        <div class="activity-time" data-timestamp="2026-02-27T09:15:00">1 week ago</div>
+                    </div>
+                </li>
+                <li class="activity-item" onclick="bounceElement(this)">
+                    <div class="activity-icon">✈️</div>
+                    <div class="activity-content">
+                        <div class="activity-title">Vacation Plan Created: European Study Tour</div>
+                        <div class="activity-time" data-timestamp="2026-02-20T11:20:00">2 weeks ago</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>EduHub</h3>
+                <p>Your comprehensive educational platform designed to empower learners worldwide. Access quality education, connect with experts, and accelerate your learning journey.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/evariste.arrogent.ever" class="social-link" title="Facebook">📘F</a>
+                    <a href="https://x.com/EBapfekure3" class="social-link" title="Twitter">🐦T</a>
+                    <a href="https://www.linkedin.com/in/evariste-bapfekurera-a3700b2b0/" class="social-link" title="LinkedIn">💼L</a>
+                    <a href="https://www.youtube.com/@evaristebapfekurera5995" class="social-link" title="YouTube">📺Y</a>
+                    <a href="https://www.instagram.com/evariste_truly_ever/" class="social-link" title="Instagram">📷I</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index11.html">Courses</a></li>
+                    <li><a href="index9.html">Library</a></li>
+                    <li><a href="index10.html">Partners</a></li>
+                    <li><a href="index12.html">Tutorials</a></li>
+                    <li><a href="index13.html">Vacation Planning</a></li>
+                    <li><a href="index14.html">Progress Tracker</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="handleFile()">File Manager</a></li>
+                    <li><a href="#" onclick="handleGraph()">Analytics</a></li>
+                    <li><a href="#" onclick="handleUser()">Profile</a></li>
+                    <li><a href="#" onclick="handleMessage()">Support</a></li>
+                    <li><a href="#" onclick="handleLocation()">Locations</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📧 support@eduhub.com</p>
+                <p>📞 +250 785786547</p>
+                <p>📍 123 Education Street<br>Learning City, LC 12345</p>
+                <p>🕒 Mon-Fri: 9AM-6PM EST</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 EduHub. All rights reserved. Empowering education through technology.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification">
+        <span id="notificationText">Welcome to EduHub!</span>
+    </div>
+
+    <div id="cookiePopup" class="cookie-popup">
+        <div class="cookie-content">
+            <h3>🍪 Cookie Preferences</h3>
+            <p>We use cookies to enhance your experience on EduHub. By continuing to use our platform, you agree to our use of cookies to improve functionality and personalize content.</p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn decline" onclick="declineCookies()">Decline</button>
+                <button class="cookie-btn accept" onclick="acceptCookies()">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index14.js">
+    </script>
+</body>
+</html>
