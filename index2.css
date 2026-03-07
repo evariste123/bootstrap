@@ -1,8 +1,9 @@
 body{
     margin: 0;
     padding: 0;
+    position: relative;
     font-family: Arial, sans-serif;
-    background-color: teal;
+    background-color: white;
 }
 .login{
     position: fixed;
@@ -13,7 +14,6 @@ body{
     width: 30vw;
     top: 40px;
     height: 60vh;
-    background-color: #f0f0f0;
     animation-duration: 2s;
     animation-name: login;
     animation-iteration-count: 1;
@@ -56,6 +56,7 @@ body{
     background-image: url('./image/leaf.jpeg');
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     opacity: 1;
     width: 30vw;
     height: 60vh;
@@ -119,7 +120,7 @@ body{
     border-radius: 20px;
     transform: translate(60%);
     flex-direction: column;
-    background-color: rgb(250, 248, 246);
+    background-color: rgb(250, 248, 246) !important;
     justify-self: center;
     align-items: center;
     animation-duration: 2s;
