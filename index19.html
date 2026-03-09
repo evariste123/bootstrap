@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌐Help Center-EduHub</title>
+    <link rel="stylesheet" href="index19.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🎓 EduHub</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index17.html">Study Abroad</a></li>
+                <li><a href="index18.html">Scholarships</a></li>
+                <li><a href="index19.html" class="active">Help Center</a></li>
+                <li><a href="index20.html">Careers</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Help Center</h1>
+            <p>Find answers to your questions about EduHub services</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-box" placeholder="Search for help...">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="categories">
+            <h2>Browse by Category</h2>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="general">General</button>
+                <button class="category-btn" data-category="account">Account</button>
+                <button class="category-btn" data-category="scholarships">Scholarships</button>
+                <button class="category-btn" data-category="application">Application</button>
+                <button class="category-btn" data-category="payment">Payment</button>
+            </div>
+        </section>
+
+    
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-category" id="general">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is EduHub?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>EduHub is a comprehensive global education platform designed to empower students with access to international study opportunities, scholarships, and career development resources. Our mission is to make world-class education accessible to all aspiring learners.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I get started with EduHub?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Getting started is easy! Simply create an account, complete your profile, and start exploring opportunities. You can browse scholarships, discover study abroad programs, and apply to opportunities that match your academic goals and interests.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is EduHub free to use?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Browsing and applying for scholarships through EduHub is completely free. We believe education should be accessible without financial barriers to entry.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Which countries do you cover?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>EduHub partners with universities and scholarship providers across 50+ countries worldwide, including the UK, USA, Canada, Australia, Germany, France, Japan, Singapore, and many more. We continue to expand our network regularly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category" id="account" style="display:none;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I create an EduHub account?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Click the "Sign Up" button on our homepage, enter your email address, create a strong password, and verify your email. Fill in your basic profile information, and you're ready to go!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I reset my password?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Click "Forgot Password" on the login page, enter your registered email, and we'll send you a password reset link. Follow the instructions in the email to create a new password.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I update my profile?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Log in to your account and go to "My Profile". You can update your academic information, career interests, language preferences, and other details. Changes are saved automatically.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I delete my account?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Go to Account Settings, scroll to "Danger Zone", and click "Delete Account". Please note that this action is permanent and cannot be undone. All your data will be removed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category" id="scholarships" style="display:none;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What types of scholarships are available?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer various scholarship types including merit-based scholarships, need-based scholarships, subject-specific scholarships, country-specific scholarships, and full/partial tuition scholarships. Filter by type to find the best match for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much can I receive?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Scholarship amounts vary widely, from partial tuition coverage to full scholarships including accommodation and living expenses. Check individual scholarship details to see what's offered.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Who is eligible for scholarships?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Eligibility varies by scholarship. Common requirements include maintaining a minimum GPA, demonstrating financial need, meeting English language requirements, and citizenship criteria. Check each scholarship's eligibility before applying.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I apply for multiple scholarships?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We encourage you to apply for multiple scholarships that match your profile. Each application is independent, so applying for one doesn't affect your chances for others.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category" id="application" style="display:none;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What documents do I need to apply?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Generally, you'll need academic transcripts, a valid passport, proof of English proficiency (IELTS/TOEFL), letters of recommendation, a personal statement, and sometimes standardized test scores. Specific requirements vary by scholarship.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does the application process take?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The application process typically takes 2-6 weeks, depending on the scholarship provider. You'll receive status updates via email throughout the process.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I save my application and finish it later?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Your application is automatically saved as you fill it out. You can log back in anytime to continue where you left off, as long as the deadline hasn't passed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>When will I hear about my application status?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Check your application status anytime by logging into your account and viewing "My Applications". You'll also receive email notifications about major status changes.</p>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="faq-category" id="payment" style="display:none;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a fee to apply through EduHub?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No! EduHub doesn't charge any application fees. However, some universities or scholarship providers may have their own application fees, which you'll pay directly to them.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards (Visa, Mastercard, American Express), digital wallets (Apple Pay, Google Pay), and bank transfers. All payments are secure and encrypted.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer refunds?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Since EduHub applications are free, refund policies depend on what you're paying for (premium features, certification courses, etc.). Check our refund policy page for details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my payment information safe?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. We use industry-standard SSL encryption and PCI DSS compliance to protect all payment information. Your data is never stored in plain text.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-support">
+            <h2>Still Need Help?</h2>
+            <p>Can't find what you're looking for? Contact our support team.</p>
+            <div class="support-methods">
+                <div class="support-card">
+                    <h3>📧 Email Support</h3>
+                    <p>Send us an email and we'll respond within 24 hours.</p>
+                    <a href="mailto:support@eduhub.edu" class="support-btn">support@eduhub.edu</a>
+                </div>
+                <div class="support-card">
+                    <h3>💬 Live Chat</h3>
+                    <p>Chat with our support team in real-time (Mon-Fri, 9AM-6PM UTC).</p>
+                    <button class="support-btn" onclick="openLiveChat()">Start Chat</button>
+                </div>
+                <div class="support-card">
+                    <h3>📞 Phone Support</h3>
+                    <p>Call our support team for urgent matters.</p>
+                    <a href="tel:+250785786547" class="support-btn">+250 785 786 547</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About EduHub</h4>
+                <p>EduHub is a global education platform dedicated to empowering learners through international study opportunities and scholarships. Our mission is to make world-class education accessible to all.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index17.html">Study Abroad</a></li>
+                    <li><a href="index15.html">Privacy Policy</a></li>
+                    <li><a href="index16.html">Terms & Conditions</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>📧 <a href="mailto:support@eduhub.edu">support@eduhub.edu</a></li>
+                    <li>📞 <a href="tel:+250785786547">+250 785 786 547</a></li>
+                    <li>📍 123 Education Street, Learning City, LC 12345</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduHub. All rights reserved. Crafted with <span style="color:#e74c3c;">❤</span></p>
+        </div>
+    </footer>
+
+    <script>
+        
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const toggle = question.querySelector('.faq-toggle');
+
+          
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.parentElement.classList.remove('active');
+                        q.querySelector('.faq-toggle').textContent = '+';
+                    }
+                });
+
+                faqItem.classList.toggle('active');
+                toggle.textContent = faqItem.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+   
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const faqCategories = document.querySelectorAll('.faq-category');
+
+        categoryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+             
+                categoryButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+           
+                faqCategories.forEach(cat => cat.style.display = 'none');
+
+                const categoryId = btn.getAttribute('data-category');
+                document.getElementById(categoryId).style.display = 'block';
+
+               
+                faqQuestions.forEach(q => {
+                    q.parentElement.classList.remove('active');
+                    q.querySelector('.faq-toggle').textContent = '+';
+                });
+            });
+        });
+
+      
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.querySelector('.search-btn');
+
+        function performSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            
+            if (query === '') {
+                faqCategories.forEach(cat => cat.style.display = 'block');
+                return;
+            }
+
+            let foundCount = 0;
+            faqQuestions.forEach(question => {
+                const questionText = question.querySelector('h3').textContent.toLowerCase();
+                const answerText = question.nextElementSibling.textContent.toLowerCase();
+                const faqItem = question.parentElement;
+
+                if (questionText.includes(query) || answerText.includes(query)) {
+                    faqItem.style.display = 'block';
+                    foundCount++;
+                } else {
+                    faqItem.style.display = 'none';
+                }
+            });
+
+          
+            faqCategories.forEach(cat => {
+                const visibleItems = cat.querySelectorAll('.faq-item[style="display: block"]').length;
+                cat.style.display = visibleItems > 0 ? 'block' : 'none';
+            });
+
+            if (foundCount === 0) {
+                alert('No results found for "' + searchInput.value + '". Please try a different search term.');
+            }
+        }
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+       
+        function openLiveChat() {
+            alert('Live chat feature coming soon!\n\nFor now, please contact us at:\nsupport@eduhub.edu\nor call +250 785 786 547');
+        }
+    </script>
+</body>
+</html>

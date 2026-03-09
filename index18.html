@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍Scholarship Application </title>
+    <link rel="stylesheet" href="./index18.css">
+</head>
+<body>
+    <section class="container">
+        <div class="header">
+            <h1>🎓 Study Abroad Scholarship Application</h1>
+            <p>Transform your dreams into reality with EduHub Scholarships</p>
+        </div>
+
+        <div class="scholarship-info">
+            <div class="info-card">
+                <div class="info-icon">💰</div>
+                <h3>Full Coverage</h3>
+                <p>Up to 100% tuition and living expenses covered</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🌍</div>
+                <h3>Global Destinations</h3>
+                <p>Study in over 50 countries worldwide</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">📚</div>
+                <h3>All Fields</h3>
+                <p>Scholarships available for any field of study</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">⚡</div>
+                <h3>Quick Process</h3>
+                <p>Fast-track approval within 60 days</p>
+            </div>
+        </div>
+
+        <div id="successMessage" class="success-message">
+            ✓ Your application has been submitted successfully! Check your email for confirmation.
+        </div>
+
+        <div id="errorMessage" class="error-message">
+            ✗ Please fill all required fields correctly.
+        </div>
+
+        <div class="form-section">
+            <h2>📅 Application Process</h2>
+            <div class="timeline-steps">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Submit Application</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Document Review</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Interview</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Decision</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">5</div>
+                    <div class="step-label">Enrollment</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="form-section">
+            <h2>🎯 Scholarship Types</h2>
+            <div class="scholarship-types">
+                <div class="scholarship-option">
+                    <label>
+                        <input type="radio" name="scholarship_type" value="full_ride" required>
+                        <div>
+                            <strong>Full Ride Scholarship</strong>
+                            <div class="scholarship-details">100% tuition + living expenses + books</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="scholarship-option">
+                    <label>
+                        <input type="radio" name="scholarship_type" value="partial" required>
+                        <div>
+                            <strong>Partial Scholarship</strong>
+                            <div class="scholarship-details">50-75% tuition coverage</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="scholarship-option">
+                    <label>
+                        <input type="radio" name="scholarship_type" value="merit_based" required>
+                        <div>
+                            <strong>Merit-Based Award</strong>
+                            <div class="scholarship-details">Based on academic excellence</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="scholarship-option">
+                    <label>
+                        <input type="radio" name="scholarship_type" value="need_based" required>
+                        <div>
+                            <strong>Need-Based Grant</strong>
+                            <div class="scholarship-details">Based on financial need</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+       
+        <form id="scholarshipForm" onsubmit="submitApplication(event)">
+         
+            <div class="form-section">
+                <h2>👤 Personal Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nationality">Nationality <span class="required">*</span></label>
+                        <input type="text" id="nationality" name="nationality" placeholder="e.g., Rwandan" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Current Address <span class="required">*</span></label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+            </div>
+
+            
+            <div class="form-section">
+                <h2>📚 Academic Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="currentSchool">Current School/University <span class="required">*</span></label>
+                        <input type="text" id="currentSchool" name="currentSchool" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentLevel">Current Academic Level <span class="required">*</span></label>
+                        <select id="currentLevel" name="currentLevel" required>
+                            <option value="">Select Level</option>
+                            <option value="secondary">Secondary School</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="phd">PhD Student</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gpa">Current GPA/Grade Average <span class="required">*</span></label>
+                        <input type="number" id="gpa" name="gpa" min="0" max="4" step="0.01" placeholder="e.g., 3.8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fieldOfStudy">Field of Study <span class="required">*</span></label>
+                        <select id="fieldOfStudy" name="fieldOfStudy" required>
+                            <option value="">Select Field</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="medicine">Medicine</option>
+                            <option value="business">Business</option>
+                            <option value="science">Science</option>
+                            <option value="humanities">Humanities</option>
+                            <option value="technology">Technology & IT</option>
+                            <option value="arts">Arts & Design</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="achievements">Academic Achievements & Awards</label>
+                    <textarea id="achievements" name="achievements" placeholder="List any scholarships, awards, honors, publications, etc."></textarea>
+                </div>
+            </div>
+
+          
+            <div class="form-section">
+                <h2>🌍 Study Abroad Preferences</h2>
+                <div class="form-group">
+                    <label>Preferred Countries <span class="required">*</span></label>
+                    <div class="countries-grid">
+                        <div class="country-checkbox">
+                            <input type="checkbox" id="uk" name="countries" value="United Kingdom">
+                            <label for="uk">🇬🇧 United Kingdom</label>
+                        </div>
+                        <div class="country-checkbox">
+                            <input type="checkbox" id="canada" name="countries" value="Canada">
+                            <label for="canada">🇨🇦 Canada</label>
+                        </div>
+                        <div class="country-checkbox">
+                            <input type="checkbox" id="australia" name="countries" value="Australia">
+                            <label for="australia">🇦🇺 Australia</label>
+                        </div>
+                        <div class="country-checkbox">
+                            <input type="checkbox" id="singapore" name="countries" value="Singapore">
+                            <label for="singapore">🇸🇬 Singapore</label>
+                        </div>
+                        <div class="country-checkbox">
+                            <input type="checkbox" id="germany" name="countries" value="Germany">
+                            <label for="germany">🇩🇪 Germany</label>
+                        </div>
+                        <div class="country-checkbox">
+                            <input type="checkbox" id="japan" name="countries" value="Japan">
+                            <label for="japan">🇯🇵 Japan</label>
+                        </div>
+                        <div class="country-checkbox">
+                            <input type="checkbox" id="usa" name="countries" value="USA">
+                            <label for="usa">🇺🇸 USA</label>
+                        </div>
+                        <div class="country-checkbox">
+                            <input type="checkbox" id="france" name="countries" value="France">
+                            <label for="france">🇫🇷 France</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="programType">Program Type <span class="required">*</span></label>
+                        <select id="programType" name="programType" required>
+                            <option value="">Select Program</option>
+                            <option value="exchange">Exchange Program</option>
+                            <option value="degree">Full Degree Program</option>
+                            <option value="summer">Summer Program</option>
+                            <option value="research">Research Internship</option>
+                            <option value="work">Work Internship</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Intended Start Date <span class="required">*</span></label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>💳 Financial Information</h2>
+                <div class="form-group">
+                    <label for="familyIncome">Estimated Annual Family Income <span class="required">*</span></label>
+                    <select id="familyIncome" name="familyIncome" required>
+                        <option value="">Select Range</option>
+                        <option value="0-20k">Less than $20,000</option>
+                        <option value="20-50k">$20,000 - $50,000</option>
+                        <option value="50-100k">$50,000 - $100,000</option>
+                        <option value="100k+">$100,000+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="financialNeed">Describe Your Financial Situation</label>
+                    <textarea id="financialNeed" name="financialNeed" placeholder="Explain any financial hardships or circumstances..."></textarea>
+                </div>
+            </div>
+
+   
+            <div class="form-section">
+                <h2>✍️ Personal Essay</h2>
+                <div class="form-group">
+                    <label for="motivation">Why do you want to study abroad? <span class="required">*</span></label>
+                    <textarea id="motivation" name="motivation" placeholder="Share your goals and dreams..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="impact">How will this scholarship impact your future? <span class="required">*</span></label>
+                    <textarea id="impact" name="impact" placeholder="Explain your career aspirations..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="contribution">How will you contribute to your host community? <span class="required">*</span></label>
+                    <textarea id="contribution" name="contribution" placeholder="Describe your plans to give back..." required></textarea>
+                </div>
+            </div>
+
+    
+            <div class="form-section">
+                <h2>📄 Upload Documents</h2>
+                <div class="requirements-list">
+                    <h4>Required Documents:</h4>
+                    <ul>
+                        <li>Official academic transcripts</li>
+                        <li>Passport copy</li>
+                        <li>2-3 recommendation letters</li>
+                        <li>Financial documentation (proof of income)</li>
+                        <li>English proficiency test results (TOEFL/IELTS)</li>
+                        <li>Resume/CV</li>
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <label for="transcripts">Upload Transcripts (PDF) <span class="required">*</span></label>
+                    <div class="file-upload" onclick="document.getElementById('transcripts').click()">
+                        <div class="file-upload-text">📎 Click to upload</div>
+                        <div class="file-upload-hint">Accepted: PDF, DOC, DOCX (Max 5MB)</div>
+                    </div>
+                    <input type="file" id="transcripts" name="transcripts" accept=".pdf,.doc,.docx">
+                    <div id="transcriptName"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="passport">Upload Passport Copy (PDF) <span class="required">*</span></label>
+                    <div class="file-upload" onclick="document.getElementById('passport').click()">
+                        <div class="file-upload-text">📎 Click to upload</div>
+                        <div class="file-upload-hint">Accepted: PDF, JPG, PNG (Max 5MB)</div>
+                    </div>
+                    <input type="file" id="passport" name="passport" accept=".pdf,.jpg,.png">
+                    <div id="passportName"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="recommendations">Upload Recommendation Letters (PDF)</label>
+                    <div class="file-upload" onclick="document.getElementById('recommendations').click()">
+                        <div class="file-upload-text">📎 Click to upload</div>
+                        <div class="file-upload-hint">Accepted: PDF (Max 10MB)</div>
+                    </div>
+                    <input type="file" id="recommendations" name="recommendations" accept=".pdf">
+                    <div id="recommendationsName"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="englishTest">Upload English Test Results (TOEFL/IELTS)</label>
+                    <div class="file-upload" onclick="document.getElementById('englishTest').click()">
+                        <div class="file-upload-text">📎 Click to upload</div>
+                        <div class="file-upload-hint">Accepted: PDF (Max 5MB)</div>
+                    </div>
+                    <input type="file" id="englishTest" name="englishTest" accept=".pdf">
+                    <div id="englishTestName"></div>
+                </div>
+            </div>
+
+
+            <div class="form-section">
+                <h2>✅ Declaration</h2>
+                <div class="form-group">
+                    <label style="display: flex; align-items: flex-start; gap: 10px;">
+                        <input type="checkbox" id="declaration" name="declaration" required style="width: auto; margin-top: 5px;">
+                        <span>I declare that all information provided is accurate and truthful. I understand that providing false information may result in disqualification.</span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label style="display: flex; align-items: flex-start; gap: 10px;">
+                        <input type="checkbox" id="terms" name="terms" required style="width: auto; margin-top: 5px;">
+                        <span>I agree to the <a href="index16.html" target="_blank">Terms & Conditions</a> and <a href="index15.html" target="_blank">Privacy Policy</a></span>
+                    </label>
+                </div>
+            </div>
+
+        
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">🚀 Submit Application</button>
+                <button type="reset" class="btn btn-secondary">Clear Form</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </form>
+
+
+        <div class="form-section faq-section">
+            <h2>❓ Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Who is eligible to apply for the scholarship?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Students from any country can apply if they meet our academic requirements (minimum GPA 3.0) and are accepted to a partner university. You must be at least 18 years old and have completed secondary education.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What are the application deadlines?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We accept applications year-round with rolling admissions. However, we recommend applying at least 6-8 months before your intended start date for faster processing and better placement options.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>How long does the application process take?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    The entire process typically takes 45-60 days from submission to final decision. This includes document review, interviews, and verification of credentials.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Can I apply for multiple scholarships?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, you can apply for multiple scholarship types and destinations. However, you can only accept one full scholarship. You may combine partial scholarships with other funding sources.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What if my application is rejected?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Rejection is not final. You can reapply after improving your academic record or submitting additional documents. We also offer alternative partial scholarships if you're close to qualifying for a full award.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Is there financial support for living expenses?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Full ride scholarships cover tuition, accommodation, and living allowances. Partial scholarships cover tuition only. All scholarship recipients receive monthly stipends for additional expenses.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What languages must the application be in?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Applications can be submitted in English, French, Kinyarwanda, Kiswahili, or Portuguese. All supporting documents must be officially translated into English.
+                </div>
+            </div>
+        </div>
+
+    
+        <section class="footer">
+                <div class="footer-section">
+                    <h4>About EduHub</h4>
+                    <p>EduHub is a global education platform dedicated to empowering learners through international study opportunities and scholarships. Our mission is to make world-class education accessible to all.</p>
+                </div>
+                <div class="footer-section1">
+                    <h4>Quick Links</h4>
+                    <div class="link">
+                        <a href="./index.html">home</a>
+                        <a href="./index17.html">Study Abroard</a>
+                        <a href="./index15.html">privacy</a>
+                        <a href="./index16.html">terms</a>
+                        <a href="#contact">contact</a>
+                    </div>
+                </div>
+                <div class="footer-section2">
+                    <h4>Contact Us</h4>
+                    <div class="contact">
+                        <p>📧 <a href="mailto:scholarships@eduhub.edu">scholarships@eduhub.edu</a></p>
+                        <p></p>📞 <a href="tel:+250785786547">+250 785 786 547</a></div>
+                       <p> 📍 123 Education Street, Learning City, LC 12345 </p>
+                    </div>
+                <div class="footer-section3">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/evariste.arrogent.ever">Facebook</a>
+                        <a href="https://www.instagram.com/evariste_truly_ever/">Instagram</a>
+                        <a href="https://www.linkedin.com/in/evariste-bapfekurera-a3700b2b0/">LinkedIn</a>
+                        <a href="https://x.com/EBapfekure3">Twitter</a>
+                        <a href="https://www.youtube.com/@evaristebapfekurera5995">you tube</a>
+                    </div>
+                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduHub. All rights reserved. Crafted with <span style="color:#e74c3c;">❤</span></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        
+        document.getElementById('transcripts').addEventListener('change', function(e) {
+            document.getElementById('transcriptName').textContent = '✓ ' + e.target.files[0]?.name || '';
+        });
+
+        document.getElementById('passport').addEventListener('change', function(e) {
+            document.getElementById('passportName').textContent = '✓ ' + e.target.files[0]?.name || '';
+        });
+
+        document.getElementById('recommendations').addEventListener('change', function(e) {
+            document.getElementById('recommendationsName').textContent = '✓ ' + e.target.files[0]?.name || '';
+        });
+
+        document.getElementById('englishTest').addEventListener('change', function(e) {
+            document.getElementById('englishTestName').textContent = '✓ ' + e.target.files[0]?.name || '';
+        });
+
+      
+        function submitApplication(event) {
+            event.preventDefault();
+
+            const countriesChecked = document.querySelectorAll('input[name="countries"]:checked').length > 0;
+            if (!countriesChecked) {
+                showError('Please select at least one country preference');
+                return;
+            }
+
+         
+            if (!document.getElementById('transcripts').files.length) {
+                showError('Please upload your academic transcripts');
+                return;
+            }
+
+            if (!document.getElementById('passport').files.length) {
+                showError('Please upload your passport copy');
+                return;
+            }
+
+          
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('scholarshipForm').reset();
+
+         
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+
+            
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        }
+
+        function showError(message) {
+            const errorMsg = document.getElementById('errorMessage');
+            errorMsg.textContent = '✗ ' + message;
+            errorMsg.style.display = 'block';
+            errorMsg.scrollIntoView({ behavior: 'smooth' });
+
+            setTimeout(() => {
+                errorMsg.style.display = 'none';
+            }, 5000);
+        }
+
+   
+        function toggleFAQ(element) {
+            const faqItem = element.closest('.faq-item');
+            faqItem.classList.toggle('active');
+        }
+
+        
+        const form = document.getElementById('scholarshipForm');
+        form.addEventListener('input', function() {
+            const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+            let filled = 0;
+            inputs.forEach(input => {
+                if (input.value.trim()) {
+                    filled++;
+                }
+            });
+            const percentage = (filled / inputs.length) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+        });
+
+      
+        document.addEventListener('DOMContentLoaded', function() {
+          
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
