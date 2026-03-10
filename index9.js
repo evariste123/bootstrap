@@ -1,209 +1,130 @@
+// Store for our books
+let books = [];
 
-let books = JSON.parse(localStorage.getItem('books')) || [];
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    displayBooks();
-    
-    const uploadForm = document.getElementById('uploadForm');
-    if (uploadForm) {
-        uploadForm.addEventListener('submit', uploadBook);
-    }
-
-    const bookCover = document.getElementById('bookCover');
-    if (bookCover) {
-        bookCover.addEventListener('change', function(e) {
-            previewImage(e, 'coverPreview');
-        });
-    }
-});
-
-
-function displayBooks() {
-    const booksGrid = document.getElementById('booksGrid');
-    if (!booksGrid) return;
-
-    let booksToDisplay = books;
-
-  
-    const searchBooks = document.getElementById('searchBooks');
-    const categoryFilter = document.getElementById('categoryFilter');
-    
-    if (searchBooks && categoryFilter) {
-        const searchTerm = searchBooks.value.toLowerCase();
-        const selectedCategory = categoryFilter.value;
-
-        booksToDisplay = books.filter(book => {
-            const matchSearch = book.title.toLowerCase().includes(searchTerm) || 
-                              book.author.toLowerCase().includes(searchTerm);
-            const matchCategory = !selectedCategory || book.category === selectedCategory;
-            return matchSearch && matchCategory;
-        });
-    }
-
-    if (booksToDisplay.length === 0) {
-        booksGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">No books found. Try a different search or upload a new book!</p>';
-        return;
-    }
-
-    booksGrid.innerHTML = booksToDisplay.map((book, index) => {
-        const originalIndex = books.indexOf(book);
-        return `
-        <div class="book-card">
-            ${book.cover ? `<img src="${book.cover}" alt="${book.title}" class="book-cover">` : `<div class="book-cover">📕</div>`}
-            <div class="book-info">
-                <h3 class="book-title">${book.title}</h3>
-                <p class="book-author">by ${book.author}</p>
-                <span class="book-category">${book.category}</span>
-                <p class="book-description">${book.description}</p>
-                <div class="book-actions">
-                    <button class="btn btn-primary" onclick="downloadBook(${originalIndex})">📥 Download</button>
-                    <button class="btn btn-secondary" onclick="viewBookDetails(${originalIndex})">View Details</button>
-                    <button class="delete-btn" onclick="deleteBook(${originalIndex})">Delete</button>
-                </div>
-            </div>
-        </div>
-        `;
-    }).join('');
-}
-
-
-function filterBooks() {
-    displayBooks();
-}
-
-
-function uploadBook(e) {
-    e.preventDefault();
-
-    const bookTitle = document.getElementById('bookTitle').value;
-    const bookAuthor = document.getElementById('bookAuthor').value;
-    const bookCategory = document.getElementById('bookCategory').value;
-    const bookDescription = document.getElementById('bookDescription').value;
-    const bookDocumentInput = document.getElementById('bookDocument');
-    const bookCoverInput = document.getElementById('bookCover');
-
-    if (bookDocumentInput.files.length === 0) {
-        showAlert('Please select a document to upload', 'error');
-        return;
-    }
-
-    const docReader = new FileReader();
-    docReader.onload = function(docEvent) {
-        let bookCover = null;
-
-        if (bookCoverInput.files.length > 0) {
-            const coverReader = new FileReader();
-            coverReader.onload = function(coverEvent) {
-                bookCover = coverEvent.target.result;
-                saveBook(bookTitle, bookAuthor, bookCategory, bookDescription, docEvent.target.result, bookCover);
-            };
-            coverReader.readAsDataURL(bookCoverInput.files[0]);
-        } else {
-            saveBook(bookTitle, bookAuthor, bookCategory, bookDescription, docEvent.target.result, null);
-        }
-    };
-    docReader.readAsArrayBuffer(bookDocumentInput.files[0]);
-}
-
-function saveBook(title, author, category, description, document, cover) {
-    const newBook = {
-        title: title,
-        author: author,
-        category: category,
-        description: description,
-        document: document,
-        cover: cover,
-        dateUploaded: new Date().toLocaleDateString()
-    };
-
-    books.push(newBook);
-    localStorage.setItem('books', JSON.stringify(books));
-
-    document.getElementById('uploadForm').reset();
-    document.getElementById('coverPreview').classList.remove('show');
-    closeUploadModal();
-    displayBooks();
-
-    showAlert(`Book "${title}" uploaded successfully!`, 'success');
-}
-
-
-function deleteBook(index) {
-    if (confirm('Are you sure you want to delete this book?')) {
-        const bookTitle = books[index].title;
-        books.splice(index, 1);
-        localStorage.setItem('books', JSON.stringify(books));
-        displayBooks();
-        showAlert(`Book "${bookTitle}" deleted successfully!`, 'success');
-    }
-}
-
-
-function downloadBook(index) {
-    const book = books[index];
-    if (book.document) {
-        const link = document.createElement('a');
-        link.href = book.document;
-        link.download = `${book.title}.pdf`;
-        link.click();
-    }
-}
-
-
-function viewBookDetails(index) {
-    const book = books[index];
-    alert(`
-Title: ${book.title}
-Author: ${book.author}
-Category: ${book.category}
-Description: ${book.description}
-Date Uploaded: ${book.dateUploaded}
-    `);
-}
-
+/**
+ * MODAL CONTROLS
+ */
 function openUploadModal() {
-    document.getElementById('uploadModal').classList.add('show');
+    document.getElementById('uploadModal').style.display = 'block';
 }
 
 function closeUploadModal() {
-    document.getElementById('uploadModal').classList.remove('show');
+    document.getElementById('uploadModal').style.display = 'none';
+    document.getElementById('uploadForm').reset();
 }
 
-
-window.addEventListener('click', function(event) {
-    const uploadModal = document.getElementById('uploadModal');
-    if (event.target === uploadModal) {
-        closeUploadModal();
+/**
+ * RENDER BOOKS TO GRID
+ */
+function displayBooks(filterData = books) {
+    const grid = document.getElementById('booksGrid');
+    
+    if (filterData.length === 0) {
+        grid.innerHTML = '<p>No books found matching your criteria.</p>';
+        return;
     }
+
+    grid.innerHTML = filterData.map((book, index) => `
+        <div class="book-card" style="border:1px solid #ccc; padding:15px; border-radius:8px; margin-bottom:10px;">
+            <h3>${book.title}</h3>
+            <p><strong>Author:</strong> ${book.author}</p>
+            <p><strong>Category:</strong> ${book.category}</p>
+            <p>${book.description}</p>
+            <small>File: ${book.fileName}</small>
+        </div>
+    `).join('');
+}
+
+/**
+ * SEARCH & FILTER LOGIC
+ */
+function filterBooks() {
+    const searchTerm = document.getElementById('searchBooks').value.toLowerCase();
+    const category = document.getElementById('categoryFilter').value;
+
+    const filtered = books.filter(book => {
+        const matchesSearch = book.title.toLowerCase().includes(searchTerm) || 
+                              book.author.toLowerCase().includes(searchTerm);
+        const matchesCategory = category === "" || book.category === category;
+        return matchesSearch && matchesCategory;
+    });
+
+    displayBooks(filtered);
+}
+
+/**
+ * FORM SUBMISSION (UPLOAD)
+ */
+document.getElementById('uploadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Create book object
+    const newBook = {
+        title: document.getElementById('bookTitle').value,
+        author: document.getElementById('bookAuthor').value,
+        category: document.getElementById('bookCategory').value,
+        description: document.getElementById('bookDescription').value,
+        fileName: document.getElementById('bookDocument').files[0]?.name || 'No file',
+        id: Date.now()
+    };
+
+    // Add to array
+    books.push(newBook);
+    
+    // Refresh UI
+    displayBooks();
+    closeUploadModal();
+    alert("Book uploaded successfully!");
 });
 
-function previewImage(event, previewElementId) {
-    const file = event.target.files[0];
-    const preview = document.getElementById(previewElementId);
+/**
+ * SEARCH FORM SUBMIT
+ */
+document.querySelector('form[action=""]').addEventListener('submit', function(e) {
+    e.preventDefault();
+    filterBooks();
+});
 
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            preview.src = e.target.result;
-            preview.classList.add('show');
-        };
-        reader.readAsDataURL(file);
-    }
-}
+// Close modal if user clicks outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('uploadModal');
+    if (event.target == modal) closeUploadModal();
+};
 
+document.addEventListener('DOMContentLoaded', () => {
+    const searchForm = document.getElementById('search');
+    const searchInput = document.getElementById('searchBooks');
 
-function showAlert(message, type) {
-    const alertDiv = document.createElement('div');
-    alertDiv.className = `message ${type}`;
-    alertDiv.textContent = message;
-    
-    const librarySection = document.querySelector('.library-section');
-    if (librarySection) {
-        librarySection.insertBefore(alertDiv, librarySection.firstChild);
-    }
+    searchForm.addEventListener('submit', (e) => {
+        // 1. Prevent the page from reloading
+        e.preventDefault();
 
-    setTimeout(() => {
-        alertDiv.remove();
-    }, 3000);
-}
+        // 2. Get the search term
+        const query = searchInput.value.trim().toLowerCase();
+
+        if (!query) return;
+
+        // 3. Logic to filter your books (Example)
+        console.log(`Searching for: ${query}`);
+        
+        // This targets your book cards or list items
+        const bookCards = document.querySelectorAll('.book-card'); 
+
+        bookCards.forEach(card => {
+            const title = card.innerText.toLowerCase();
+            if (title.includes(query)) {
+                card.style.display = "block"; // Show match
+            } else {
+                card.style.display = "none";  // Hide others
+            }
+        });
+    });
+
+    // Optional: Real-time search as you type
+    searchInput.addEventListener('input', () => {
+        if (searchInput.value === "") {
+            // Show all books if search is cleared
+            document.querySelectorAll('.book-card').forEach(card => card.style.display = "block");
+        }
+    });
+});

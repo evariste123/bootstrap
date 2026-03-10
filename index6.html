@@ -226,14 +226,29 @@
     <h2>Food Assistant Chatbot</h2>
     <p>Chat with our food assistant:</p>
     
+    <div id="chatContainer" class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">👋 Hi! I'm your Food Assistant. How can I help you with your order today?</div>
+                <div class="message-time">Just now</div>
+            </div>
+        </div>
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
     <h3>Common Questions:</h3>
-   
-        <b>Hello - Chat with assistant</b>
-        <b>What is your menu? - See available categories</b>
-        <b>Tell me about pizza - Get pizza information</b>
-        <b>What payment methods do you accept? - Payment options</b>
-        <b>Do you deliver? - Delivery information</b>
-        <b>What are your prices? - Pricing information</b>
+    <div class="quick-questions">
+        <button class="quick-btn" onclick="sendQuickMessage('Hello')">Hello</button>
+        <button class="quick-btn" onclick="sendQuickMessage('What is your menu?')">Menu</button>
+        <button class="quick-btn" onclick="sendQuickMessage('Tell me about pizza')">Pizza Info</button>
+        <button class="quick-btn" onclick="sendQuickMessage('What payment methods do you accept?')">Payment</button>
+        <button class="quick-btn" onclick="sendQuickMessage('Do you deliver?')">Delivery</button>
+        <button class="quick-btn" onclick="sendQuickMessage('What are your prices?')">Prices</button>
+    </div>
     </div>
 <div class="card14">
     <form action="" id="myForm">
@@ -283,6 +298,9 @@
         </div>
     </div>
 </footer>
+
+<script src="./index6.js"></script>
 </body>
 </html>
+
 

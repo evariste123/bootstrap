@@ -233,6 +233,41 @@ print(r.json())
         </div>
     </section>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // 1. Select the elements
+    const trialLabel = document.querySelector('.muted0');
+    const durationText = document.querySelector('.font');
+    const pillBadge = document.querySelector('.pill');
+
+    /**
+     * Update Function: Change the plan details dynamically
+     */
+    function updatePlan(newTrialName, newDuration) {
+        if(trialLabel) trialLabel.textContent = newTrialName;
+        if(durationText) durationText.textContent = newDuration;
+    }
+    if (pillBadge) {
+        pillBadge.style.cursor = 'pointer'; // Make it look clickable
+        
+        pillBadge.addEventListener('click', () => {
+            pillBadge.style.backgroundColor = '#28a745'; // Change to green
+            pillBadge.style.color = '#fff';
+            pillBadge.textContent = 'Verified ✓';
+            
+            console.log("User acknowledged: No Credit Card Required.");
+        });
+    }
+
+    // Log the current state for debugging
+    console.log("Current Offer:", {
+        type: trialLabel?.textContent,
+        length: durationText?.textContent,
+        requirement: pillBadge?.textContent
+    });
+});
+
+  </script>
   <script src="./index7.js"></script>
 </body>
 </html>
