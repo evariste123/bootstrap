@@ -171,6 +171,7 @@ and has been on a relentless pursuit of excellence ever since. Our journey began
             <a href="./index13.html"><button type="button">vacation</button></a>
              <a href="./index14.html"><button type="button">Dashboard</button></a>
              <a href="./index17.html"><button type="button">Abroard</button></a>
+             <a href="./index22.html"><button type="button">job-Abroard</button></a>
     </div>
 </section>
 
@@ -337,7 +338,7 @@ and has been on a relentless pursuit of excellence ever since. Our journey began
                 <span class="category">Technology</span>
                 <h3>The Era of AI Personalization</h3>
                 <p>In 2026, AI is no longer just a tool; it's a co-pilot. We explore how hyper-personalization is redefining the user journey from landing pages to final conversion.</p>
-                <a href="#" class="read-more">Read Full Post →</a>
+                <a href="./index21.html" class="read-more">Read Full Post →</a>
             </div>
         </article>
 
@@ -351,7 +352,7 @@ and has been on a relentless pursuit of excellence ever since. Our journey began
                 <span class="category">Design</span>
                 <h3>Beyond Minimalist Interfaces</h3>
                 <p>Why "Neo-Brutalism" and maximalist layouts are making a comeback. Discover how to balance "controlled chaos" with high-performance UX standards.</p>
-                <a href="#" class="read-more">Read Full Post →</a>
+                <a href="./index21.html" class="read-more">Read Full Post →</a>
             </div>
         </article>
 
@@ -365,7 +366,7 @@ and has been on a relentless pursuit of excellence ever since. Our journey began
                 <span class="category">Culture</span>
                 <h3>The Hybrid Work Revolution</h3>
                 <p>Three years into the global shift, we analyze the metrics of remote-first productivity and how company culture survives across decentralized teams.</p>
-                <a href="#" class="read-more">Read Full Post →</a>
+                <a href="./index21.html" class="read-more">Read Full Post →</a>
             </div>
         </article>
 
@@ -438,6 +439,88 @@ and has been on a relentless pursuit of excellence ever since. Our journey began
     </style>
 </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // 1. Collect Basic Inputs
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('number').value;
+        const country = document.getElementById('country').value;
+
+        // 2. Collect Selected Languages (Checkboxes)
+        const languages = [];
+        if (document.getElementById('langRw').checked) languages.push('Kinyarwanda');
+        if (document.getElementById('langEn').checked) languages.push('English');
+        if (document.getElementById('langFr').checked) languages.push('French');
+        if (document.getElementById('langEs').checked) languages.push('Spanish');
+
+        // 3. Collect Gender (Radio buttons)
+        const gender = document.querySelector('input[name="gender"]:checked')?.value || 'Not specified';
+
+        // 4. Create the Data Object
+        const submissionData = {
+            fullName: name,
+            email: email,
+            phone: phone,
+            country: country,
+            languages: languages.length > 0 ? languages.join(', ') : 'None selected',
+            gender: gender.charAt(0).toUpperCase() + gender.slice(1),
+            date: new Date().toLocaleString()
+        };
+
+        // 5. Provide Feedback & Close Form
+        console.log('Form Submitted:', submissionData);
+        showSummary(submissionData);
+    });
+
+    /**
+     * Function to display the summary and hide the form
+     */
+    function showSummary(data) {
+        // Create a summary container with matching styles
+        const summaryDiv = document.createElement('div');
+        summaryDiv.style.cssText = `
+            background: #ffffff; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
+            border: 1px solid #eee;
+            text-align: left;
+            line-height: 1.8;
+        `;
+
+        summaryDiv.innerHTML = `
+            <h2 style="color: #28a745; text-align: center;">Message Sent Successfully! ✅</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">Thank you for reaching out. Here is a copy of your details:</p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 20px;">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <p><strong>Name:</strong> ${data.fullName}</p>
+                <p><strong>Email:</strong> ${data.email}</p>
+                <p><strong>Phone:</strong> ${data.phone}</p>
+                <p><strong>Country:</strong> ${data.country}</p>
+                <p><strong>Gender:</strong> ${data.gender}</p>
+                <p><strong>Languages:</strong> ${data.languages}</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button onclick="location.reload()" style="background-color: #007BFF; color: white; border: none; padding: 12px 30px; border-radius: 30px; cursor: pointer;">
+                    Send Another Message
+                </button>
+            </div>
+        `;
+
+        // Replace the form with the summary
+        contactForm.replaceWith(summaryDiv);
+    }
+});
+
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeo6lhmN0VKM9e9wG1z6fFhEAs5yU5K/5e3z0GPfF5d02Q9k" crossorigin="anonymous"></script>

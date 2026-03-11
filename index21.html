@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Preview</title>
+    
+    <style>
+        :root {
+            --primary: #28a745;
+            --dark: #2d3436;
+            --grey: #636e72;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .post-preview-container {
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+     
+        .post-image {
+            margin: 0;
+            height: 200px;
+            background: #dfe6e9; 
+            overflow: hidden;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .post-card:hover .post-image img {
+            transform: scale(1.1);
+        }
+
+   
+        .post-content-wrapper {
+            padding: 25px;
+        }
+
+        .post-title {
+            margin: 0 0 10px 0;
+            color: var(--dark);
+            font-size: 1.4rem;
+            line-height: 1.3;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: var(--grey);
+            margin-bottom: 15px;
+        }
+
+        .divider { margin: 0 8px; color: #ccc; }
+
+        .post-excerpt p {
+            color: var(--grey);
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+       
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+        }
+
+        .read-more:hover {
+            background-color: var(--primary);
+            color: white;
+            padding-right: 25px;
+        }
+
+        .arrow {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .read-more:hover .arrow {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+
+ 
+    <section class="post-preview-container">
+        <article class="post-card">
+            
+            <figure class="post-image">
+                <a href="./index14.html">
+                    <img src="./image/canada.jpeg" alt="API Architecture" id="featuredImg" loading="lazy">
+                </a>
+            </figure>
+
+            <div class="post-content-wrapper">
+                <header class="post-header">
+                    <h2 class="post-title">Exploring the Future of REST APIs</h2>
+                    <div class="post-meta">
+                        <span class="author">By Evariste Eva</span>
+                        <span class="divider">|</span>
+                        <time datetime="2024-05-20">May 20, 2024</time>
+                    </div>
+                </header>
+
+                <div class="post-excerpt">
+                    <p>
+                        Discover how modern API architecture is evolving to meet the demands of high-scale 
+                        applications. We dive deep into rate limiting, security protocols, and 
+                        the best practices for developer documentation in the 2024 landscape.
+                    </p>
+                </div>
+
+                <footer class="post-footer">
+                    <a href="./index.html" class="read-more" id="postLink" role="button">
+                        back<span class="arrow">&RightArrow;</span>
+                    </a>
+                </footer>
+            </div>
+        </article>
+    </section>
+
+ 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const postLink = document.getElementById('postLink');
+            const card = document.querySelector('.post-card');
+
+           
+            postLink.addEventListener('click', function(e) {
+                
+                this.style.opacity = '0.7';
+                this.innerHTML = 'Opening... <span class="arrow">🍏</span>';
+                
+                console.log("User navigating to full post...");
+            });
+
+   
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+               
+                if (e.target.tagName !== 'A') {
+                    window.location.href = "./index.html";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

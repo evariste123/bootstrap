@@ -235,23 +235,21 @@ print(r.json())
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-    // 1. Select the elements
+  
     const trialLabel = document.querySelector('.muted0');
     const durationText = document.querySelector('.font');
     const pillBadge = document.querySelector('.pill');
 
-    /**
-     * Update Function: Change the plan details dynamically
-     */
+    
     function updatePlan(newTrialName, newDuration) {
         if(trialLabel) trialLabel.textContent = newTrialName;
         if(durationText) durationText.textContent = newDuration;
     }
     if (pillBadge) {
-        pillBadge.style.cursor = 'pointer'; // Make it look clickable
+        pillBadge.style.cursor = 'pointer'; 
         
         pillBadge.addEventListener('click', () => {
-            pillBadge.style.backgroundColor = '#28a745'; // Change to green
+            pillBadge.style.backgroundColor = '#28a745'; 
             pillBadge.style.color = '#fff';
             pillBadge.textContent = 'Verified ✓';
             
@@ -259,7 +257,7 @@ print(r.json())
         });
     }
 
-    // Log the current state for debugging
+   
     console.log("Current Offer:", {
         type: trialLabel?.textContent,
         length: durationText?.textContent,
