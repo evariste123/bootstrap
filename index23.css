@@ -1,0 +1,381 @@
+
+        body 
+        { 
+        font-family: sans-serif;
+         background: #f4f7f6;
+          padding: 20px;
+         }
+        .form-container 
+        { 
+         max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 8px; 
+        box-shadow: 0 20px 20px rgba(22, 22, 22, 0.1);
+         }
+         .form-container h2{
+            text-align: center;
+            bottom: 20px;
+         }
+         .section-title{
+            position:relative;
+            justify-self: center;
+            color: hsl(162, 100%, 4%);
+            font-size: 1.5rem;
+            bottom: 10px;
+         }
+         .grid{
+            position: relative;
+            padding: 30px 20px;
+         }
+         .form-group{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+         }
+         .form-group label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group input{
+            width: 20vw;
+            color: black;
+            height: 5vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group input::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group input:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+
+         .form-group1{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+            top: 20px;
+         }
+         .form-group1 label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group1 input{
+            width: 20vw;
+            color: black;
+            height: 5vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group1 input::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group1 input:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+
+         .section-title1{
+            position:relative;
+            justify-self: center;
+            color: hsl(162, 100%, 4%);
+            font-size: 1rem;
+            bottom: 40px;
+         }
+         .grid1{
+            position: relative;
+            padding: 30px 20px;
+            top: 0px;
+         }
+
+
+         .form-group2{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+            top: 20px;
+         }
+         .form-group2 label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group2 input{
+            width: 20vw;
+            color: black;
+            height: 5vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group2 input::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group2 input:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+
+         .form-group3{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+            top: 0px;
+         }
+         .form-group3 label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group3 input{
+            width: 20vw;
+            color: black;
+            height: 5vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group3 input::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group3 input:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+
+
+         .form-group4{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+            top: 10px;
+         }
+         .form-group4 label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group4 input{
+            width: 20vw;
+            color: black;
+            height: 5vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group4 input::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group4 input:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+         .grid2{
+            position: relative;
+            padding: 30px 20px;
+         }
+         .form-group5 label{
+            position: relative;
+            color: #00573a;
+         }
+         .form-group5 select{
+            padding: 5px 5px;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group5 select:hover{
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            background-color: #373838;
+            color: white;
+         }
+
+         .form-group6{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+            top: 10px;
+         }
+         .form-group6 label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group6 input{
+            width: 20vw;
+            color: black;
+            height: 5vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group6 input::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group6 input:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+         
+         .section-title2{
+            position:relative;
+            justify-self: center;
+            color: hsl(162, 100%, 4%);
+            font-size: 1.5rem;
+            bottom: 10px;
+         }
+
+         .form-group7{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+            top: 10px;
+         }
+         .form-group7 label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group7 input{
+            width: 20vw;
+            color: black;
+            height: 5vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group7 input::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group7 input:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+         
+         .form-group8{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+            top: 20px;
+         }
+         .form-group8 label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group8 input{
+            width: 20vw;
+            color: black;
+            height: 5vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group8 input::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group8 input:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+
+         .form-group9{
+            position: relative;
+            justify-self: left;
+            margin-left: 10px;
+            top: 30px;
+         }
+         .form-group9 label{
+            color: #00573a;
+            font: 20px bold;
+         }
+         .form-group9 textarea{
+            width: 20vw;
+            color: black;
+            height: 10vh;
+            border: 1px solid cyan;
+            border-radius: 5px;
+         }
+         .form-group9 textarea::placeholder{
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+         }
+         .form-group9 textarea:hover{
+            text-transform: capitalize;
+            transform: scale(1.05);
+            transition: all ease-in 0.3s;
+            cursor: pointer;
+            border: 1px solid purple;
+         }
+         .btn{
+            position: relative;
+            top: 60px;
+         }
+         .btn button{
+             padding: 20px 20px;
+            background-color: limegreen;
+            border: none;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+         }
+         .btn button:hover{
+            transition: all ease-in 0.3s;
+            background-color: #00573a;
+            color: white;
+            font: optional;
+            box-shadow: 0 0 20px black;
+         }
+         .button{
+            position: relative;
+            justify-self: right;
+            margin-right: 20px;
+         }
+         .button button{
+             padding: 20px 20px;
+            background-color: rgb(123, 126, 123);
+            border: none;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+         }
+         .button button:hover{
+            transition: all ease-in 0.3s;
+            background-color: #243b34;
+            color: white;
+            font: optional;
+            box-shadow: 0 0 20px black;
+         }

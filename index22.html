@@ -363,6 +363,7 @@
             
             <div class="hero0">
                 <a href="#">View All 12,500+ Jobs →</a>
+                <a href="./index23.html">Apply for 🌐Jobs</a>
             </div>
         </div>
 
@@ -387,14 +388,14 @@
             
             <form action="" id="form">
                 <input type="email" placeholder="Enter your email address" required>
-                <select id="select" onclick="sample">
-                    <option value="">Select your profession</option>
-                    <option value="">Healthcare</option>
-                    <option value="">IT & Technology</option>
-                    <option value="">Engineering</option>
-                    <option value="">Education</option>
-                    <option value="">Finance</option>
-                    <option value="">Other</option>
+                <select id="select">
+                    <option value="Select your profession">Select your profession</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="IT & Technology">IT & Technology</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Education">Education</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Other">Other</option>
                 </select>
                 <button type="submit">Subscribe Now</button>
             </form>
@@ -402,44 +403,149 @@
         </div>
 
         <!-- Contact & Support -->
-        <div class="Footer">
+        <div class="footer">
+            <hr>
             <h2>📞 Need Guidance?</h2>
             
-            <div class="Contact">
-                <div class="Contact1">
+                <div class="contact">
                     <h4>📱 WhatsApp/Call</h4>
                     <p>+250 785786547</p>
                     <p>Mon-Fri, 9AM-6PM (GMT)</p>
                 </div>
                 
-                <div class="Contact2">
+                <div class="contact1">
                     <h4>✉️ Email Support</h4>
                     <p>jobs.abroad@eduhub.com</p>
                     <p>24/7 response within 24 hours</p>
                 </div>
                 
-                <div class="Contact3">
+                <div class="contact2">
                     <h4>📍 Visit Us</h4>
                     <p>123 Education Street</p>
                     <p>Ottawa,canada-ontario</p>
                 </div>
-            </div>
+           
         
 
         <!-- Footer Note -->
         <div class="link">
-            <hr>
             <p class="links">
                 <a href="#">About Us</a> | 
-                <a href="#">Privacy Policy</a> | 
-                <a href="#">Terms of Service</a> | 
-                <a href="#">Contact</a>
+                <a href="./index15.html">Privacy Policy</a> | 
+                <a href="./index16.html">Terms of Service</a> | 
+                <a href="#">Contact</a>|
+                <a href="./index.html">back</a>
             </p>
 
         </div>
-        <p>© 2024 EduHub - Your Global Career Partner. All rights reserved.</p>
+        <p class="para">© 2024 EduHub - Your Global Career Partner. All rights reserved.</p>
         </div>
     </section>
+<script>
 
+class SubscriptionManager {
+    constructor(formId, selectId) {
+        this.form = document.getElementById(formId);
+        this.select = document.getElementById(selectId);
+        this.submitBtn = this.form?.querySelector('button[type="submit"]');
+        
+        if (this.form) this.init();
+    }
+
+    init() {
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    }
+
+    async handleSubmit(event) {
+        event.preventDefault();
+
+        const email = this.form.querySelector('input[type="email"]').value.trim();
+        const profession = this.select.value;
+
+        if (!profession || profession === "Select your profession") {
+            this.renderPopup("Validation Error", "Please select a valid profession.", "error");
+            return;
+        }
+
+        this.setLoadingState(true);
+
+        try {
+            // Simulate Network Latency
+            await new Promise(res => setTimeout(res, 1200));
+
+            // SUCCESS: Show Professional Detail Card
+            this.renderPopup("Subscription Confirmed", {
+                "User Email": email,
+                "Profession": profession,
+                "Status": "Active",
+                "Timestamp": new Date().toLocaleString()
+            }, "success");
+
+            this.form.reset();
+        } catch (error) {
+            this.renderPopup("System Error", "Failed to connect to server.", "error");
+        } finally {
+            this.setLoadingState(false);
+        }
+    }
+
+  
+    renderPopup(title, details, type) {
+        const oldPopup = document.getElementById('info-popup');
+        if (oldPopup) oldPopup.remove();
+
+        const overlay = document.createElement('div');
+        overlay.id = 'info-popup';
+        Object.assign(overlay.style, {
+            position: 'fixed', top: '0', left: '0', width: '100%', height: '100%',
+            backgroundColor: 'rgba(0,0,0,0.85)', display: 'flex', alignItems: 'center',
+            justifyContent: 'center', zIndex: '9999', backdropFilter: 'blur(5px)',
+            fontFamily: 'sans-serif'
+        });
+
+        const card = document.createElement('div');
+        Object.assign(card.style, {
+            background: '#fff', padding: '30px', borderRadius: '12px', width: '90%',
+            maxWidth: '400px', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', textAlign: 'left'
+        });
+
+        let infoHtml = '';
+        if (typeof details === 'object') {
+            infoHtml = Object.entries(details).map(([key, val]) => `
+                <div style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:5px;">
+                    <small style="color:#888; text-transform:uppercase; font-size:10px; font-weight:bold;">${key}</small>
+                    <div style="color:#333; font-size:15px;">${val}</div>
+                </div>
+            `).join('');
+        } else {
+            infoHtml = `<p style="color:#666;">${details}</p>`;
+        }
+
+        card.innerHTML = `
+            <h2 style="margin-top:0; color:${type === 'success' ? '#27ae60' : '#e74c3c'}; font-size:22px;">${title}</h2>
+            <div style="margin: 20px 0;">${infoHtml}</div>
+            <button id="close-popup" style="width:100%; padding:12px; background:#333; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:bold;">Dismiss</button>
+        `;
+
+        overlay.appendChild(card);
+        document.body.appendChild(overlay);
+
+        document.getElementById('close-popup').onclick = () => overlay.remove();
+    }
+
+    setLoadingState(isLoading) {
+        if (!this.submitBtn) return;
+        this.submitBtn.disabled = isLoading;
+        this.submitBtn.textContent = isLoading ? "Verifying..." : "Subscribe Now";
+        this.submitBtn.style.opacity = isLoading ? "0.6" : "1";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new SubscriptionManager('form', 'select');
+});
+
+
+</script>
 </body>
 </html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🌎Job Application</title>
+    <link rel="stylesheet" href="./index23.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>🌐Global Career Application</h2>
+    
+    <form action="#" method="POST" enctype="multipart/form-data">
+        
+        <!-- Personal Information -->
+        <div class="section-title">👤Personal Details</div>
+        <div class="grid">
+            <div class="form-group">
+                <label for="fname">Full Name: 📛</label>
+                <input type="text" id="fname" name="firstname" required placeholder="First name">
+            </div>
+            <div class="form-group1">
+                <label for="lname">Last Name:👤 </label>
+                <input type="text" id="lname" name="lastname" required placeholder="Last name">
+            </div>
+        </div>
+
+        <div class="form-group2">
+            <label for="email">Email Address: 📧 </label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+        </div>
+
+        <!-- International Specifics -->
+        <div class="section-title1">🌍International Status</div>
+        <div class="grid1">
+            <div class="form-group3">
+                <label for="nationality">Nationality: 🏳️</label>
+                <input type="text" id="nationality" name="nationality" required placeholder="your nationality">
+            </div>
+            <div class="form-group4">
+                <label for="current_location">Current Country of Residence</label>
+                <input type="text" id="current_location" name="current_location" required placeholder="your current_location">
+            </div>
+        </div>
+
+        <div class="grid2">
+            <div class="form-group5">
+                <label for="visa">: 📑Work Authorization/Visa Status</label>
+                <select id="visa" name="visa_status">
+                    <option value="none">Requires Sponsorship</option>
+                    <option value="valid">Valid Work Permit</option>
+                    <option value="citizen">Citizen/Permanent Resident</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group6">
+                <label for="passport">Passport Number (Optional): 🛂</label>
+                <input type="text" id="passport" name="passport_no" required placeholder="your valid number">
+            </div>
+        </div>
+
+        <!-- Professional Info -->
+        <div class="section-title2">💼Professional Background</div>
+        <div class="form-group7">
+            <label for="position">Position Applied For: 🛠️ </label>
+            <input type="text" id="position" name="position" required placeholder="your position">
+        </div>
+
+        <div class="form-group8">
+            <label for="resume">Upload CV/Resume (PDF only): 📄</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+        </div>
+
+        <div class="form-group9">
+            <label for="cover_letter">Relocation Statement / Message: 📍 </label>
+            <textarea id="cover_letter" name="message" rows="4" placeholder="Briefly explain your interest in working abroad..."></textarea>
+        </div>
+        <div class="btn">
+        <button type="submit">Submit Application: 🚀</button>
+    </div>
+    </form>
+    <div class="button">
+        <a href="./index22.html"><button type="button">Join the Team ✨</button></a>
+    </div>
+</div>
+<script>
+/**
+ * International Job Application Handler
+ * Features: File validation, dynamic UI feedback, and data extraction
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const jobForm = document.querySelector('form');
+    const resumeInput = document.getElementById('resume');
+    const submitBtn = jobForm.querySelector('button');
+
+    // 1. Professional File Validation (Prevent invalid uploads)
+    resumeInput.addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+            // Check for PDF type
+            if (file.type !== "application/pdf") {
+                alert("Error: Only PDF files are accepted.");
+                this.value = ""; // Clear the input
+                return;
+            }
+            // Check for size (e.g., 5MB limit)
+            if (file.size > 5 * 1024 * 1024) {
+                alert("Error: File size must be less than 5MB.");
+                this.value = "";
+            }
+        }
+    });
+
+    // 2. Form Submission Handling
+    jobForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // UI State: Loading
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Processing Application...";
+        submitBtn.style.backgroundColor = "#6c757d";
+
+        // Extract Data using FormData API
+        const formData = new FormData(jobForm);
+        const applicantData = Object.fromEntries(formData.entries());
+
+        try {
+            // Simulate server-side processing delay
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            // Success UI: Build a professional summary popup
+            showApplicationSummary(applicantData);
+            
+            jobForm.reset();
+        } catch (error) {
+            alert("System error: Please try again later.");
+        } finally {
+            // Restore UI State
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+            submitBtn.style.backgroundColor = "#007bff";
+        }
+    });
+
+    /**
+     * Creates a professional success modal with the application data
+     */
+    function showApplicationSummary(data) {
+        const overlay = document.createElement('div');
+        Object.assign(overlay.style, {
+            position: 'fixed', top: '0', left: '0', width: '100%', height: '100%',
+            backgroundColor: 'rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center',
+            justifyContent: 'center', zIndex: '1000', backdropFilter: 'blur(4px)'
+        });
+
+        const modal = document.createElement('div');
+        Object.assign(modal.style, {
+            background: 'white', padding: '25px', borderRadius: '10px',
+            maxWidth: '450px', width: '90%', boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+        });
+
+        modal.innerHTML = `
+            <h3 style="color:#28a745; margin-top:0;">✅ Application Received</h3>
+            <p style="font-size:14px; color:#666;">Your global application for <strong>${data.position}</strong> has been successfully captured.</p>
+            <div style="background:#f8f9fa; padding:15px; border-radius:5px; margin:15px 0; font-size:13px; line-height:1.6;">
+                <strong>Name:</strong> ${data.firstname} ${data.lastname}<br>
+                <strong>Nationality:</strong> ${data.nationality}<br>
+                <strong>Residing in:</strong> ${data.current_location}<br>
+                <strong>Visa Status:</strong> ${data.visa_status}<br>
+                <strong>Email:</strong> ${data.email}
+            </div>
+            <button id="closeModal" style="width:100%; padding:10px; background:#333; color:white; border:none; border-radius:4px; cursor:pointer;">Finish</button>
+        `;
+
+        overlay.appendChild(modal);
+        document.body.appendChild(overlay);
+
+        document.getElementById('closeModal').onclick = () => overlay.remove();
+    }
+});
+</script>
+
+</body>
+</html>

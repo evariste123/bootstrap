@@ -50,13 +50,22 @@ body{
     background-color:transparent;
 }
 .btn{
-    position: relative;
-    padding: 20px 20px;
-    background-color: #4c62c5;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-    border-bottom: 1px solid rgb(59, 3, 85);
+     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+     background-size: 400% 400%;
+     animation: gradient-shift 15s ease infinite;
+     position: relative;
+     padding: 20px 20px;
+     text-align: center;
+     border-radius: 10px 10px 0 0;
+     border-bottom: 1px solid rgb(59, 3, 85);
 }
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .btn:hover{
     transition: all ease 0.3s;
     transform: translate(10px) scale(1.01);
@@ -68,8 +77,8 @@ body{
 .btn span{
     color: cyan;
     cursor: pointer;
-    padding: 10px 10px;
-    background-color: rgb(2, 34, 2);
+    padding: 15px 15px;
+    background-color: #006992;
     border-radius: 5px;
 }
 .card p{
@@ -78,11 +87,19 @@ body{
     font: 20px bold;
 }
 .btn1{
-    position: relative;
-    padding: 20px 20px;
-    background-color: #8e5fda;
-    text-align: center;
-    border-bottom: 1px solid cyan;
+     background: linear-gradient(-45deg, #9e553f, #8f3658, #3185a3, #2a9179);
+     background-size: 400% 400%;
+     animation: gradient-shift 15s ease infinite;
+     position: relative;
+     padding: 20px 20px;
+     text-align: center;
+     border-bottom: 1px solid rgb(59, 3, 85);
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .btn1:hover{
     transition: all ease 0.3s;
@@ -95,7 +112,7 @@ body{
 .btn1 span{
     color: cyan;
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 15px 15px;
     background-color: rgb(2, 34, 2);
     border-radius: 5px;
 }
@@ -105,11 +122,19 @@ body{
     font: 20px bold;
 }
 .btn2{
-    position: relative;
-    padding: 20px 20px;
-    background-color: #5fa9da;
-    text-align: center;
-    border-bottom: 1px solid darkblue;
+     background: linear-gradient(-45deg, #753a28, #7e2145, #14556d, #14725c);
+     background-size: 400% 400%;
+     animation: gradient-shift 15s ease infinite;
+     position: relative;
+     padding: 20px 20px;
+     text-align: center;
+     border-bottom: 1px solid rgb(59, 3, 85);
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .btn2:hover{
     transition: all ease 0.3s;
@@ -122,8 +147,8 @@ body{
 .btn2 span{
     color: cyan;
     cursor: pointer;
-    padding: 10px 10px;
-    background-color: rgb(2, 34, 2);
+    padding: 15px 15px;
+    background-color: #002ba0;
     border-radius: 5px;
 }
 .btn2 p{
@@ -132,16 +157,25 @@ body{
     font: 20px bold;
 }
 .btn3{
-    position: relative;
-    padding: 20px 20px;
-    background-color: #9ebeb4;
-    text-align: center;
+     background: linear-gradient(-45deg, #aa7938, #cc358d, #1a8386, #23d58b);
+     background-size: 400% 400%;
+     animation: gradient-shift 15s ease infinite;
+     position: relative;
+     padding: 20px 20px;
+     text-align: center;
+     border-bottom: 1px solid rgb(59, 3, 85);
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .btn3 span{
     color: cyan;
     cursor: pointer;
-    padding: 10px 10px;
-    background-color: rgb(2, 34, 2);
+    padding: 15px 15px;
+    background-color: rgb(59, 2, 151);
     border-radius: 5px;
 }
 .btn3:hover{
@@ -1499,7 +1533,7 @@ h3 {
     justify-self: left;
     margin-left: 20px;
     width:20vw;
-    top: 0px;
+    top: 10px;
     height: auto;
     border: 1px solid black;
     background-color: #76797a;
@@ -1542,7 +1576,7 @@ h3 {
     width: 20vw;
     color: black;
     height: auto;
-    bottom: 1350px;
+    bottom: 1500px;
 }
 .hero5 h4{
      font-size: 1.5rem;
@@ -1574,7 +1608,7 @@ h3 {
 }
 .hero6{
     position: absolute;
-    bottom: 1350px;
+    bottom: 1500px;
     width: 20vw;
     justify-self: center;
     height: auto;
@@ -1613,7 +1647,7 @@ h3 {
 }
 .hero7{
     position: absolute;
-    bottom: 1350px;
+    bottom: 1500px;
     width: 20vw;
     justify-self:right;
     margin-right: 20px;
@@ -1824,4 +1858,133 @@ flex-wrap: wrap;
     box-shadow: 0 0 20px darkmagenta;
     transform: scale(1.05);
     border-radius: 5px;
+}
+.footer{
+    padding: 50px 20px;
+    background-color: #000;
+}
+.footer h2{
+    margin-left: 10px;
+    color: white;
+    text-align: center;
+    font: bold;
+}
+@media(max-width:600px){
+    .footer h2{
+        position: relative;
+        text-align: left;
+    }
+}
+.footer hr{
+    justify-self: center;
+    width: 300px;
+    position: relative;
+    padding: 2px 2px;
+    overflow-wrap: break-word;
+    background-color: #00ffaa;
+    box-shadow: 0 0 20px lime;
+    border-radius: 20px;
+    border: none;
+}
+@media(max-width:600px){
+    .footer{
+        padding: 100px 20px;
+    }
+}
+@media(max-width:600px){
+    .footer hr{
+        position: relative;
+        justify-self: left;
+        width: 200px;
+        bottom: 50px;
+    }
+}
+.contact{
+    position: relative;
+    justify-self: left;
+    margin-left: 20px;
+    width: 30vw;
+    height: auto;
+    background-color: transparent;
+}
+@media(max-width:600px){
+    .contact{
+        position: relative;
+        bottom: 20px;
+    }
+}
+.contact h4{
+    color: #00ffae;
+    font: 20px bold;
+}
+.contact p{
+    color: #949797;
+    font: bold;
+    margin-left: 20px;
+}
+.contact1{
+    position: relative;
+    top: 20px;
+    justify-self: left;
+    margin-left: 20px;
+    width: 30vw;
+    height: auto;
+}
+
+@media(max-width:600px){
+    .contact{
+        position: relative;
+        top: 50px;
+        overflow-wrap: break-word;
+        justify-self: left;
+    }
+}
+.contact1 h4{
+    font: 20px bold;
+    color: #00ffae;
+
+}
+.contact2{
+    position: absolute;
+    justify-self: right;
+    margin-right: 20px;
+    bottom: 150px;
+    width: 30vw;
+    height: auto;
+}
+.contact2 h4{
+    color: #00ffaa;
+    font: 20px bold;
+}
+.link{
+    position: relative;
+    top: 20px;
+    width: 40vw;
+    height: auto;
+    margin-left: 20px;
+    justify-self: left;
+}
+.links{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.links a{
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: wheat;
+}
+.links a:hover{
+    color: cyan;
+    position: relative;
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    text-shadow: 0 0 10px cyan;
+    transform: translateY(-5px);
+}
+.para{
+    position: relative;
+    justify-self: center;
+    top: 30px;
 }
