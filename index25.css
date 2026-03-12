@@ -1,0 +1,154 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+.container{
+    max-width: 1200px;
+    position: relative;
+    padding: 80px;
+    justify-self: center;
+    height: auto;
+    background-color: #f8f4f4;
+    border-radius: 20px;
+    top: 10px;
+    box-shadow: 0 0 20px rgb(15, 15, 15);
+    animation-duration: 5s;
+    animation-name: eva;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: initial;
+}
+@keyframes  eva{
+    50%{
+        transform: translateX(20px) scale(0.9);
+        background-color: #e7ebe1 50%;
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(50px) scale(0.5);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(50px) scale(1);
+        opacity: 1;
+    }
+}
+.container h1{
+    color: rgb(51, 4, 51);
+    text-align: center;
+    font-weight: bold;
+    top: 10px;
+}
+.card{
+    position: relative;
+    width: 70vw;
+    padding: 30px;
+    justify-self: center;
+    border-left: 5px solid blue;
+    background-color: rgb(241, 237, 237);
+    border-radius: 0 5px 5px 0;
+    box-shadow:  0 10px 15px rgb(39, 38, 36);
+}
+@media(max-width:600px){
+    .container{
+        animation-name: none;
+    }
+}
+.card p{
+    position: relative;
+    top: 0px;
+}
+
+.item{
+    position: relative;
+    width: 70vw;
+    padding: 30px;
+    justify-self: center;
+    border-left: 5px solid #0068ca;
+    background-color: rgb(241, 237, 237);
+    border-radius: 0 5px 5px 0;
+    box-shadow:  0 10px 15px rgb(39, 38, 36);
+    top: 20px;
+}
+
+.item1{
+    position: relative;
+    width: 70vw;
+    padding: 30px;
+    top: 40px;
+    justify-self: center;
+    border-left: 5px solid #760094;
+    background-color: rgb(241, 237, 237);
+    border-radius: 0 5px 5px 0;
+    box-shadow:  0 10px 15px rgb(39, 38, 36);
+}
+
+.item2{
+    position: relative;
+    width: 70vw;
+    padding: 30px;
+    top: 60px;
+    justify-self: center;
+    border-left: 5px solid #00ff62;
+    background-color: rgb(241, 237, 237);
+    border-radius: 0 5px 5px 0;
+    box-shadow:  0 10px 15px rgb(39, 38, 36);
+}
+.item2 a{
+    text-decoration: none;
+    color: green;
+}
+    @media(max-width:600px){
+        .btn{
+            position: relative;
+            justify-self: center;
+            top: 0px;
+            margin-left: 0px;
+        }
+    }
+    .btn button{
+        padding: 10px 10px;
+        background-color: rgb(242, 247, 242);
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .btn button:hover{
+        transform: translateY(-5px) scale(1.05);
+        transition: all ease-in 0.3s;
+        box-shadow: 0 0 15px cornflowerblue;
+        background-color: darkgray;
+    }
+
+    .btn1{
+        position: absolute;
+        top: 80px;
+        justify-self: right;
+        margin-right: 20px;
+    }
+    @media(max-width:600px){
+        .btn1{
+            position: relative;
+            justify-self: center;
+            margin-right: 0px;
+            top: 30px;
+        }
+    }
+    .btn1 button{
+        padding: 10px 10px;
+        background-color: rgb(247, 243, 243);
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn1 button:hover{
+        transform: translateY(-5px) scale(1.05);
+        transition: all ease-in 0.3s;
+        box-shadow: 0 0 15px cornflowerblue;
+        background-color: forestgreen;
+    }

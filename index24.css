@@ -1,0 +1,202 @@
+ body { 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 100px 20px;
+    }
+    .container{
+        padding: 100px 40px;
+        justify-self: center;
+        background-color: #f0eaea;
+        box-shadow: 0 0 20px rgb(19, 18, 18);
+        border-radius: 10px;
+    }
+    .table{
+        padding: 80px 20px;
+        top: 20px;
+        position: relative;
+        border-radius: 10px;
+        background-color: lightskyblue;
+        box-shadow: 0 0 20px rgb(34, 33, 33);
+    }
+    .table h1{
+        text-align: center;
+        bottom: 20px;
+        color: #3902ff !important;
+        position: relative;
+    }
+    .card1{
+        padding: 10px 10px;
+        background-color: whitesmoke;
+        box-shadow: 0 10px 15px rgb(20, 20, 20);
+        border-left: 3px solid hotpink;
+        border-radius: 0 10px 10px 0;
+    }
+    .card1 h2{
+        font-weight: bold;
+        color: rgb(25, 2, 46);
+    }
+    .card1 p{
+        font: bold;
+        font-weight: 900;
+    }
+
+    .card2{
+        padding: 10px 10px;
+        background-color: whitesmoke;
+        box-shadow: 0 10px 15px rgb(20, 20, 20);
+        border-left: 3px solid #57a7f1;
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        top: 20px;
+    }
+    .card2 h2{
+        font-weight: bold;
+        color: rgb(25, 2, 46);
+    }
+
+    .card3{
+        padding: 10px 10px;
+        background-color: whitesmoke;
+        box-shadow: 0 10px 15px rgb(20, 20, 20);
+        border-left: 3px solid rgb(114, 40, 252);
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        top: 40px;
+    }
+    .card3 h2{
+        font-weight: bold;
+        color: rgb(25, 2, 46);
+    }
+    @media(max-width:600px){
+        .table{
+            position: relative;
+            width: 80vw;
+            height: auto;
+            justify-self: center;
+            overflow-wrap: break-word;
+        }
+    }
+         @media(max-width:600px){
+            .tables{
+                position: relative;
+                width: 80vw;
+                height: auto;
+            }
+         }
+    .item{
+        width: 50vw;
+        padding: 10px 10px;
+        background-color: #f0eaea;
+        border-left: 5px solid blueviolet;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 0 10px 15px rgb(20, 20, 20);
+        justify-self: center;
+    }
+
+    .item1{
+        width: 50vw;
+        padding: 10px 10px;
+        background-color: #f0eaea;
+        border-left: 5px solid #400cff;
+        border-radius: 0 10px 10px 0;
+        top: 10px;
+        position: relative;
+        box-shadow: 0 10px 15px rgb(20, 20, 20);
+        justify-self: center;
+    }
+
+    .item2{
+        width: 50vw;
+        padding: 10px 10px;
+        background-color: #f0eaea;
+        border-left: 5px solid #4e02fd;
+        border-radius: 0 10px 10px 0;
+        justify-self: center;
+        position: relative;
+        box-shadow: 0 10px 15px rgb(20, 20, 20);
+        top: 40px;
+    }
+    .footer{
+        width:50vw;
+        padding: 50px 20px;
+        background-color: #000;
+        position: relative;
+        border-radius: 10px;
+        justify-self: center;
+        top: 50px;
+        text-align: center;
+    }
+    .footer p{
+            color: honeydew;
+            font-size: 20px bold;
+    }
+    .footer a{
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+    .footer a:hover{
+        color: grey;
+        text-shadow: 0 0 20px cyan;
+        transition: all ease-in 0.3s;
+        transform: translateY(-5px);
+        cursor: pointer;
+        position: relative;
+    }
+    .btn{
+        position:relative;
+        justify-self: left;
+        margin-left: 20px;
+        top: 30px;
+    }
+    @media(max-width:600px){
+        .btn{
+            position: relative;
+            justify-self: center;
+            top: 0px;
+            margin-left: 0px;
+        }
+    }
+    .btn button{
+        padding: 10px 10px;
+        background-color: honeydew;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .btn button:hover{
+        transform: translateY(-5px) scale(1.05);
+        transition: all ease-in 0.3s;
+        box-shadow: 0 0 15px cornflowerblue;
+        background-color: darkgray;
+    }
+    .btn1{
+        position: absolute;
+        top: 130px;
+        justify-self: right;
+        margin-right: 20px;
+    }
+    @media(max-width:600px){
+        .btn1{
+            position: relative;
+            justify-self: center;
+            margin-right: 0px;
+            top: 30px;
+        }
+    }
+    .btn1 button{
+        padding: 10px 10px;
+        background-color: darkgrey;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn1 button:hover{
+        transform: translateY(-5px) scale(1.05);
+        transition: all ease-in 0.3s;
+        box-shadow: 0 0 15px cornflowerblue;
+        background-color: forestgreen;
+    }
