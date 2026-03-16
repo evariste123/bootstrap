@@ -1,156 +1,231 @@
-/* 1. Global Reset & Typography */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f7f6;
-    padding: 20px;
-}
-
-/* 2. Header & Navigation */
-header {
-    background: #003366; /* Deep professional blue */
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-nav {
-    margin-top: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-nav a {
-    color: #00d4ff;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: white;
-}
-
-/* 3. Main Content Layout */
-main {
-    max-width: 1000px;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
     margin: 0 auto;
+    max-width: 1200px;
+    padding: 100px;
+    box-shadow: 10px 10px 10px black;
+    justify-self: center;
 }
-
-section {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    border-left: 5px solid #003366;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-h2 {
-    color: #003366;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
-}
-
-/* 4. Code Snippet Styling */
-pre {
-    background: #2d2d2d;
-    color: #f8f8f2;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto; /* Makes code scrollable on mobile */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
-    margin: 15px 0;
-}
-
-code {
-    background: #eee;
-    padding: 2px 5px;
-    border-radius: 3px;
-    color: #d63384;
-}
-
-/* 5. Tables & Data */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-th {
-    background-color: #003366;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* 6. Professional Forms */
-fieldset {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-legend {
-    font-weight: bold;
-    color: #003366;
-    padding: 0 10px;
-}
-
-input[type="text"], select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background: #28a745; /* Success Green */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #218838;
-}
-
-/* 7. Footer */
-footer {
+.header{
+    position: relative;
     text-align: center;
-    padding: 20px;
-    color: #777;
-    font-size: 0.9rem;
+}
+.header h1{
+    position: relative;
+    font: bold;
+    text-transform: capitalize;
+    text-align: center;
+    bottom: 30px;
+    text-shadow: 5px 5px 5px teal;
+}
+.header p em{
+    position: relative;
+    font-size: 20px;
+    font-weight: 900;
+    bottom: 10px;
+}
+.navbar{
+    padding: 10px 20px;
+    background-color: rgb(238, 233, 233);
+    box-shadow: 0 0 20px rgb(29, 28, 28);
+    border-radius: 5px;
+    justify-self: center;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.menu strong{
+    position: relative;
+    font: 20px bold;
+}
+.menu a{
+    position: relative;
+    color: black;
+    font: 20px bold;
+    text-decoration: none;
+    padding: 5px 5px;
+    background-color: rgb(235, 220, 220);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.menu a:hover{
+    transform: scale(1.05);
+    transition: all ease-in 0.3s;
+    background-color:hsl(0, 0%, 100%)
+}
+.about{
+    position: relative;
+    padding: 30px 20px;
+    background-color:#f4f8f5;
+    box-shadow: 0 0 20px black;
+    border-left: 3px solid cyan;
+    border-radius:0 10px 10px 0;
+}
+.table{
+    padding: 40px 20px;
+    background-color: whitesmoke;
+    position: relative;
+    top: 20px;
+    box-shadow: 0 0 15px black;
+    border-left: 3px solid blue;
+    border-radius: 0 10px 10px 0;
+}
+.code{
+    padding: 30px 20px;
+    background-color: #2a2b2a;
+    border-radius: 5px;
+    color: white;
+}
+.media{
+    padding: 30px 20px;
+    position: relative;
+    top: 40px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px;
+    border-left: 3px solid violet;
+    border-radius: 0 10px 10px 0;
+}
+.list{
+    padding: 10px 10px;
+    background-color: #2a2b2a;
+    border-radius: 5px;
+    color: white;
+}
+.image{
+    padding: 10px 10px;
+    background-color: #2a2b2a;
+    border-radius: 5px;
+    color: white;
+}
+.tables{
+    padding: 30px 20px;
+    position: relative;
+    top: 60px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px;
+    border-left: 3px solid rgb(27, 0, 37);
+    border-radius: 0 10px 10px 0;
+}
+.data{
+    padding: 15px 15px;
+    background-color: #2a2b2a;
+    border-radius: 5px;
+    color: white;
+}
+.forms{
+    padding: 30px 20px;
+    position: relative;
+    top: 80px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px;
+    border-left: 3px solid rgb(10, 0, 37);
+    border-radius: 0 10px 10px 0;
+}
+.form{
+    padding: 15px 15px;
+    background-color: #2a2b2a;
+    border-radius: 5px;
+    color: white;
+}
+.submit{
+    padding: 40px 20px;
+     background-image: 
+    linear-gradient(to left, rgba(135, 206, 250, 0.6), rgba(0, 128, 128, 0.6)), 
+    url('./image/canada.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    border-radius: 10px;
+    opacity: 1;
+    top: 100px;
+    box-shadow: 0 0 20px black;
+}
+.submit h2{
+    font: bold;
+    color: white;
+}
+.submit p{
+    font: 20px bold;
+}
+.submit legend{
+    font: 20px bold;
+    color:white;
+}
+.submit input{
+    padding:10px;
+    width: 20vw;
+    color: rgb(255, 255, 255);
+    background-color: #2a2b2a;
+    font: bold;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+.submit input::placeholder{
+    color: white;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-style: italic;
+}
+.submit input:hover{
+    border: 1px solid cyan;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+}
+.submit textarea{
+    background-color: #2a2b2a;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.submit textarea:hover{
+     border: 1px solid cyan;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+}
+.submit textarea::placeholder{
+     color: white;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-style: italic;
+}
+.submit button{
+    padding: 10px 15px;
+    background-color: #f4f8f5;
+    box-shadow: 0 0 20px black;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.submit button:hover{
+    background-color: #b6b4b4;
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+}
+.footer{
+    padding: 30px 20px;
+    background-color: #000;
+    top: 120px;
+    position: relative;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+.footer p strong{
+    color: hsl(177, 100%, 50%);
+}
+.footer a{
+    color: hsl(207, 100%, 50%);
+    text-decoration: none;
+}
+.footer p small{
+    color: whitesmoke;
+    font: 20px bold;
 }

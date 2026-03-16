@@ -9,34 +9,36 @@
 <body>
 
     <!-- Navigation Header -->
-    <header>
+    <header class="header">
         <h1>EduHub: Global Code Repository</h1>
         <p><em>Empowering the world through open-source education.</em></p>
-        <nav>
+            </header>
+        <nav  class="navbar">
+          <div class="menu">
             <strong>Quick Navigation:</strong>
-            <a href="#about">About</a> | 
-            <a href="#basics">Basics</a> | 
-            <a href="#media">Media & Lists</a> | 
-            <a href="#tables">Data Tables</a> | 
-            <a href="#forms">Forms & Input</a> | 
+            <a href="#about">About</a> 
+            <a href="#basics">Basics</a> 
+            <a href="#media">Media & Lists</a> 
+            <a href="#tables">Data Tables</a> 
+            <a href="#forms">Forms & Input</a> 
             <a href="#submit">Contribute</a>
+            </div>
         </nav>
-    </header>
 
     <hr>
 
     <main>
         <!-- Project Description -->
-        <section id="about">
+        <section id="about" class="about">
             <h2>1. Our Mission</h2>
             <p>EduHub is a decentralized platform designed to bridge the digital divide. We provide <strong>standardized HTML templates</strong> that work on any browser, in any country, regardless of internet speed. By mastering these snippets, users can create professional documentation, resumes, and business websites.</p>
         </section>
 
         <!-- Basic Structure Section -->
-        <section id="basics">
+        <section id="basics" class="table">
             <h2>2. The Foundation (Boilerplate)</h2>
             <p>Every professional web document requires a <code>&lt;head&gt;</code> for metadata and a <code>&lt;body&gt;</code> for visible content.</p>
-            <pre>
+            <pre class="code">
 &lt;!-- The Document Type Declaration --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -52,12 +54,12 @@
         </section>
 
         <!-- Media & Lists Section -->
-        <section id="media">
+        <section id="media" class="media">
             <h2>3. Visuals & Lists</h2>
             <p>Use these codes to organize information into bullet points or to display images and videos.</p>
             
             <h3>Unordered List (Bullet Points)</h3>
-            <pre>
+            <pre class="list">
 &lt;ul&gt;
   &lt;li&gt;First item&lt;/li&gt;
   &lt;li&gt;Second item&lt;/li&gt;
@@ -66,16 +68,16 @@
 
             <h3>Images with Accessibility</h3>
             <p>The <code>alt</code> attribute is essential for global accessibility (screen readers).</p>
-            <pre>
+            <pre class="image">
 &lt;img src="image-url.jpg" alt="Description of the image" width="300"&gt;
             </pre>
         </section>
 
         <!-- Data Tables Section -->
-        <section id="tables">
+        <section id="tables" class="tables">
             <h2>4. Information Tables</h2>
             <p>Tables are the best way to display structured data like schedules, pricing, or inventory.</p>
-            <pre>
+            <pre class="data">
 &lt;table border="1"&gt;
   &lt;tr&gt;
     &lt;th&gt;Service&lt;/th&gt;
@@ -90,10 +92,10 @@
         </section>
 
         <!-- Advanced Forms Section -->
-        <section id="forms">
+        <section id="forms" class="forms">
             <h2>5. User Interactivity (Forms)</h2>
             <p>Forms allow your global audience to communicate with you.</p>
-            <pre>
+            <pre class="form">
 &lt;form action="/submit-path" method="POST"&gt;
   &lt;label&gt;Choose Category:&lt;/label&gt;
   &lt;select name="category"&gt;
@@ -106,15 +108,15 @@
         </section>
 
         <!-- Submission Section -->
-        <section id="submit">
+        <section id="submit" class="submit">
             <h2>6. Contribute to EduHub</h2>
             <p>Add your custom code to our global database. All submissions are reviewed for clarity.</p>
-            <fieldset>
+        
                 <legend>Submission Form</legend>
-                <form>
+                <form action="" id="myForm">
                     <p>
                         <label for="username">Contributor Name:</label><br>
-                        <input type="text" id="username" required>
+                        <input type="text" id="username" required placeholder="User Name">
                     </p>
                     <p>
                         <label for="code-type">Code Category:</label><br>
@@ -124,17 +126,16 @@
                     </p>
                     <p>
                         <label for="usercode">Paste HTML:</label><br>
-                        <textarea id="usercode" rows="8" cols="60"></textarea>
+                        <textarea id="usercode" rows="8" cols="60" placeholder="Paste here your html codes..." required></textarea>
                     </p>
                     <button type="submit">Upload to EduHub</button>
                 </form>
-            </fieldset>
         </section>
     </main>
 
     <hr>
 
-    <footer>
+    <footer class="footer">
         <p><strong>EduHub Global</strong> | &copy; 2026 | <a href="mailto:support@eduhub.org">Contact Support</a></p>
         <p><small>Note: This site uses 100% pure HTML for maximum compatibility across all devices.</small></p>
     </footer>
