@@ -9,7 +9,6 @@ body{
     position: relative;
     bottom: 0px;
     justify-items: right;
-    border-radius: 5px;
     box-shadow: 0 0 20px black;
 }
 .logo{
@@ -93,7 +92,12 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  border-radius: 10px;
   text-align: center;
+  border-left: 5px solid rgb(240, 230, 230);
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  border-top: 5px solid white;
 }
 .hero h1{
     font-size: 2.5rem;
@@ -106,23 +110,46 @@ body{
 }
 .cta-btn{
     text-decoration: none;
-    padding: 10px 20px;
-    background-color: whitesmoke;
+    padding: 15px 20px;
+    background-color: rgb(27, 27, 27);
     border-radius: 5px;
     position: relative;
     top: 20px;
+    font-size: 20px;
     cursor: pointer;
     border: 1px solid #00ffff;
+    animation-duration: 5s;
+    animation-name: ev;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes ev{
+    from{
+        transform: scale(0.5) translateY(-5px);
+        opacity: 0.5;
+    }
+    to{
+        transform: scale(1.1) translateX(5px);
+        opacity: 1;
+        box-shadow: 0 0 30px cyan;
+    }
+}
+.cta-btn a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
 }
 .cta-btn:hover{
     transition: all ease-in 0.3s;
-    transform: scale(1.05) translateY(-5px);
     animation-duration: 2s;
     animation-name: eva;
+    transform: scale(1.05);
     animation-delay: 2s;
     animation-iteration-count: infinite;
-    border: none;
-    border-radius: 0px;
+    border:1px solid black;
+    background-color: dodgerblue;
+    border-radius: 5px;
 }
 @keyframes eva{
     from{
@@ -130,7 +157,7 @@ body{
         opacity: 0;
     }
     to{
-        background: linear-gradient(to right,cyan 20%,purple 80%,lime );
+        background: linear-gradient(to top,rgb(38, 49, 49) 10%,rgb(37, 22, 37) 80% );
         opacity: 1;
     }
 }
@@ -148,6 +175,7 @@ body{
     justify-self: left;
     margin-left: 20px;
     width: 25vw;
+    bottom: 50px;
     height: auto;
     border-radius: 5px;
     background-color: rgb(255, 253, 253);
@@ -409,7 +437,7 @@ body{
     background-color: rgb(255, 253, 253);
     border: 5px solid rgb(240, 235, 235);
     box-shadow: 0 0 10px lavender;
-    top: 70px;
+    top: 20px;
 }
 
 @media(max-width:600px){
@@ -644,7 +672,7 @@ body{
     background-color: rgb(255, 253, 253);
     border: 5px solid rgb(240, 235, 235);
     box-shadow: 0 0 10px lavender;
-    top: 100px;
+    top: 60px;
 }
 
 @media(max-width:600px){
@@ -886,8 +914,10 @@ body{
 
 .footer{
     padding: 50px 20px;
-    background-color: #f1ebeb;
+    background-color: #252424;
     position: relative;
+    color: white;
+    text-align: center;
 }
 @media(max-width:600px){
     .footer{
