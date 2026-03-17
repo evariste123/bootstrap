@@ -1326,8 +1326,8 @@ body{
     }
 }
 .social-media a img:hover{
-    transition: all ease 0.3s;
-    transform: scale(1.05) translateY(10px);
+    transition: all ease-in 0.3s;
+    transform: scale(1.05) translateY(5px);
     box-shadow: 0 0 15px cyan;
     border: 2px dotted #00fd2a;
 }
@@ -1373,7 +1373,7 @@ body{
     padding: 12px 22px;
     border: none;
     color: black;
-    background-color: #00fd2a;
+    background-color: #003d0a;
     border-radius: 5px;
     font: 20px bold;
 }
@@ -1382,9 +1382,9 @@ body{
     box-shadow: 0 0 5px cyan;
     cursor: pointer;
     color: white;
-    transform: scale(1.05);
-    background-color: #009200;
-    padding: 10px 20px;
+    transform: scale(1.01);
+    background-color: #017701;
+    padding: 10px 15px;
 }
 
 @media(max-width:600px){
@@ -1531,7 +1531,7 @@ body{
     }
 }
 
-/* Responsive chat */
+
 @media (max-width: 768px) {
     .chat-container {
         max-height: 300px;

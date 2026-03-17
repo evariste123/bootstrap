@@ -270,9 +270,9 @@
             <h4>Quick Links💧</h4>
             <div class="link">
                 <a href="#all">All Products</a>
-                <a href="#new">New Arrivals</a>
+                <a href="./index27.html">New Arrivals</a>
                 <a href="#contact">Contact Support</a>
-                <a href="#faq">FAQ</a>
+                <a href="./index22.html">FAQ</a>
                  <a href="./index15.html">Terms of Service</a> 
                 <a href="./index15.html">Privacy Policy</a>
             </div>
@@ -290,8 +290,8 @@
         <div class="footer-newsletter">
             <h4>Newsletter</h4>
             <p>stay up to date with us for all news📰</p>
-            <form action="#" method="post">
-                <input type="email" name="newsletter" placeholder="Your email address">
+            <form action="#" method="post" id="form">
+                <input type="email" name="newsletter" placeholder="Your email address" required>
                 <button type="submit">Subscribe</button>
             </form>
             <p>&copy; 2026 Food Ordering System. All rights reserved.</p>
@@ -300,6 +300,42 @@
 </footer>
 
 <script src="./index6.js"></script>
+<script>
+  document.getElementById('form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
+    const email = formData.get('newsletter');
+
+    // 1. Visual feedback: Disable button & show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Subscribing...';
+
+    try {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // 3. Success Logic
+        console.log('Successfully subscribed:', email);
+        alert(`Success! ${email} has been subscribed.`); 
+        form.reset();
+
+    } catch (error) {
+        // 4. Error Handling
+        console.error('Subscription error:', error);
+        alert('Something went wrong. Please try again.');
+
+    } finally {
+        // 5. Reset button state
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Subscribe';
+    }
+    form.reset();
+});
+
+
+</script>
 </body>
 </html>
 

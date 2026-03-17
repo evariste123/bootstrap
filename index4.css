@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background-color:rgb(43, 42, 42);
     color: white;
 }
 .header{
@@ -20,7 +20,7 @@ body{
     animation-duration: 5s;
     animation-name: logo;
     animation-delay: 10s;
-    box-shadow: 0 0 10px cyan;
+    box-shadow: 0 0 10px rgb(22, 22, 22);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -71,9 +71,10 @@ body{
     width: 35vw;
     margin-right: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #0affde,0 0 10px #0affde,0 0 10px #0affde;
+    box-shadow: 0 0 10px #191a19,0 0 10px #191a19,0 0 10px #13000e;
     animation-duration: 1s;
     border: 1px solid cyan;
+    background-color: #000000;
     animation-delay: 1s;
     animation-iteration-count: 1;
     animation-name: navbar;
@@ -146,6 +147,7 @@ body{
     margin-left: 40px;
     background-color: rgb(1, 22, 22);
     border-radius: 10px;
+    box-shadow: 0 0 20px black;
 }
 @media(max-width:600px){
     #hero.hero{
@@ -197,7 +199,7 @@ body{
 .hero-content h2{
     position: relative;
     text-align: center;
-    text-shadow: 0 0 10px rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(10, 10, 10);
     overflow-wrap: break-word;
 }
 @media(max-width:600px){
@@ -272,7 +274,7 @@ body{
 .features h2{
     position: relative;
     text-align: center;
-    color: #04f7ff;
+    color: #000000;
     overflow-wrap: break-word;
 }
 .feature-card{
@@ -288,9 +290,10 @@ body{
 .feature-card:hover{
      opacity: 1;
     color: #fdfcfc !important;
-    background-color: #0099ff;
+    background-color: #0d1b24;
     box-shadow: 0 0 15px cyan;
     transition: all ease-in 0.3s;
+    transform: scale(1.05);
     cursor: pointer;
 }
 .feature-card h3{
@@ -332,9 +335,10 @@ body{
      opacity: 1;
     color: #fdfcfc !important;
     box-shadow: 0 0 15px cyan;
-    background-color: #0099ff;
+    background-color: #0d1b24;
     transition: all ease-in 0.3s;
     cursor: pointer;
+     transform: scale(1.05);
 }
 .feature-card1 h3{
     position: relative;
@@ -367,9 +371,10 @@ body{
     opacity: 1;
     color: #fdfcfc !important;
     box-shadow: 0 0 15px cyan;
-    background-color: #0099ff;
     transition: all ease-in 0.3s;
     cursor: pointer;
+     transform: scale(1.05);
+     background-color: #0d1b24;
 }
 .feature-card2 h3{
       position: relative;
@@ -404,6 +409,8 @@ body{
     background-color: #0099ff;
     transition: all ease-in 0.3s;
     cursor: pointer;
+    transform: scale(1.05);
+    background-color: #0d1b24;
 }
 .feature-card3 h3{
      position: relative;
@@ -438,6 +445,8 @@ body{
     background-color: #0099ff;
     transition: all ease-in 0.3s;
     cursor: pointer;
+    transform: scale(1.05);
+    background-color: #0d1b24;
 }
 .service-item h3{
      position: relative;
@@ -546,12 +555,14 @@ body{
     }
 }
 .about-content:hover{
-      opacity: 1;
+    opacity: 1;
     color: #fdfcfc !important;
     box-shadow: 0 0 15px cyan;
     background-color: #06121a;
     transition: all ease-in 0.3s;
     cursor: pointer;
+    transform: scale(1.05);
+    background-color: #0d1b24;
 }
 .about-content p{
     position: relative;

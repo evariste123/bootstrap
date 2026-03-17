@@ -1,7 +1,7 @@
 
             body {
                 margin: 0;
-                 background-color: #0056b3;
+                 background-color: hsl(0, 0%, 100%);
                 font-family: Arial, sans-serif;
                 color: #0a0a0a;
             }
@@ -121,15 +121,21 @@
                 }
               }
               .navbar-brand {
-                    color: white !important;
+                    color: #000000 !important;
                     text-decoration: none;
                     display: inline-block;
                     padding: 10px 20px;
                     text-align: center;
-                    background-color: hsl(187, 100%, 52%);
+                    background-color: hsl(190, 17%, 93%);
                     border-radius: 5px;
                     border: 1px solid #0ef7ff;
                     box-shadow: 0 0 15px rgb(172, 250, 250);
+              }
+              .navbar-brand:hover{
+                transition: all ease-in 0.3s;
+                cursor: pointer;
+                transform: scale(1.05);
+                box-shadow: 0 0 20px black;
               }
               @media(max-width: 768px) {
                     .navbar-brand {
@@ -148,7 +154,7 @@
               @media(min-width: 769px) {
                     body {
                         color: white !important;
-                        background-color: #0f1d36;
+                        background-color: hsl(0, 15%, 94%);
                         font-family: Arial, sans-serif;
                         margin: 0;
                     }
@@ -308,7 +314,7 @@
                         white-space: nowrap;
                         overflow: hidden;
                         text-transform: uppercase;
-                         color: #0affde;
+                         color: hsl(0, 0%, 1%);
                          text-shadow: 0 0 10px #0affde, 0 0 20px #0affde, 0 0 30px #0affde;
                         text-align: center;
                         animation-duration: 2s;
@@ -355,7 +361,7 @@
                             font-size: 1rem;    
                         }}
                         .about {
-                            background-color: #222;
+                            background-color: #ffffff;
                             padding: 40px 20px;
                             border-radius: 8px;
                             margin-bottom: 40px;
@@ -1300,8 +1306,8 @@
             }
             .code6 a:hover{
                 color: #00eeff !important;
-                transform: translate(10px);
-                padding-bottom: 0px;
+                transform: translateY(-5px);
+                transition: all ease-in 0.3s;
                 text-shadow: 0 0 10px #00cab9;
             }
             #portfolio.button1{

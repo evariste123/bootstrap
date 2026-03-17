@@ -229,3 +229,36 @@ body{
     color: whitesmoke;
     font: 20px bold;
 }
+.button button{
+    position: relative;
+    top: 20px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.button button:hover{
+    transition: all 0.3s;
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #43005e;
+    color: white;
+}
+.btn{
+    position: absolute;
+    justify-self: right;
+    top: 140px;
+}
+.btn button{
+    padding: 10px 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.btn button:hover{
+     transition: all 0.3s;
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #1c005e;
+    color: white;
+}
