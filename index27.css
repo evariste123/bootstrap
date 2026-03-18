@@ -44,10 +44,16 @@ body{
     background-color: lavender;
 }
 .logo a:hover{
-    color: black;
+    color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #303;
 }
 .logo span{
     color: purple;
+}
+.logo span:hover{
+    color: green;
 }
 .nav{
     display: flex;
@@ -236,9 +242,16 @@ body{
     background-color: #303;
     position: relative;
     border: none;
+    cursor: pointer;
     border-radius: 20px;
     color: white;
     font: 20px bold;
+}
+.btn:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
 }
 .card:hover{
     transition: all ease-in 0.3s;
@@ -338,7 +351,14 @@ body{
     border: none;
     border-radius: 20px;
     color: white;
+    cursor: pointer;
     font: 20px bold;
+}
+.btn1:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
 }
 .card1:hover{
     transition: all ease-in 0.3s;
@@ -346,7 +366,6 @@ body{
     transform: scale(1.05);
     background-color: #edd;
 }
-
 
 .card2{
     position: absolute;
@@ -418,6 +437,13 @@ body{
     border-radius: 20px;
     color: white;
     font: 20px bold;
+    cursor: pointer;
+}
+.btn2:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
 }
 .card2:hover{
     transition: all ease-in 0.3s;
@@ -425,7 +451,6 @@ body{
     transform: scale(1.05);
     background-color: #edd;
 }
-
 
 .card3{
     position: relative;
@@ -498,13 +523,18 @@ body{
     color: white;
     font: 20px bold;
 }
+.btn3:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
+}
 .card3:hover{
     transition: all ease-in 0.3s;
     cursor: pointer;
     transform: scale(1.05);
     background-color: #edd;
 }
-
 
 .card4{
     position: absolute;
@@ -573,7 +603,14 @@ body{
     border: none;
     border-radius: 20px;
     color: white;
+    cursor: pointer;
     font: 20px bold;
+}
+.btn4:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
 }
 .card4:hover{
     transition: all ease-in 0.3s;
@@ -581,7 +618,6 @@ body{
     transform: scale(1.05);
     background-color: #edd;
 }
-
 
 .card5{
     position: absolute;
@@ -653,6 +689,13 @@ body{
     border-radius: 20px;
     color: white;
     font: 20px bold;
+    cursor: pointer;
+}
+.btn5:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
 }
 .card5:hover{
     transition: all ease-in 0.3s;
@@ -732,6 +775,13 @@ body{
     border-radius: 20px;
     color: white;
     font: 20px bold;
+    cursor: pointer;
+}
+.btn6:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
 }
 .card6:hover{
     transition: all ease-in 0.3s;
@@ -810,14 +860,19 @@ body{
     color: white;
     font: 20px bold;
 }
+.btn8:hover{
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
+}
 .card7:hover{
     transition: all ease-in 0.3s;
     cursor: pointer;
     transform: scale(1.05);
     background-color: #edd;
 }
-
-
 
 .card9{
     position: absolute;
@@ -905,6 +960,13 @@ body{
     color: white;
     font: 20px bold;
 }
+.btn9:hover{
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+    background-color: rgb(34, 8, 34);
+    color: white;
+}
 .card9:hover{
     transition: all ease-in 0.3s;
     cursor: pointer;
@@ -922,5 +984,89 @@ body{
 @media(max-width:600px){
     .footer{
         top: 40px;
+    }
+}
+
+@media(max-width:600px){
+    .image img{
+        position:relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge{
+        position: relative;
+        width: 80vw;
+    }
+    .image1 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge1{
+        position: relative;
+        width: 80vw;
+    }
+    .image2 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge2{
+        position: relative;
+        width: 80vw;
+    }
+    .image3 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge3{
+        position: relative;
+        width: 80vw;
+    }
+    .image4 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge4{
+        position: relative;
+        width: 80vw;
+    }
+    .image5 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge5{
+        position: relative;
+        width: 80vw;
+    }
+    .image6 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge6{
+        position: relative;
+        width: 80vw;
+    }
+    .image8 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge7{
+        position: relative;
+        width: 80vw;
+    }
+    .image9 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .badge9{
+        position: relative;
+        width: 80vw;
     }
 }
