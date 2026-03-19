@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💥Universal Code Playground</title>
+    <link rel="stylesheet" href="./index28.css">
+</head>
+<body>
+
+    <section class="container">
+        <h1>DevSpace Multi-Lang IDE</h1>
+        <div class="clock-container">
+    <div id="local-time">00:00:00</div>
+</div>
+        <div class="controls">
+            <!-- Language Selection -->
+            <label for="lang">Language:</label>
+            <select id="lang">
+                <option value="html">HTML / CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+                <option value="php">PHP</option>
+                <option value="sql">SQL</option>
+            </select>
+
+            <!-- Action Buttons -->
+            <button type="button" class="btn-run" onclick="alert('Executing Code...')">▶ Run Code</button>
+            <button type="button" class="btn-save">💾 Save</button>
+            <button type="button" class="btn-clear">🗑️ Clear</button>
+            <button type="button" class="btn-theme">🌙 Theme</button>
+            <button type="button" class="btn-setting">⚙️ Settings</button>
+            <button type="button" class="btn">⏬download</button>
+        </div>
+    </section>
+
+    <section class="editor-container">
+        <!-- Input Side -->
+        <div class="code">
+            <p id="time"></p>
+            <h2>Editor with time:
+          </h2>
+            <textarea id="code" placeholder="Write your code here..."></textarea>
+        </div>
+
+        <!-- Output Side -->
+        <div class="console">
+            <h2>Console Output</h2>
+                <div class="terminal-header">System Terminal v1.0.4</div>
+                <div class="terminal" id="terminal"><b>> Ready to compile...</b></div>
+        </div>
+    </section>
+
+    <section class="file">
+        <h3>Project Management</h3>
+        <form action="" id="form">
+            <input type="text" placeholder="Project Filename (e.g. index.html)">
+            <button type="submit" id="file" class="btn1">Create New File</button>
+            <button type="button" id="Import" class="btn2">Import Folder</button>
+            <button type="button" id="Share" class="btn3">Share Snippet</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Programmer Playground | Status: <span style="color: #28a745;">● Online</span></p>
+        <button type="button" id="Documentation" class="btn4">Documentation</button>
+        <button type="button" id="Keyboard" class="btn5">Keyboard Shortcuts</button>
+        <a href="./index.html"><button type="button" class="btn6">◀️Back to home</button></a>
+        <a href="./index26.html"><button type="button" class="btn7">code Guide</button></a>
+        
+    </footer>
+<script>
+    function updateClock(){
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        document.getElementById('local-time').textContent =timeString;
+    }
+    updateClock();
+    setInterval(updateClock,1000);
+</script>
+</body>
+</html>
