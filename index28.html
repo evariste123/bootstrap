@@ -68,7 +68,7 @@
         <button type="button" id="Documentation" class="btn4">Documentation</button>
         <button type="button" id="Keyboard" class="btn5">Keyboard Shortcuts</button>
         <a href="./index.html"><button type="button" class="btn6">◀️Back to home</button></a>
-        <a href="./index26.html"><button type="button" class="btn7">code Guide</button></a>
+        <a href="./index26.html"><button type="button" class="btn7" id="btn7">code Guide</button></a>
         
     </footer>
 <script>
@@ -79,6 +79,23 @@
     }
     updateClock();
     setInterval(updateClock,1000);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btn7 = document.getElementById("btn7");
+
+    if (btn7) { 
+        btn7.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            alert('code Guide is opening whether you click ok button below 👇'); 
+            setTimeout(() => {
+                window.location.href = './index26.html';
+            }, 1000);
+        });
+    }
+});
+
+    alert("before you start your journey to coding click the button below👇 to learn how you can make your code to build your project... the button is (code Guide)");
 </script>
 </body>
 </html>
