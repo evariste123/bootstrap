@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub | SQL Complete Manual</title>
+</head>
+<body>
+
+    <header>
+        <a href="./index28.html"><h1><span>SQL</span> EduHub Database Complete</h1></a>
+        <div id="menu-btn">☰</div>
+    </header>
+
+    <nav id="sidebar">
+        <h3>1. XAMPP & CMD</h3>
+        <ul>
+            <li><a href="#xampp-connect">Connect XAMPP to CMD</a></li>
+            <li><a href="#basic-cmd">Basic CMD Commands</a></li>
+        </ul>
+        <h3>2. Data Definition (DDL)</h3>
+        <ul>
+            <li><a href="#databases">Databases (Create/Drop)</a></li>
+            <li><a href="#tables">Tables (Create/Alter)</a></li>
+            <li><a href="#constraints">Constraints (Keys)</a></li>
+        </ul>
+        <h3>3. Data Manipulation (DML)</h3>
+        <ul>
+            <li><a href="#crud">Insert, Update, Delete</a></li>
+            <li><a href="#select">Select Queries</a></li>
+        </ul>
+        <h3>4. Advanced SQL</h3>
+        <ul>
+            <li><a href="#joins">Joins (Inner, Left)</a></li>
+            <li><a href="#aggregate">Aggregate Functions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- XAMPP CONNECTION -->
+        <section id="xampp-connect" class="section">
+            <h2>Connect XAMPP to CMD</h2>
+            <div class="card">
+                <h4>Step-by-Step Setup</h4>
+                <ul class="step-list">
+                    <li>Open <b>XAMPP Control Panel</b> and start <b>MySQL</b>.</li>
+                    <li>Open Command Prompt (<b>CMD</b>).</li>
+                    <li>Navigate to the MySQL bin directory:</li>
+                </ul>
+                <pre class="cmd">cd C:\xampp\mysql\bin</pre>
+                <ul class="step-list">
+                    <li>Log in to the MySQL server (default user is 'root' with no password):</li>
+                </ul>
+                <pre class="cmd">mysql -u root -p</pre>
+                <p class="desc">Press <b>Enter</b> when asked for a password (leave it blank).</p>
+            </div>
+        </section>
+
+        <!-- DATABASE DDL -->
+        <section id="databases" class="section">
+            <h2>Database Management</h2>
+            <div class="card">
+                <h4>Commands</h4>
+                <pre>
+<span class="keyword">CREATE DATABASE</span> eduhub_db;  <span class="comment">-- Create a new DB</span>
+<span class="keyword">SHOW DATABASES</span>;             <span class="comment">-- List all DBs</span>
+<span class="keyword">USE</span> eduhub_db;              <span class="comment">-- Enter the DB</span>
+<span class="keyword">DROP DATABASE</span> eduhub_db;    <span class="comment">-- Delete DB</span></pre>
+            </div>
+        </section>
+
+        <!-- TABLES -->
+        <section id="tables" class="section">
+            <h2>Table Properties & Creation</h2>
+            <div class="card">
+                <h4>Table Setup with Constraints</h4>
+                <pre>
+<span class="keyword">CREATE TABLE</span> users (
+    id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>,
+    username <span class="keyword">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT NULL</span>,
+    email <span class="keyword">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">UNIQUE</span>,
+    age <span class="keyword">INT DEFAULT</span> <span class="number">18</span>,
+    created_at <span class="keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>
+);</pre>
+            </div>
+        </section>
+
+        <!-- SELECT -->
+        <section id="select" class="section">
+            <h2>Querying Data</h2>
+            <div class="card">
+                <h4>Filtering and Sorting</h4>
+                <pre>
+<span class="comment">-- Select all users over 20 sorted by name</span>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> users 
+<span class="keyword">WHERE</span> age > <span class="number">20</span> 
+<span class="keyword">ORDER BY</span> username <span class="keyword">ASC</span>;
+
+<span class="comment">-- Pattern matching</span>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> email <span class="keyword">LIKE</span> <span class="string">'%@gmail.com'</span>;</pre>
+            </div>
+        </section>
+
+        <!-- JOINS -->
+        <section id="joins" class="section">
+            <h2>Table Relations (Joins)</h2>
+            <div class="card">
+                <h4>Inner Join Example</h4>
+                <pre>
+<span class="keyword">SELECT</span> orders.id, users.username
+<span class="keyword">FROM</span> orders
+<span class="keyword">INNER JOIN</span> users <span class="keyword">ON</span> orders.user_id = users.id;</pre>
+            </div>
+        </section>
+
+        <!-- AGGREGATE -->
+        <section id="aggregate" class="section">
+            <h2>Advanced Functions</h2>
+            <div class="card">
+                <h4>Math & Grouping</h4>
+                <pre>
+<span class="keyword">SELECT</span> <span class="func">COUNT</span>(id) <span class="keyword">AS</span> total_users <span class="keyword">FROM</span> users;
+<span class="keyword">SELECT</span> <span class="func">AVG</span>(age) <span class="keyword">FROM</span> users;
+<span class="keyword">SELECT</span> <span class="func">SUM</span>(price) <span class="keyword">FROM</span> orders <span class="keyword">GROUP BY</span> status;</pre>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Sidebar Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        menuBtn.onclick = () => {
+            sidebar.classList.toggle('active');
+            menuBtn.innerHTML = sidebar.classList.contains('active') ? '✕' : '☰';
+        };
+
+        // Auto-close on link click
+        document.querySelectorAll('nav a').forEach(link => {
+            link.onclick = () => sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

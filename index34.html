@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub | PHP Complete Manual</title>
+</head>
+<body>
+
+    <header>
+       <a href="./index28.html"> <h1><span>PHP</span> EduHub PHP Complete</h1></a>
+        <div id="menu-btn">☰</div>
+    </header>
+
+    <nav id="sidebar">
+        <h3>1. Core Basics</h3>
+        <ul>
+            <li><a href="#syntax">Basic Syntax</a></li>
+            <li><a href="#variables">Variables & Types</a></li>
+            <li><a href="#strings">String Functions</a></li>
+        </ul>
+        <h3>2. Logic & Data</h3>
+        <ul>
+            <li><a href="#conditionals">If / Switch</a></li>
+            <li><a href="#loops">Loops (Foreach)</a></li>
+            <li><a href="#arrays">Arrays (Associative)</a></li>
+        </ul>
+        <h3>3. Web & Forms</h3>
+        <ul>
+            <li><a href="#superglobals">$_GET & $_POST</a></li>
+            <li><a href="#sessions">Sessions & Cookies</a></li>
+        </ul>
+        <h3>4. Advanced</h3>
+        <ul>
+            <li><a href="#mysql">MySQL Connection</a></li>
+            <li><a href="#functions">Functions & OOP</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- BASIC SYNTAX -->
+        <section id="syntax" class="section">
+            <h2>Basic Syntax</h2>
+            <div class="card">
+                <h4>PHP Tags & Echo</h4>
+                <p class="desc">PHP code is executed on the server, and the result is returned to the browser as plain HTML.</p>
+                <pre>
+<span class="tag">&lt;?php</span>
+<span class="keyword">echo</span> <span class="string">"Hello EduHub!"</span>; <span class="comment">// Standard output</span>
+<span class="keyword">print</span> <span class="string">"Welcome to PHP"</span>; <span class="comment">// Similar to echo</span>
+<span class="tag">?&gt;</span></pre>
+            </div>
+        </section>
+
+        <!-- VARIABLES -->
+        <section id="variables" class="section">
+            <h2>Variables & Types</h2>
+            <div class="card">
+                <h4>Dynamic Typing</h4>
+                <pre>
+<span class="var">$name</span> = <span class="string">"John"</span>;      <span class="comment">// String</span>
+<span class="var">$age</span> = <span class="number">25</span>;           <span class="comment">// Integer</span>
+<span class="var">$is_valid</span> = <span class="keyword">true</span>;    <span class="comment">// Boolean</span>
+<span class="var">$price</span> = <span class="number">10.50</span>;      <span class="comment">// Float</span></pre>
+            </div>
+        </section>
+
+        <!-- ARRAYS -->
+        <section id="arrays" class="section">
+            <h2>Arrays</h2>
+            <div class="card">
+                <h4>Indexed & Associative</h4>
+                <pre>
+<span class="comment">// Indexed Array</span>
+<span class="var">$colors</span> = <span class="keyword">array</span>(<span class="string">"Red"</span>, <span class="string">"Green"</span>, <span class="string">"Blue"</span>);
+
+<span class="comment">// Associative Array (Key => Value)</span>
+<span class="var">$user</span> = [
+    <span class="string">"id"</span> => <span class="number">101</span>,
+    <span class="string">"role"</span> => <span class="string">"Admin"</span>
+];
+<span class="keyword">echo</span> <span class="var">$user</span>[<span class="string">"role"</span>];</pre>
+            </div>
+        </section>
+
+        <!-- SUPERGLOBALS -->
+        <section id="superglobals" class="section">
+            <h2>Form Handling</h2>
+            <div class="card">
+                <h4>$_POST & $_GET</h4>
+                <p class="desc">Superglobals are built-in variables that are always available in all scopes.</p>
+                <pre>
+<span class="comment">// Handling a POST form</span>
+<span class="keyword">if</span> (<span class="var">$_SERVER</span>[<span class="string">"REQUEST_METHOD"</span>] == <span class="string">"POST"</span>) {
+    <span class="var">$user</span> = <span class="var">$_POST</span>[<span class="string">'username'</span>];
+    <span class="keyword">echo</span> <span class="string">"Welcome, "</span> . <span class="var">$user</span>;
+}</pre>
+            </div>
+        </section>
+
+        <!-- MYSQL -->
+        <section id="mysql" class="section">
+            <h2>Database Connection</h2>
+            <div class="card">
+                <h4>PDO (PHP Data Objects)</h4>
+                <pre>
+<span class="keyword">try</span> {
+    <span class="var">$conn</span> = <span class="keyword">new</span> PDO(<span class="string">"mysql:host=localhost;dbname=edu"</span>, <span class="string">"user"</span>, <span class="string">"pass"</span>);
+    <span class="var">$conn</span>->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    <span class="keyword">echo</span> <span class="string">"Connected successfully"</span>;
+} <span class="keyword">catch</span>(PDOException <span class="var">$e</span>) {
+    <span class="keyword">echo</span> <span class="string">"Connection failed: "</span> . <span class="var">$e</span>->getMessage();
+}</pre>
+            </div>
+        </section>
+
+        <!-- SESSIONS -->
+        <section id="sessions" class="section">
+            <h2>Sessions</h2>
+            <div class="card">
+                <h4>Session Control</h4>
+                <pre>
+<span class="keyword">session_start()</span>; <span class="comment">// Must be at top</span>
+<span class="var">$_SESSION</span>[<span class="string">"favcolor"</span>] = <span class="string">"green"</span>;
+<span class="keyword">echo</span> <span class="string">"Session variables are set."</span>;</pre>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        menuBtn.onclick = () => {
+            sidebar.classList.toggle('active');
+            menuBtn.innerHTML = sidebar.classList.contains('active') ? '✕' : '☰';
+        };
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.onclick = () => sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

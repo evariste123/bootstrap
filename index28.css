@@ -426,10 +426,10 @@ body{
 
 .btn7{
     padding: 10px 10px;
-    background-color: #bbb8b8;
+    background-color: #f37979;
     color: rgb(5, 5, 5);
     border: none;
-    border-radius: 5px;
+    border-radius: 40px;
     cursor: pointer;
 }
 .btn7:hover{
@@ -437,7 +437,12 @@ body{
     cursor: pointer;
     transform: scale(1.02);
     color: white;
-    background-color: #787579;
+    background-color: #f56f4e;
+}
+.btn7 span{
+    color: white;
+    font: 20px bold;
+    font-weight: 900;
 }
 .clock-container {
   position: relative;
@@ -449,4 +454,151 @@ body{
   border: none;
   border-radius: 10px;
   color: rgb(242, 250, 242);
+}
+
+.btn8{
+    padding: 10px 10px;
+    background-color: #11a0ff;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn8:hover{
+     transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+    color: white;
+    background-color: #4e7af5;
+}
+.btn8 span{
+    color: white;
+    font: 20px bold;
+    font-weight: 900;
+}
+
+.btn9{
+    padding: 10px 10px;
+    background-color: #ffef11;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn9:hover{
+     transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+    color: white;
+    background-color: #f5f24e;
+}
+.btn9 span{
+    color: rgb(0, 0, 0);
+    font: 20px bold;
+    font-weight: 900;
+}
+
+.btn10{
+    padding: 10px 10px;
+    background-color: #072c35;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn10:hover{
+     transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+    color: white;
+    background-color: #031124;
+}
+.btn10 span{
+    color: white;
+    font: 20px bold;
+    font-weight: 900;
+}
+
+.btn11{
+    padding: 10px 10px;
+    background-color: #11a0ff;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn11:hover{
+     transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+    color: white;
+    background-color: #1c6380;
+}
+.btn11 span{
+    color: #ff0000;
+    font: 20px bold;
+    font-weight: 900;
+}
+
+.btn12{
+    padding: 10px 10px;
+    background-color: #0a178d;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn12:hover{
+     transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+    color: white;
+    background-color: #1d1f92;
+}
+.btn12 span{
+    color: white;
+    font: 20px bold;
+    font-weight: 900;
+}
+
+.btn13{
+    padding: 10px 10px;
+    background-color: #5348f1;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn13:hover{
+     transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+    color: white;
+    background-color: #4441d3;
+}
+.btn13 span{
+    color: #080808;
+    font: 20px bold;
+    font-weight: 900;
+}
+
+.btn14{
+    padding: 10px 10px;
+    background-color: #48f18e;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn14:hover{
+     transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+    color: white;
+    background-color: #1e582f;
+}
+.btn14 span{
+    color: #080808;
+    font: 20px bold;
+    font-weight: 900;
 }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <main>
+<a href="./index28.html">
+        <h1><span>☕</span> EduHub Java Complete</h1></a>
+        <div id="menu-btn">☰</div>
+    </header>
+
+    <nav id="sidebar">
+        <h3>1. Basics & Types</h3>
+        <ul>
+            <li><a href="#variables">Primitives & Variables</a></li>
+            <li><a href="#strings">Strings & Casting</a></li>
+        </ul>
+        <h3>2. Logic & Collections</h3>
+        <ul>
+            <li><a href="#loops">Loops (For, While)</a></li>
+            <li><a href="#arrays">Arrays & ArrayList</a></li>
+        </ul>
+        <h3>3. OOP Mastery</h3>
+        <ul>
+            <li><a href="#classes">Classes & Objects</a></li>
+            <li><a href="#inheritance">Inheritance & Interface</a></li>
+        </ul>
+        <h3>4. Advanced</h3>
+        <ul>
+            <li><a href="#exceptions">Exception Handling</a></li>
+            <li><a href="#lambda">Lambda Expressions</a></li>
+        </ul>
+    </nav>
+
+        <!-- VARIABLES -->
+        <section id="variables" class="section">
+            <h2>Primitives & Variables</h2>
+            <div class="card">
+                <h4>Data Types</h4>
+                <p class="desc">Java is statically typed. Every variable must have a declared type.</p>
+                <pre>
+<span class="keyword">int</span> myNum = <span class="number">5</span>;               <span class="comment">// Integer</span>
+<span class="keyword">float</span> myFloatNum = <span class="number">5.99f</span>;    <span class="comment">// Floating point</span>
+<span class="keyword">char</span> myLetter = <span class="string">'D'</span>;         <span class="comment">// Character</span>
+<span class="keyword">boolean</span> myBool = <span class="keyword">true</span>;       <span class="comment">// Boolean</span>
+<span class="type">String</span> myText = <span class="string">"Hello"</span>;     <span class="comment">// String (Object)</span></pre>
+            </div>
+        </section>
+
+        <!-- STRINGS -->
+        <section id="strings" class="section">
+            <h2>Strings & Casting</h2>
+            <div class="card">
+                <h4>String Methods</h4>
+                <pre>
+<span class="type">String</span> txt = <span class="string">"EduHub Java"</span>;
+<span class="type">System</span>.out.println(txt.length());     <span class="comment">// 11</span>
+<span class="type">System</span>.out.println(txt.toUpperCase());<span class="comment">// EDUHUB JAVA</span>
+<span class="type">System</span>.out.println(txt.indexOf(<span class="string">"Java"</span>)); <span class="comment">// 7</span></pre>
+            </div>
+        </section>
+
+        <!-- LOOPS -->
+        <section id="loops" class="section">
+            <h2>Loops & Logic</h2>
+            <div class="card">
+                <h4>For-Each Loop</h4>
+                <p class="desc">Commonly used to iterate through arrays or collections.</p>
+                <pre>
+<span class="type">String</span>[] cars = {<span class="string">"Volvo"</span>, <span class="string">"BMW"</span>, <span class="string">"Ford"</span>};
+<span class="keyword">for</span> (<span class="type">String</span> i : cars) {
+  <span class="type">System</span>.out.println(i);
+}</pre>
+            </div>
+        </section>
+
+        <!-- ARRAYS -->
+        <section id="arrays" class="section">
+            <h2>Collections</h2>
+            <div class="card">
+                <h4>ArrayList (Dynamic)</h4>
+                <pre>
+<span class="keyword">import</span> java.util.<span class="type">ArrayList</span>;
+
+<span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt; list = <span class="keyword">new</span> <span class="type">ArrayList</span>&lt;&gt;();
+list.add(<span class="string">"Java"</span>);
+list.add(<span class="string">"Python"</span>);
+list.remove(<span class="number">0</span>);</pre>
+            </div>
+        </section>
+
+        <!-- OOP -->
+        <section id="classes" class="section">
+            <h2>OOP Pillars</h2>
+            <div class="card">
+                <h4>Constructors & Methods</h4>
+                <pre>
+<span class="keyword">public class</span> <span class="type">User</span> {
+  <span class="type">String</span> name;
+
+  <span class="comment">// Constructor</span>
+  <span class="keyword">public</span> <span class="type">User</span>(<span class="type">String</span> n) {
+    name = n;
+  }
+
+  <span class="keyword">public void</span> sayHello() {
+    <span class="type">System</span>.out.println(<span class="string">"Hi "</span> + name);
+  }
+}</pre>
+            </div>
+        </section>
+
+        <!-- INTERFACES -->
+        <section id="inheritance" class="section">
+            <h2>Interfaces</h2>
+            <div class="card">
+                <h4>Abstraction</h4>
+                <pre>
+<span class="keyword">interface</span> <span class="type">Animal</span> {
+  <span class="keyword">public void</span> animalSound(); <span class="comment">// interface method</span>
+}
+
+<span class="keyword">class</span> <span class="type">Pig</span> <span class="keyword">implements</span> <span class="type">Animal</span> {
+  <span class="keyword">public void</span> animalSound() {
+    <span class="type">System</span>.out.println(<span class="string">"Oink Oink"</span>);
+  }
+}</pre>
+            </div>
+        </section>
+
+        <!-- LAMBDA -->
+        <section id="lambda" class="section">
+            <h2>Lambda Expressions</h2>
+            <div class="card">
+                <h4>Functional Programming</h4>
+                <p class="desc">Added in Java 8 to simplify code syntax.</p>
+                <pre>
+<span class="type">ArrayList</span>&lt;<span class="type">Integer</span>&gt; numbers = <span class="keyword">new</span> <span class="type">ArrayList</span>&lt;&gt;();
+numbers.add(<span class="number">5</span>);
+numbers.add(<span class="number">9</span>);
+numbers.forEach( (n) -> { <span class="type">System</span>.out.println(n); } );</pre>
+            </div>
+        </section>
+
+        <!-- EXCEPTIONS -->
+        <section id="exceptions" class="section">
+            <h2>Exception Handling</h2>
+            <div class="card">
+                <h4>Try...Catch</h4>
+                <pre>
+<span class="keyword">try</span> {
+  <span class="keyword">int</span>[] myNumbers = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>};
+  <span class="type">System</span>.out.println(myNumbers[<span class="number">10</span>]);
+} <span class="keyword">catch</span> (<span class="type">Exception</span> e) {
+  <span class="type">System</span>.out.println(<span class="string">"Error: Index out of bounds."</span>);
+} <span class="keyword">finally</span> {
+  <span class="type">System</span>.out.println(<span class="string">"Cleanup code here."</span>);
+}</pre>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

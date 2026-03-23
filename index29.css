@@ -1,0 +1,412 @@
+body{
+    background-color: #353434;
+    margin: 0 auto;
+    padding: 0;
+}
+.header{
+    background-color:white;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    top: 0px;
+}
+.header a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    bottom: 20px;
+}
+.header h1{
+    font: bold;
+    cursor: pointer;
+}
+.header span{
+    color: #1ef566;
+}
+.navbar{
+    width: 16vw;
+    max-height: 100vh;
+    top: 85px;
+    position: fixed;
+    background-color: #353434;
+    overflow-y: auto;
+    color: cyan;
+    z-index: 2000;
+}
+.menu{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.menu a{
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font: bold;
+    margin-left: 30px;
+    overflow-y: auto;
+    bottom: 40px;
+}
+.menu a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all ease-in 0.3s;
+    color: rgb(17, 17, 17);
+}
+.menu h3{
+    position: relative;
+    color: wheat;
+    margin-left: 20px;
+    bottom: 20px;
+}
+.menu1{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.menu1 a{
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font: bold;
+    overflow-y: auto;
+    margin-left: 30px;
+    bottom: 70px;
+}
+.menu1 a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all ease-in 0.3s;
+    color: rgb(17, 17, 17);
+}
+.menu1 h3{
+    position: relative;
+    margin-left: 20px;
+    color: wheat;
+    bottom: 50px;
+}
+.menu2{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.menu2 a{
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font: bold;
+    overflow-y: auto;
+    margin-left: 30px;
+    bottom: 100px;
+}
+.menu2 a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all ease-in 0.3s;
+    color: rgb(17, 17, 17);
+}
+.menu2 h3{
+    position: relative;
+    color: wheat;
+    bottom: 80px;
+    margin-left: 20px;
+}
+.menu3{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.menu3 a{
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font: bold;
+    overflow-y: auto;
+    margin-left: 30px;
+    bottom: 120px;
+}
+.menu3 a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all ease-in 0.3s;
+    color: rgb(17, 17, 17);
+}
+.menu3 h3{
+    position: relative;
+    color: wheat;
+    bottom: 100px;
+    margin-left: 20px;
+}
+.menu4{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.menu4 a{
+    position: relative;
+    color: rgb(253, 254, 255);
+    text-decoration: none;
+    font: bold;
+    overflow-y: auto;
+    margin-left: 30px;
+    bottom: 140px;
+}
+.menu4 a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all ease-in 0.3s;
+    color: rgb(17, 17, 17);
+}
+.menu4 h3{
+    position: relative;
+    color: wheat;
+    margin-left: 20px;
+    bottom: 130px;
+}
+.main{
+    width: 83vw;
+    top: 105px;
+    transform: translate(10%);
+    position: absolute;
+    justify-self:center;
+    background-color: #353434;
+}
+.section{
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+.section h2{
+    position: relative;
+    color: darkcyan;
+    text-align: center;
+}
+.card{
+    position: relative;
+    width: 20vw;
+    height: auto;
+    background-color: rgb(52, 68, 138);
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    justify-self: left;
+    margin-left: 10px;
+}
+.card h3 code{
+    color: #0fff5b;
+    margin-left: 20px;
+    font: bold;
+    font-weight: 900;
+}
+.list{
+    color: yellow;
+}
+.list code{
+    color: pink;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 20px;
+}
+.card p{
+    color: #eeedf0;
+    font: 20px bold;
+    margin-left: 20px;
+}
+.demo{
+    padding: 5px 5px;
+    border-radius: 0 0 5px 5px;
+    background-color: rgb(119, 120, 122);
+}
+.dem{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.card1{
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    background-color: rgb(52, 68, 138);
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    justify-self: center;
+    top: 90px;
+}
+.card1 h3 code{
+    color: #0fff5b;
+    margin-left: 20px;
+    font: bold;
+    font-weight: 900;
+}
+.list1{
+    color: yellow;
+}
+.list1 code{
+    color: pink;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 20px;
+}
+.card1 p{
+    color: #ebeaec;
+    font: 20px bold;
+    margin-left: 20px;
+}
+.demo1{
+    padding: 5px 5px;
+    border-radius: 0 0 5px 5px;
+    background-color: rgb(119, 120, 122);
+}
+.demo0{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.card2{
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    background-color: rgb(52, 68, 138);
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    justify-self: right;
+    margin-right: 10px;
+    top: 100px;
+}
+.card2 h3 code{
+    color: #0fff5b;
+    margin-left: 20px;
+    font: bold;
+    font-weight: 900;
+}
+.list2{
+    color: yellow;
+}
+.list2 code{
+    color: pink;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 20px;
+}
+.card2 p{
+    color: #f3f1f5;
+    font: 20px bold;
+    margin-left: 20px;
+}
+.section1{
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    top: 10px;
+}
+.section1 h2{
+    font-weight: 900;
+    color: #032d9e;
+    text-align: center;
+}
+.card3{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+}
+.card3 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.list3{
+    color: rgb(53, 53, 4);
+}
+.list3 code{
+    color: rgb(115, 37, 155);
+}
+.box3{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    justify-self: center;
+}
+.box3:hover{
+    transition: all ease-in 0.3s;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: rgb(0, 217, 255);
+}
+.box4{
+    position: absolute;
+    justify-self: right;
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    background-color: darkgreen;
+}
+.box4:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: darkolivegreen;
+}
+.card4{
+    padding: 20px 20px;
+    border-radius: 5px;
+    top: 10px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+}
+.card4 h3 code{
+    color: blue;
+    font: 20px bold;
+    font-weight: 900;
+}
+.list4{
+    color: seagreen;
+    font: 15px;
+}
+.list4 code{
+    color: rgb(42, 68, 153);
+    font: 16px bold;
+}
+.card5{
+    top: 20px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+}
+.demo4{
+    position: relative;
+    justify-self: center;
+}
+.box0{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right,cyan 50%,rgb(204, 0, 255) 50%);
+}
+.box0:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 30px;
+    height: 50px;
+    background: linear-gradient(to right,purple 50%,cyan 50%);
+}
+.box5{
+    position: absolute;
+    justify-self: right;
+    top: 100px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to left,red,blue,green,purple);
+}

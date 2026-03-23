@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub|CSS</title>
+    <link rel="stylesheet" href="./index29.css">
+</head>
+<body>
+    <header class="header">
+        <a href="./index28.html"><h1>🎨Edu<span>Hub</span>-learning Css</h1></a>
+    </header>
+
+    <nav class="navbar">
+        
+        <div class="menu">
+            <h3>1. Essential Layout</h3>
+            <a href="#display">Display & Visibility</a>
+            <a href="#position">Position & Z-Index</a>
+            <a href="#box-model">Box Model (Margin/Padding)</a>
+        </div>
+    
+        <div class="menu1">
+            <h3>2. Advanced Layout</h3>
+            <a href="#flexbox">Flexbox Masterclass</a>
+            <a href="#grid">CSS Grid Layout</a>
+            <a href="#table">Table Properties</a>
+        </div>
+        
+        <div class="menu2">
+            <h3>3. Text & Typography</h3>
+            <a href="#fonts">Fonts & Weight</a>
+            <a href="#text-effects">Text Effects & Spacing</a>
+            <a href="#lists">List Styling</a>
+        </div>
+     
+        <div class="menu3">
+               <h3>4. Visual Effects</h3>
+            <a href="#backgrounds">Backgrounds & Gradients</a>
+            <a href="#borders">Borders & Outlines</a>
+            <a href="#shadows">Shadows & Opacity</a>
+        </div>
+        
+        <div class="menu4">
+            <h3>5. Dynamic & Logic</h3>
+            <a href="#transforms">Transforms 2D/3D</a>
+            <a href="#transitions">Transitions & Animations</a>
+            <a href="#filters">Filters & Blending</a>
+            <a href="#misc">User Interface & Misc</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- BOX MODEL SECTION -->
+        <section id="box-model" class="section">
+            <h2>1. The Box Model</h2>
+                <div class="card">
+                    <h3><code>margin</code></h3>
+                    <div class="list">Values: <code>top right bottom left | auto | px | rem | %</code></div>
+                    <p>Creates space <b>outside</b> the element's border.</p>
+                    <div class="demo"><div class="dem">Margin Area</div></div>
+                </div>
+                <div class="card1">
+                    <h3><code>padding</code></h3>
+                    <div class="list1">Values: <code>px | em | % | inherit</code></div>
+                    <p>Creates space <b>inside</b> the element, between content and border.</p>
+                    <div class="demo1"><div class="demo0">Content</div></div>
+                </div>
+                <div class="card2">
+                    <h3><code>box-sizing</code></h3>
+                    <div class="list2">Values: <code>content-box | border-box</code></div>
+                    <p>Determines if padding/border are included in width.</p>
+                </div>
+        </section>
+
+        <!-- FLEXBOX SECTION -->
+        <section id="flexbox" class="section1">
+            <h2>2. Flexbox Container</h2>
+            
+                <div class="card3">
+                    <h3><code>flex-direction</code></h3>
+                    <div class="list3">Values: <code>row | column | row-reverse | column-reverse</code></div>
+                    <div class="demo3">
+                        <div class="box3"></div>
+                        <div class="box4"></div>
+                    </div>
+                </div>
+                <div class="card4">
+                    <h3><code>justify-content</code></h3>
+                    <div class="list4">Values: <code>center | flex-start | flex-end | space-between | space-around</code></div>
+                    <div class="demo4">
+                        <div class="box0"></div><div class="box5"></div>
+                    </div>
+                </div>
+                <div class="card5">
+                    <h3><code>align-items</code></h3>
+                    <div class="list5">Values: <code>stretch | center | flex-start | flex-end | baseline</code></div>
+                    <div class="demo5">
+                        <div class="boxi"></div><div class="box6"></div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- TYPOGRAPHY SECTION -->
+        <section id="fonts" class="section2">
+            <h2>3. Typography</h2>
+                <div class="card6">
+                    <h3><code>font-family</code></h3>
+                    <div class="list6">Values: <code>serif | sans-serif | monospace | cursive</code></div>
+                    <div class="demo6">
+                        <span>Serif Text</span>
+                        <span>Monospace Text</span>
+                    </div>
+                </div>
+                <div class="card7">
+                    <h3><code>text-transform</code></h3>
+                    <div class="list7">Values: <code>uppercase | lowercase | capitalize | none</code></div>
+                    <div class="demo7"><span>uppercase text</span></div>
+                </div>
+                <div class="card8">
+                    <h3><code>letter-spacing</code></h3>
+                    <div class="list8">Values: <code>normal | px | em</code></div>
+                    <div class="demo8"><span>WIDE TEXT</span></div>
+                </div>
+            
+        </section>
+
+        <!-- DYNAMIC EFFECTS -->
+        <section id="transforms" class="section3">
+            <h2>4. Dynamic Effects (Hover Items)</h2>
+          
+                <div class="card9">
+                    <h3><code>transform: rotate</code></h3>
+                    <div class="list9">Values: <code>deg | turn | rad</code></div>
+                    <div class="demo9"><div class="box9"></div></div> <!--box-rotate-->
+                </div>
+                <div class="card10">
+                    <h3><code>transform: scale</code></h3>
+                    <div class="list10">Values: <code>number (e.g. 1.5, 0.5)</code></div>
+                    <div class="demo10"><div class="box10"></div></div><!--box-rotate-->
+                </div>
+                <div class="card11">
+                    <h3><code>filter: blur & hue</code></h3>
+                    <div class="list11">Values: <code>px | deg | %</code></div>
+                    <div class="demo11"><div class="box11"></div></div><!--box-rotate color change-->
+                </div>
+                <div class="card12">
+                    <h3><code>border-radius</code></h3>
+                    <div class="list12">Values: <code>px | % | em</code></div>
+                    <div class="demo12"><div class="box12"></div></div><!--box-radius-->
+                </div>
+            
+        </section>
+
+        <!-- BACKGROUNDS -->
+        <section id="backgrounds" class="section4">
+            <h2>5. Backgrounds & Misc</h2>
+                <div class="card13">
+                    <h3><code>background-clip</code></h3>
+                    <div class="list13">Values: <code>border-box | padding-box | content-box | text</code></div>
+                    <div class="demo13"><strong style="font-size: 1rem; background: linear-gradient(to right, red, blue); -webkit-background-clip: text; color: transparent;">GRADIENT TEXT</strong></div>
+                </div>
+                <div class="card14">
+                    <h3><code>cursor</code></h3>
+                    <div class="list14">Values: <code>pointer | wait | crosshair | not-allowed | grab</code></div>
+                    <div class="demo14">Hover for Help Cursor</div>
+                </div>
+                <div class="card15">
+                    <h3><code>user-select</code></h3>
+                    <div class="list15">Values: <code>none | auto | all | text</code></div>
+                    <div class="demo15">You cannot select this text</div>
+                </div>
+           
+        </section>
+    </main>
+</body>
+</html>
