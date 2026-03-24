@@ -10,6 +10,14 @@ body{
     width: 100%;
     top: 0px;
 }
+@media(max-width:600px){
+    .header{
+        justify-self: center;
+        position: relative;
+        text-align: center;
+        background-color: #042c4d;
+    }
+}
 .header a{
     position: relative;
     color: black;
@@ -28,10 +36,21 @@ body{
     max-height: 100vh;
     top: 85px;
     position: fixed;
+    justify-self: left;
     background-color: #353434;
     overflow-y: auto;
     color: cyan;
     z-index: 2000;
+}
+@media(max-width:600px){
+    .navbar{
+        position: relative;
+        justify-self: center;
+        width: 90vw;
+        overflow-wrap: break-word;
+        background-color: #353434;
+        top: 0px;
+    }
 }
 .menu{
     display: grid;
@@ -171,6 +190,14 @@ body{
     justify-self:center;
     background-color: #353434;
 }
+@media(max-width:600px){
+    .main{
+        position: relative;
+        width: 90vw;
+        transform: translate(0%);
+        top: 20px;
+    }
+}
 .section{
     position: relative;
     padding: 20px;
@@ -191,6 +218,21 @@ body{
     border-radius: 5px;
     justify-self: left;
     margin-left: 10px;
+}
+.card:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    background-color: rgb(123, 71, 158);
+    transform: scale(1.05) translateY(-5px);
+}
+@media(max-width:600px){
+    .card{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        margin-left: 0px;
+    }
 }
 .card h3 code{
     color: #0fff5b;
@@ -233,6 +275,22 @@ body{
     justify-self: center;
     top: 90px;
 }
+.card1:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    background-color: rgb(123, 71, 158);
+    transform: scale(1.05) translateY(-5px);
+}
+@media(max-width:600px){
+    .card1{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        top: 10px;
+        overflow-wrap: break-word;
+    }
+}
 .card1 h3 code{
     color: #0fff5b;
     margin-left: 20px;
@@ -274,6 +332,22 @@ body{
     justify-self: right;
     margin-right: 10px;
     top: 100px;
+}
+.card2:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    background-color: rgb(123, 71, 158);
+    transform: scale(1.05) translateY(-5px);
+}
+@media(max-width:600px){
+    .card2{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        top: 20px;
+        margin-right: 0px;
+    }
 }
 .card2 h3 code{
     color: #0fff5b;
@@ -377,14 +451,6 @@ body{
     color: rgb(42, 68, 153);
     font: 16px bold;
 }
-.card5{
-    top: 20px;
-    padding: 20px 20px;
-    border-radius: 5px;
-    position: relative;
-    border-left: 2px solid blueviolet;
-    background-color: whitesmoke;
-}
 .demo4{
     position: relative;
     justify-self: center;
@@ -404,9 +470,479 @@ body{
 }
 .box5{
     position: absolute;
-    justify-self: right;
-    top: 100px;
+    top: 0px;
+    transform: translate(150%);
     width: 50px;
     height: 50px;
     background: linear-gradient(to left,red,blue,green,purple);
+}
+.box5:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform:scale(1.05);
+    background: orangered;
+    border-radius: 30px;
+}
+.card5{
+    top: 20px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+}
+.card5 h3 code{
+    color: blue;
+    font: 20px bold;
+    margin-left: 20px;
+    font-weight: 900;
+}
+.list5{
+    color: hotpink;
+    font: 20px bold;
+}
+.list5 code{
+    color: teal;
+    font-size: 15px;
+}
+.demo5{
+    position: relative;
+}
+.boxi{
+    width: 200px;
+    height: 50px;
+    justify-self: center;
+    position: relative;
+    background-color: brown;
+}
+.boxi:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    background-color: #032d9e;
+    border-radius:  50px 0 50px 0;
+}
+.box6{
+    position: absolute;
+    justify-self: center;
+    width: 50px;
+    height: 70px;
+    background-color: darkcyan;
+    top: 0px;
+}
+.box6:hover{
+    transition: all ease-in 0.3s;
+    background-color: #0fff5b;
+    border: 2px solid black;
+    border-radius: 50px 0 50px 0;
+    cursor: pointer;
+}
+
+.section2{
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    top: 20px;
+}
+.section2 h2{
+    font-weight: 900;
+    color: #032d9e;
+    text-align: center;
+}
+.card6{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+}
+.card6 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.card6 h3 code{
+    color: darkblue;
+    margin-left: 10px;
+}
+.list6{
+    color: darkgreen;
+    font: 20px bold;
+}
+.list6 code{
+    font: 17px bold;
+    color: darkgoldenrod;
+}
+.demo6{
+    position: relative;
+    justify-self: center;
+}
+.demo6 b{
+    color: darkmagenta;
+    font: 20px bold;
+}
+.demo6 span{
+    color: rgb(185, 181, 181);
+    font-size: 20px;
+    font-weight: 900;
+}
+.card7{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+    top: 10px;
+}
+.card7 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.list7{
+    color: darksalmon;
+    font: 17px bold;
+    text-align: center;
+}
+.list7 code{
+    color: rgb(24, 11, 36);
+}
+.demo7{
+    text-align: center;
+    top: 5px;
+    position: relative;
+    color: rgb(73, 141, 168);
+}
+.card8{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+    top: 20px;
+}
+.card8 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.list8{
+    text-align: center;
+    font-size: 17px;
+    color: darkorange;
+    gap: 10px;
+}
+.list8 code{
+    color: rgb(6, 187, 187);
+}
+.demo8{
+    text-align: center;
+    color: rgb(139, 137, 132);
+    top: 5px;
+    position: relative;
+}
+
+.section3{
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    top: 30px;
+}
+.section3 h2{
+    font-weight: 900;
+    color: #032d9e;
+    text-align: center;
+}
+.card9{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+}
+.card9 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.list9{
+    color: darkolivegreen;
+    font: 17px bold;
+    text-align: center;
+}
+.list9 code{
+    color: dodgerblue;
+}
+.demo9{
+    width: 10vw;
+    height: 20vh;
+    justify-self: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(218, 212, 212);
+}
+@media(max-width:600px){
+    .demo9{
+        position: relative;
+        width: 50vw;
+    }
+}
+.box9{
+    width: 80px;
+    height: 80px;
+    background-image:url('/image/cana.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-self: center;
+    top: 20px;
+    border-radius: 40px;
+    position: relative;
+    animation-duration: 2s;
+    animation-name: eva;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes eva{
+    from{
+        transform: rotate(0deg);
+        opacity: 0.5;
+    }
+    to{
+        transform: rotate(360deg);
+        opacity: 1;
+        border: 1px solid cyan;
+    }
+}
+.card10{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+    top: 10px;
+}
+.card10 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+
+.list10{
+    color: darkolivegreen;
+    font: 17px bold;
+    text-align: center;
+}
+.list10 code{
+    color: dodgerblue;
+}
+.demo10{
+    width: 10vw;
+    height: 20vh;
+    justify-self: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(218, 212, 212);
+}
+@media(max-width:600px){
+    .demo10{
+        position: relative;
+        width: 50vw;
+    }
+}
+.box10{
+    width: 80px;
+    height: 80px;
+    background-image:url('/image/cana.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-self: center;
+    top: 20px;
+    border-radius: 40px;
+    position: relative;
+    animation-duration: 2s;
+    animation-name: ev;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes ev{
+    from{
+        transform: rotate(0deg) scale(0);
+        opacity: 0.5;
+    }
+    to{
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+        border: 1px solid cyan;
+    }
+}
+
+.card12{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+    top: 20px;
+}
+.card12 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.list12{
+    text-align: center;
+    color: darkslategrey;
+    font: 17px bold;
+}
+.list12 code{
+    color: dodgerblue;
+}
+.demo12{
+    position: relative;
+    justify-self: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px 20px 30px 40px;
+    background-color: dimgray;
+}
+.section4{
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    top: 40px;
+}
+.section4 h2{
+    font-weight: 900;
+    color: #032d9e;
+    text-align: center;
+}
+.card13{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+}
+.card13 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.list13{
+    color: deepskyblue;
+    text-align: center;
+    font: 17px bold;
+}
+.list13 code{
+    color: forestgreen;
+    font: bold;
+}
+.demo13{
+    padding: 10px;
+    width:10vw;
+    top: 10px;
+    cursor: pointer;
+    justify-self: center;
+    position: relative;
+    text-align: center;
+    background-color: rgb(175, 170, 170);
+}
+@media(max-width:600px){
+    .demo13{
+        position: relative;
+        width: 50vw;
+        border-radius: 10px;
+        background-color: darkcyan;
+    }
+}
+.demo13:hover{
+    background-color: darkseagreen;
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+.card14{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+    top: 10px;
+}
+.card14 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.list14{
+    color: darkslategrey;
+    font:17px bold;
+    text-align: center;
+}
+.demo14{
+    padding: 10px;
+    width: 10vw;
+    justify-self: center;
+    cursor: pointer;
+    background-color: darkslategrey;
+    border-radius: 10px;
+    text-align: center;
+}
+@media(max-width:600px){
+    .demo14{
+        position: relative;
+        width: 50vw;
+        color: white;
+        background-color: darkslateblue;
+    }
+}
+.demo14:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: white;
+}
+.card15{
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    border-left: 2px solid blueviolet;
+    background-color: whitesmoke;
+    top: 20px;
+}
+.card15 h3 code{
+    font: 20px bold;
+    font-weight: 900;
+    color: blue;
+}
+.list15{
+    color:#611fca;
+    text-align: center;
+    font-size: 17px;
+}
+.list15 code{
+    color: rgb(240, 31, 31);
+}
+.demo15{
+    padding: 15px 10px;
+    background-color: #2c2b2b;
+    border-radius:10px;
+    color: white;
+    text-align: center;
+}
+.demo15 input{
+    width: 20vw;
+    height: 5vh;
+    background-color: transparent;
+    border: none;
+    cursor: wait;
+    text-align: center;
+    font: 20px bold;
 }
