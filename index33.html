@@ -4,38 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./index33.css">
 </head>
 <body>
-    <header>
-        <a href="./index28.html">EduHub C++ complete</a>
+    <header class="header">
+        <a href="./index28.html">EduHub <span> C++</span> complete</a>
     </header>
-        <nav id="sidebar">
-        <h3>1. Setup & Basics</h3>
-        <ul>
-            <li><a href="#structure">Program Structure</a></li>
-            <li><a href="#variables">Data Types & Values</a></li>
-            <li><a href="#input">User Input (cin)</a></li>
-        </ul>
-        <h3>2. Logic & Control</h3>
-        <ul>
-            <li><a href="#conditionals">If / Else / Switch</a></li>
-            <li><a href="#loops">Loops (For, While)</a></li>
-            <li><a href="#operators">Operators & Math</a></li>
-        </ul>
-        <h3>3. OOP & Memory</h3>
-        <ul>
-            <li><a href="#pointers">Pointers & Refs</a></li>
-            <li><a href="#functions">Functions</a></li>
-            <li><a href="#classes">Classes & Objects</a></li>
-        </ul>
-        <h3>4. Advanced & Q&A</h3>
-        <ul>
-            <li><a href="#files">File Handling</a></li>
-            <li><a href="#qa">Interview Q&A</a></li>
-        </ul>
+        <nav id="sidebar" class="navbar">
+        <div class="logo"><span>C++</span></div>
+       
+        <div class="menu">
+             <h3>1. Setup & Basics</h3>
+            <a href="#structure">Program Structure</a>
+            <a href="#variables">Data Types & Values</a>
+             <a href="#input">User Input (cin)</a>
+        </div>
+        
+        <div class="menu1">
+            <h3>2. Logic & Control</h3>
+            <a href="#conditionals">If / Else / Switch</a>
+            <a href="#loops">Loops (For, While)</a>
+            <a href="#operators">Operators & Math</a>
+        
+        <div class="menu2">
+            <h3>3. OOP & Memory</h3>
+            <a href="#pointers">Pointers & Refs</a>
+            <a href="#functions">Functions</a>
+            <a href="#classes">Classes & Objects</a>
+        </div>
+        
+        <div class="menu3">
+            <h3>4. Advanced & Q&A</h3>
+            <a href="#files">File Handling</a>
+            <a href="#qa">Interview Q&A</a>
+        </div>
     </nav>
 
-    <main>
+    <main class="main">
         <!-- STRUCTURE -->
         <section id="structure" class="section">
             <h2>Program Structure</h2>
@@ -46,27 +51,27 @@
 <span class="keyword">using namespace</span> std;
 
 <span class="type">int</span> <span class="keyword">main</span>() {
-    cout << <span class="string">"Welcome to EduHub!"</span>;
+cout << <span class="string">"Welcome to EduHub!"</span>;
     <span class="keyword">return</span> <span class="number">0</span>;
 }</pre>
             </div>
         </section>
 
         <!-- INPUT -->
-        <section id="input" class="section">
+        <section id="input" class="section1">
             <h2>User Input</h2>
             <div class="card">
                 <h4>Using cin</h4>
                 <pre>
 <span class="type">int</span> x;
 cout << <span class="string">"Enter a number: "</span>;
-cin >> x; <span class="comment">// Gets user input from keyboard</span>
-cout << <span class="string">"Your number is: "</span> << x;</pre>
+cin >> x; <span class="comment"> <br>// Gets user input <br> from keyboard</span>
+cout << <span class="string">"Your number is: " <br></span> << x;</pre>
             </div>
         </section>
 
         <!-- OPERATORS -->
-        <section id="operators" class="section">
+        <section id="operators" class="section2">
             <h2>Operators</h2>
             <div class="card">
                 <h4>Comparison & Logic</h4>
@@ -74,18 +79,18 @@ cout << <span class="string">"Your number is: "</span> << x;</pre>
 <span class="type">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>;
 (a == b);  <span class="comment">// False</span>
 (a != b);  <span class="comment">// True</span>
-(a < b && b > <span class="number">15</span>); <span class="comment">// Logical AND (True)</span>
-(a > <span class="number">100</span> || b == <span class="number">20</span>); <span class="comment">// Logical OR (True)</span></pre>
+(a < b && b > <span class="number">15</span>); <span class="comment"> <br>// Logical AND (True)</span>
+(a > <span class="number">100</span> || b == <span class="number">20</span>); <span class="comment"> <br>// Logical OR (True)</span></pre>
             </div>
         </section>
 
         <!-- FUNCTIONS -->
-        <section id="functions" class="section">
+        <section id="functions" class="section3">
             <h2>Functions</h2>
             <div class="card">
                 <h4>Void & Return Types</h4>
                 <pre>
-<span class="comment">// Function declaration</span>
+<span class="comment"> <br>// Function declaration</span>
 <span class="type">void</span> <span class="func">sayHi</span>() {
     cout << <span class="string">"Hello!"</span>;
 }
@@ -97,7 +102,7 @@ cout << <span class="string">"Your number is: "</span> << x;</pre>
         </section>
 
         <!-- CLASSES -->
-        <section id="classes" class="section">
+        <section id="classes" class="section4">
             <h2>Classes & Objects</h2>
             <div class="card">
                 <h4>Encapsulation</h4>
@@ -116,42 +121,42 @@ myObj.brand = <span class="string">"Tesla"</span>;</pre>
         </section>
 
         <!-- FILE HANDLING -->
-        <section id="files" class="section">
+        <section id="files" class="section5">
             <h2>File Handling</h2>
             <div class="card">
                 <h4>fstream Library</h4>
                 <pre>
 <span class="keyword">#include</span> <span class="header-inc">&lt;fstream&gt;</span>
 
-ofstream <span class="func">MyFile</span>(<span class="string">"data.txt"</span>); <span class="comment">// Create/Open</span>
-MyFile << <span class="string">"Writing to files!"</span>; <span class="comment">// Write</span>
-MyFile.close(); <span class="comment">// Always close</span></pre>
+ofstream <span class="func">MyFile</span>(<span class="string">"data.txt"</span>); <span class="comment"><br>// Create/Open</span>
+MyFile << <span class="string">"Writing to files!"</span>; <span class="comment"> <br>// Write</span>
+MyFile.close(); <span class="comment"> <br>// Always close</span></pre>
             </div>
         </section>
 
         <!-- Q&A SECTION -->
-        <section id="qa" class="section">
+        <section id="qa" class="section6">
             <h2>Detailed Q&A</h2>
             <div class="card">
                 <div class="qa-box">
                     <p class="question">Q: What is a Constructor?</p>
                     <p class="answer">A: A special method that is automatically called when an object of a class is created. It has the same name as the class.</p>
                 </div>
-                <div class="qa-box">
-                    <p class="question">Q: Difference between Array and Vector?</p>
-                    <p class="answer">A: Arrays have a fixed size. Vectors (from &lt;vector&gt;) are dynamic and can resize automatically.</p>
+                <div class="qa-box1">
+                    <p class="question1">Q: Difference between Array and Vector?</p>
+                    <p class="answer1">A: Arrays have a fixed size. Vectors (from &lt;vector&gt;) are dynamic and can resize automatically.</p>
                 </div>
-                <div class="qa-box">
-                    <p class="question">Q: What is the purpose of 'virtual' functions?</p>
-                    <p class="answer">A: They are used in base classes to ensure that the correct function is called for an object, regardless of the expression used to make the function call (Polymorphism).</p>
+                <div class="qa-box2">
+                    <p class="question2">Q: What is the purpose of 'virtual' functions?</p>
+                    <p class="answer2">A: They are used in base classes to ensure that the correct function is called for an object, regardless of the expression used to make the function call (Polymorphism).</p>
                 </div>
-                <div class="qa-box">
-                    <p class="question">Q: What is 'Destructor'?</p>
-                    <p class="answer">A: A destructor is a member function which is invoked automatically when the object goes out of scope or is explicitly destroyed by a call to delete.</p>
+                <div class="qa-box3">
+                    <p class="question3">Q: What is 'Destructor'?</p>
+                    <p class="answer3">A: A destructor is a member function which is invoked automatically when the object goes out of scope or is explicitly destroyed by a call to delete.</p>
                 </div>
-                <div class="qa-box">
-                    <p class="question">Q: What is the 'this' pointer?</p>
-                    <p class="answer">A: It is a constant pointer that holds the memory address of the current object. It is available within all non-static class member functions.</p>
+                <div class="qa-box4">
+                    <p class="question4">Q: What is the 'this' pointer?</p>
+                    <p class="answer4">A: It is a constant pointer that holds the memory address of the current object. It is available within all non-static class member functions.</p>
                 </div>
             </div>
         </section>

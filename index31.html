@@ -4,57 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./index31.css">
 </head>
 <body>
-    <header>
-        <a href="./index28.html"><h2>EduHub python complete</h2></a>
+    <header class="header">
+        <a href="./index28.html"><h2>EduHub <span> python</span> complete</h2></a>
     </header>
-        <nav id="sidebar">
-        <h3>1. Core Syntax</h3>
-        <ul>
-            <li><a href="#variables">Variables & Types</a></li>
-            <li><a href="#lists">Lists & Dictionaries</a></li>
-            <li><a href="#comprehensions">List Comprehensions</a></li>
-        </ul>
-        <h3>2. Control Flow</h3>
-        <ul>
-            <li><a href="#loops">Loops (For, While)</a></li>
-            <li><a href="#conditionals">If / Elif / Else</a></li>
-            <li><a href="#exceptions">Error Handling</a></li>
-        </ul>
-        <h3>3. Functions & OOP</h3>
-        <ul>
-            <li><a href="#functions">Functions (def)</a></li>
-            <li><a href="#classes">Classes (OOP)</a></li>
-        </ul>
-        <h3>4. File Handling</h3>
-        <ul>
-            <li><a href="#files">Reading/Writing Files</a></li>
-        </ul>
+        <nav id="sidebar" class="navbar">
+        <div class="logo"><span>Py</span></div>
+        <div class="menu">
+            <h3>1. Core Syntax</h3>
+            <a href="#variables">Variables & Types</a>
+            <a href="#lists">Lists & Dictionaries</a>
+            <a href="#comprehensions">List Comprehensions</a>
+        </div>
+       
+        <div class="menu1">
+             <h3>2. Control Flow</h3>
+            <a href="#loops">Loops (For, While)</a>
+            <a href="#conditionals">If / Elif / Else</a>
+            <a href="#exceptions">Error Handling</a>
+        </div>
+       
+        <div class="menu2">
+             <h3>3. Functions & OOP</h3>
+            <a href="#functions">Functions (def)</a>
+            <a href="#classes">Classes (OOP)</a>
+        </divcl>
+        
+        <div class="menu3">
+            <h3>4. File Handling</h3>
+            <a href="#files">Reading/Writing Files</a>
+        </div>
     </nav>
 
-    <main>
+    <main class="main">
         <!-- VARIABLES -->
         <section id="variables" class="section">
             <h2>Variables & Data Types</h2>
             <div class="card">
                 <h4>Common Values</h4>
                 <p class="desc">Python is dynamically typed. It infers the type based on the value assigned.</p>
-                <pre>
-name = <span class="string">"EduHub"</span>          <span class="comment"># String</span>
-age = <span class="number">25</span>                <span class="comment"># Integer</span>
-price = <span class="number">19.99</span>           <span class="comment"># Float</span>
-is_active = <span class="keyword">True</span>        <span class="comment"># Boolean</span>
-nothing = <span class="keyword">None</span>          <span class="comment"># NoneType</span></pre>
+                <pre class="item5">
+name = <span class="string">"EduHub"</span><span class="comment"># String</span>
+age = <span class="number">25</span><span class="comment"># Integer</span>
+price = <span class="number">19.99</span><span class="comment"># Float</span>
+is_active = <span class="keyword">True</span><span class="comment"># Boolean</span>
+nothing = <span class="keyword">None</span><span class="comment"># NoneType</span></pre>
             </div>
         </section>
 
         <!-- DATA STRUCTURES -->
-        <section id="lists" class="section">
+        <section id="lists" class="section1">
             <h2>Data Structures</h2>
             <div class="card">
                 <h4>Lists & Dictionaries</h4>
-                <pre>
+                <pre class="item4">
 <span class="comment"># List (Ordered, Mutable)</span>
 fruits = [<span class="string">"apple"</span>, <span class="string">"banana"</span>]
 fruits.append(<span class="string">"cherry"</span>)
@@ -69,26 +74,26 @@ user = {
         </section>
 
         <!-- LIST COMPREHENSIONS -->
-        <section id="comprehensions" class="section">
+        <section id="comprehensions" class="section2">
             <h2>Advanced Logic</h2>
             <div class="card">
                 <h4>List Comprehensions</h4>
                 <p class="desc">A concise way to create lists in a single line.</p>
-                <pre>
+                <pre class="item3">
 nums = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
 
-<span class="comment"># Create a list of squares for even numbers only</span>
-squares = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]
+<span class="comment"># Create a list of squares <br> for even numbers only</span>
+squares = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in <br></span> nums <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]
 <span class="comment"># Output: [4, 16]</span></pre>
             </div>
         </section>
 
         <!-- CONDITIONALS -->
-        <section id="conditionals" class="section">
+        <section id="conditionals" class="section3">
             <h2>Conditionals</h2>
             <div class="card">
                 <h4>If / Elif / Else</h4>
-                <pre>
+                <pre class="item2">
 score = <span class="number">85</span>
 
 <span class="keyword">if</span> score >= <span class="number">90</span>:
@@ -101,27 +106,27 @@ score = <span class="number">85</span>
         </section>
 
         <!-- ERROR HANDLING -->
-        <section id="exceptions" class="section">
+        <section id="exceptions" class="section4">
             <h2>Error Handling</h2>
             <div class="card">
                 <h4>Try / Except</h4>
                 <p class="desc">Prevent your program from crashing when an error occurs.</p>
-                <pre>
+                <pre class="item1">
 <span class="keyword">try</span>:
-    result = <span class="number">10</span> / <span class="number">0</span>
+result = <span class="number">10</span> / <span class="number">0</span>
 <span class="keyword">except</span> <span class="func">ZeroDivisionError</span>:
-    <span class="func">print</span>(<span class="string">"Cannot divide by zero!"</span>)
+<span class="func">print</span>(<span class="string">"Cannot divide by <br> zero!"</span>)
 <span class="keyword">finally</span>:
-    <span class="func">print</span>(<span class="string">"Execution complete."</span>)</pre>
+<span class="func">print</span>(<span class="string">"Execution complete."</span>)</pre>
             </div>
         </section>
 
         <!-- CLASSES -->
-        <section id="classes" class="section">
+        <section id="classes" class="section5">
             <h2>Object Oriented Programming</h2>
             <div class="card">
                 <h4>Classes & Inheritance</h4>
-                <pre>
+                <pre class="item">
 <span class="keyword">class</span> <span class="func">Animal</span>:
     <span class="keyword">def</span> <span class="func">speak</span>(self):
         <span class="keyword">pass</span>
@@ -136,19 +141,19 @@ my_dog = Dog()
         </section>
 
         <!-- FILE HANDLING -->
-        <section id="files" class="section">
+        <section id="files" class="section6">
             <h2>File Handling</h2>
             <div class="card">
                 <h4>Reading & Writing</h4>
                 <p class="desc">Using the <code>with</code> statement ensures files are closed automatically.</p>
-                <pre>
+                <pre class="item0">
 <span class="comment"># Writing to a file</span>
-<span class="keyword">with</span> <span class="func">open</span>(<span class="string">"test.txt"</span>, <span class="string">"w"</span>) <span class="keyword">as</span> f:
-    f.write(<span class="string">"Hello EduHub!"</span>)
+<span class="keyword">with</span> <span class="func">open</span>(<span class="string">"test.txt"</span>, <span class="string">"w"</span>)<span class="keyword">as</span>f:
+f.write(<span class="string">"Hello EduHub!"</span>)
 
 <span class="comment"># Reading from a file</span>
-<span class="keyword">with</span> <span class="func">open</span>(<span class="string">"test.txt"</span>, <span class="string">"r"</span>) <span class="keyword">as</span> f:
-    content = f.read()</pre>
+<span class="keyword">with</span> <span class="func">open</span>(<span class="string">"test.txt"</span>, <span class="string">"r"</span>)<span class="keyword">as</span>f:
+content = f.read()</pre>
             </div>
         </section>
     </main>

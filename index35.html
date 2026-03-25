@@ -4,39 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduHub | SQL Complete Manual</title>
+    <link rel="stylesheet" href="./index35.css">
 </head>
 <body>
 
-    <header>
+    <header class="header">
         <a href="./index28.html"><h1><span>SQL</span> EduHub Database Complete</h1></a>
-        <div id="menu-btn">☰</div>
     </header>
 
-    <nav id="sidebar">
-        <h3>1. XAMPP & CMD</h3>
-        <ul>
-            <li><a href="#xampp-connect">Connect XAMPP to CMD</a></li>
-            <li><a href="#basic-cmd">Basic CMD Commands</a></li>
-        </ul>
-        <h3>2. Data Definition (DDL)</h3>
-        <ul>
-            <li><a href="#databases">Databases (Create/Drop)</a></li>
-            <li><a href="#tables">Tables (Create/Alter)</a></li>
-            <li><a href="#constraints">Constraints (Keys)</a></li>
-        </ul>
-        <h3>3. Data Manipulation (DML)</h3>
-        <ul>
-            <li><a href="#crud">Insert, Update, Delete</a></li>
-            <li><a href="#select">Select Queries</a></li>
-        </ul>
-        <h3>4. Advanced SQL</h3>
-        <ul>
-            <li><a href="#joins">Joins (Inner, Left)</a></li>
-            <li><a href="#aggregate">Aggregate Functions</a></li>
-        </ul>
+    <nav id="sidebar" class="navbar">
+        <div class="logo"><span>SQL</span></div>
+        <div class="menu">
+            <h3>1. XAMPP & CMD</h3>
+            <a href="#xampp-connect">Connect XAMPP to CMD</a>
+            <a href="#basic-cmd">Basic CMD Commands</a>
+        </div>
+        
+        <div class="menu1">
+            <h3>2. Data Definition (DDL)</h3>
+            <a href="#databases">Databases (Create/Drop)</a>
+            <a href="#tables">Tables (Create/Alter)</a>
+            <a href="#constraints">Constraints (Keys)</a>
+        </div>
+       
+        <div class="menu2">
+             <h3>3. Data Manipulation (DML)</h3>
+            <a href="#crud">Insert, Update, Delete</a>
+            <a href="#select">Select Queries</a>
+        </div>
+        
+        <div class="menu3">
+            <h3>4. Advanced SQL</h3>
+            <a href="#joins">Joins (Inner, Left)</a>
+            <a href="#aggregate">Aggregate Functions</a>
+        </div>
     </nav>
 
-    <main>
+    <main class="main">
         <!-- XAMPP CONNECTION -->
         <section id="xampp-connect" class="section">
             <h2>Connect XAMPP to CMD</h2>
@@ -57,11 +61,11 @@
         </section>
 
         <!-- DATABASE DDL -->
-        <section id="databases" class="section">
+        <section id="databases" class="section1">
             <h2>Database Management</h2>
             <div class="card">
                 <h4>Commands</h4>
-                <pre>
+                <pre class="item5">
 <span class="keyword">CREATE DATABASE</span> eduhub_db;  <span class="comment">-- Create a new DB</span>
 <span class="keyword">SHOW DATABASES</span>;             <span class="comment">-- List all DBs</span>
 <span class="keyword">USE</span> eduhub_db;              <span class="comment">-- Enter the DB</span>
@@ -70,11 +74,11 @@
         </section>
 
         <!-- TABLES -->
-        <section id="tables" class="section">
+        <section id="tables" class="section2">
             <h2>Table Properties & Creation</h2>
             <div class="card">
                 <h4>Table Setup with Constraints</h4>
-                <pre>
+                <pre class="item4">
 <span class="keyword">CREATE TABLE</span> users (
     id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>,
     username <span class="keyword">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT NULL</span>,
@@ -86,11 +90,11 @@
         </section>
 
         <!-- SELECT -->
-        <section id="select" class="section">
+        <section id="select" class="section3">
             <h2>Querying Data</h2>
             <div class="card">
                 <h4>Filtering and Sorting</h4>
-                <pre>
+                <pre class="item3">
 <span class="comment">-- Select all users over 20 sorted by name</span>
 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> users 
 <span class="keyword">WHERE</span> age > <span class="number">20</span> 
@@ -102,11 +106,11 @@
         </section>
 
         <!-- JOINS -->
-        <section id="joins" class="section">
+        <section id="joins" class="section4">
             <h2>Table Relations (Joins)</h2>
             <div class="card">
                 <h4>Inner Join Example</h4>
-                <pre>
+                <pre class="item2">
 <span class="keyword">SELECT</span> orders.id, users.username
 <span class="keyword">FROM</span> orders
 <span class="keyword">INNER JOIN</span> users <span class="keyword">ON</span> orders.user_id = users.id;</pre>
@@ -114,11 +118,11 @@
         </section>
 
         <!-- AGGREGATE -->
-        <section id="aggregate" class="section">
+        <section id="aggregate" class="section5">
             <h2>Advanced Functions</h2>
             <div class="card">
                 <h4>Math & Grouping</h4>
-                <pre>
+                <pre class="item">
 <span class="keyword">SELECT</span> <span class="func">COUNT</span>(id) <span class="keyword">AS</span> total_users <span class="keyword">FROM</span> users;
 <span class="keyword">SELECT</span> <span class="func">AVG</span>(age) <span class="keyword">FROM</span> users;
 <span class="keyword">SELECT</span> <span class="func">SUM</span>(price) <span class="keyword">FROM</span> orders <span class="keyword">GROUP BY</span> status;</pre>

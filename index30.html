@@ -4,127 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduHub | JS Complete Manual</title>
+    <link rel="stylesheet" href="./index30.css">
 </head>
 <body>
 
-    <header>
+    <header class="header">
        <a href="./index28.html"> <h1><span>JS</span> EduHub JavaScript Complete</h1></a>
-        <div id="menu-btn">☰</div>
     </header>
 
-    <nav>
-        <h3>1. Basics & Values</h3>
-        <ul>
+    <nav class="navbar">
+        <div class="logo"><span>Py</span></div>
+        <div class="menu">
+             <h3>1. Basics & Values</h3>
             <li><a href="#variables">Variables (let, const)</a></li>
             <li><a href="#data-types">Data Types (Values)</a></li>
             <li><a href="#operators">Operators & Math</a></li>
-        </ul>
-        <h3>2. Logic & Control</h3>
-        <ul>
+        </div>
+  
+        <div class="menu1">
+            <h3>2. Logic & Control</h3>
             <li><a href="#loops">Loops (For, While)</a></li>
             <li><a href="#conditionals">If / Else / Switch</a></li>
             <li><a href="#arrays">Array Methods</a></li>
-        </ul>
-        <h3>3. Advanced JS</h3>
-        <ul>
+        </div>
+   
+        <div class="menu2">
+            <h3>3. Advanced JS</h3>
             <li><a href="#destructuring">Destructuring & Spread</a></li>
             <li><a href="#async">Promises & Fetch</a></li>
             <li><a href="#closures">Closures & HOF</a></li>
-        </ul>
-        <h3>4. DOM Mastery</h3>
-        <ul>
+        </div>
+       
+        <div class="menu3">
+            <h3>4. DOM Mastery</h3>
             <li><a href="#selectors">Selectors</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#storage">LocalStorage</a></li>
-        </ul>
+        </div>
     </nav>
 
-    <main>
+    <main class="main">
         <!-- VARIABLES & DATA TYPES -->
         <section id="variables" class="section">
             <h2>Fundamentals</h2>
             <div class="card">
                 <h4>Data Types & Values</h4>
                 <p class="desc">JavaScript has 8 basic data types.</p>
-                <pre>
-<span class="keyword">let</span> str = <span class="string">"Hello"</span>;      <span class="comment">// String</span>
-<span class="keyword">let</span> num = <span class="number">25</span>;           <span class="comment">// Number (Int/Float)</span>
-<span class="keyword">let</span> bigInt = <span class="number">9007n</span>;     <span class="comment">// BigInt</span>
-<span class="keyword">let</span> bool = <span class="keyword">true</span>;        <span class="comment">// Boolean (true/false)</span>
-<span class="keyword">let</span> und = <span class="keyword">undefined</span>;    <span class="comment">// Undefined</span>
-<span class="keyword">let</span> n = <span class="keyword">null</span>;           <span class="comment">// Null</span>
-<span class="keyword">let</span> sym = Symbol();     <span class="comment">// Symbol</span>
-<span class="keyword">let</span> obj = { key: <span class="string">"val"</span> };<span class="comment">// Object</span></pre>
+                <pre class="item5">
+<span class="keyword">let</span> str = <span class="string">"Hello"</span>;  <br>  <span class="comment">// String</span>
+<span class="keyword">let</span> num = <span class="number">25</span>;       <br>    <span class="comment">// Number(Int/Float)</span>
+<span class="keyword">let</span> bigInt = <span class="number">9007n</span>;  <br>   <span class="comment">// BigInt</span>
+<span class="keyword">let</span> bool = <span class="keyword">true</span>;    <br>    <span class="comment">// Boolean(true/false)</span>
+<span class="keyword">let</span> und = <span class="keyword">undefined</span>; <br>   <span class="comment">// Undefined</span>
+<span class="keyword">let</span> n = <span class="keyword">null</span>;    <br>       <span class="comment">// Null</span>
+<span class="keyword">let</span> sym = Symbol();  <br>   <span class="comment">// Symbol</span>
+<span class="keyword">let</span> obj = { key: <span class="string">"val"</span> }; <br><span class="comment">// Object</span></pre>
             </div>
         </section>
 
         <!-- OPERATORS -->
-        <section id="operators" class="section">
+        <section id="operators" class="section1">
             <h2>Operators & Logic</h2>
             <div class="card">
                 <h4>Arithmetic & Comparison</h4>
-                <pre>
-<span class="comment">// Arithmetic</span>
-<span class="keyword">let</span> sum = <span class="number">10</span> + <span class="number">5</span>;    <span class="comment">// 15</span>
-<span class="keyword">let</span> power = <span class="number">2</span> ** <span class="number">3</span>;  <span class="comment">// 8</span>
+                <pre class="item4">
+<span class="comment"> <br>// Arithmetic</span>
+<span class="keyword">let</span> sum = <span class="number">10</span> + <span class="number">5</span>; <br>   <span class="comment">// 15</span>
+<span class="keyword">let</span> power = <span class="number">2</span> ** <span class="number">3</span>;<br>  <span class="comment">// 8</span>
 
 <span class="comment">// Comparison (Values)</span>
-<span class="number">5</span> == <span class="string">"5"</span>;  <span class="comment">// true (loose)</span>
-<span class="number">5</span> === <span class="string">"5"</span>; <span class="comment">// false (strict - Recommended)</span></pre>
+<span class="number">5</span> == <span class="string">"5"</span>; <br> <span class="comment">// true (loose)</span>
+<span class="number">5</span> === <span class="string">"5"</span>; <br> <span class="comment">// false (strict -<br> Recommended)</span></pre>
             </div>
         </section>
 
         <!-- LOOPS -->
-        <section id="loops" class="section">
+        <section id="loops" class="section2">
             <h2>Loops & Iteration</h2>
             <div class="card">
                 <h4>For & For...of</h4>
-                <pre>
-<span class="comment">// Standard For Loop</span>
+                <pre class="item3">
+<span class="comment"> <br>// Standard For Loop</span>
 <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i < <span class="number">5</span>; i++) {
     console.log(i);
 }
 
-<span class="comment">// Modern For...of (Best for Arrays)</span>
-<span class="keyword">const</span> items = [<span class="string">"Apple"</span>, <span class="string">"Orange"</span>];
-<span class="keyword">for</span> (<span class="keyword">const</span> item <span class="keyword">of</span> items) {
+<span class="comment"> <br>// Modern For...of <br>(Best for Arrays)</span>
+<span class="keyword">const</span> items = [<span class="string">"Apple"</span>, <br><span class="string">"Orange"</span>];
+<span class="keyword">for</span> (<span class="keyword">const</span> item <br><span class="keyword">of</span> items) {
     console.log(item);
 }</pre>
             </div>
         </section>
 
         <!-- ARRAY METHODS -->
-        <section id="arrays" class="section">
+        <section id="arrays" class="section3">
             <h2>Array Power Methods</h2>
             <div class="card">
                 <h4>Map, Filter, Reduce</h4>
-                <pre>
+                <pre class="item2">
 <span class="keyword">const</span> nums = [<span class="number">1, 2, 3, 4</span>];
 
-<span class="keyword">const</span> doubled = nums.map(n => n * <span class="number">2</span>);     <span class="comment">// [2, 4, 6, 8]</span>
-<span class="keyword">const</span> evens = nums.filter(n => n % <span class="number">2</span> === <span class="number">0</span>); <span class="comment">// [2, 4]</span>
-<span class="keyword">const</span> sum = nums.reduce((acc, cur) => acc + cur, <span class="number">0</span>); <span class="comment">// 10</span></pre>
+<span class="keyword">const</span> doubled = nums.map <br>(n => n * <span class="number">2</span>);     <br><span class="comment">// [2, 4, 6, 8]</span>
+<span class="keyword">const</span> evens = nums.filter <br>(n => n % <span class="number">2</span> === <br><span class="number">0</span>); <span class="comment">// [2, 4]</span>
+<span class="keyword">const</span> sum = nums.reduce <br>((acc, cur) => acc + cur, <span class="number">0</span>); <br><span class="comment">// 10</span></pre>
             </div>
         </section>
 
         <!-- ADVANCED: DESTRUCTURING -->
-        <section id="destructuring" class="section">
+        <section id="destructuring" class="section4">
             <h2>ES6+ Modern Features</h2>
             <div class="card">
                 <h4>Destructuring & Spread</h4>
-                <pre>
+                <pre class="item1">
 <span class="comment">// Object Destructuring</span>
-<span class="keyword">const</span> user = { name: <span class="string">"Alex"</span>, age: <span class="number">20</span> };
+<span class="keyword">const</span> user = { name: <br><span class="string">"Alex"</span>, age: <span class="number">20</span> };
 <span class="keyword">const</span> { name, age } = user;
 
 <span class="comment">// Spread Operator</span>
 <span class="keyword">const</span> arr1 = [<span class="number">1, 2</span>];
-<span class="keyword">const</span> combined = [...arr1, <span class="number">3, 4</span>]; <span class="comment">// [1, 2, 3, 4]</span></pre>
+<span class="keyword">const</span><br> combined = [...arr1, <span class="number">3, 4</span>]; <span class="comment"><br>// [1, 2, 3, 4]</span></pre>
             </div>
         </section>
 
         <!-- DOM MANIPULATION -->
-        <section id="selectors" class="section">
+        <section id="selectors" class="section5">
             <h2>Advanced DOM Manipulation</h2>
             <div class="card">
                 <h4>Creating Elements Dynamic</h4>
@@ -132,13 +136,13 @@
                     <button class="btn-demo" id="addBtn">Add List Item</button>
                     <ul id="myList" style="list-style:none; padding:10px;"></ul>
                 </div>
-                <pre>
-<span class="keyword">const</span> btn = document.querySelector(<span class="string">'#addBtn'</span>);
-btn.addEventListener(<span class="string">'click'</span>, () => {
-    <span class="keyword">const</span> li = document.createElement(<span class="string">'li'</span>);
-    li.textContent = <span class="string">"New Item added!"</span>;
-    li.style.color = <span class="string">"#f7df1e"</span>;
-    document.querySelector(<span class="string">'#myList'</span>).appendChild(li);
+                <pre class="item">
+<span class="keyword">const</span> btn = document.<br>querySelector (<span class="string">'#addBtn'</span>);
+btn.addEventListener(<span class="string">'click'</span>, <br> () => {
+<span class="keyword">const</span> li =<br>document.createElement (<span class="string">'li'</span>);
+li.textContent = <span class="string">"New Item <br> added!"</span>;
+li.style.color = <span class="string">"#f7df1e"</span>;
+document.querySelector(<span class="string"><br> '#myList'</span>) .appendChild(li);
 });</pre>
             </div>
         </section>
@@ -150,6 +154,12 @@ btn.addEventListener(<span class="string">'click'</span>, () => {
             const li = document.createElement('li');
             li.textContent = "✔ JS Element Created!";
             li.style.marginTop = "5px";
+            li.style.color ="white";
+            li.style.width ="10vw";
+            li.style.height ="auto";
+            li.style.textAlign ="center";
+            li.style.borderRadius ="5px";
+            li.style.backgroundColor ="darkcyan";
             document.getElementById('myList').appendChild(li);
         });
     </script>
