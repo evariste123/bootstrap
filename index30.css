@@ -36,7 +36,7 @@ body{
 .navbar{
     width: 15vw;
     max-height: 100vh;
-    top: 100px;
+    top: 120px;
     position: fixed;
     justify-self: left;
     background-color: #353434;
@@ -77,6 +77,29 @@ body{
     cursor: pointer;
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0 0 20px cyan;
+}
+
+@media(max-width:600px){
+    .logo{
+        position: relative;
+        justify-self: left;
+    }
+    .menu{
+        position: relative;
+        justify-self: left;
+    }
+    .menu1{
+        position: relative;
+        justify-self: left;
+    }
+    .menu2{
+        position: relative;
+        justify-self: left;
+    }
+    .menu3{
+        position: relative;
+        justify-self: left;
+    }
 }
 .menu{
     display: grid;
@@ -184,9 +207,49 @@ body{
     margin-left: 20px;
 }
 
+.link{
+    position: relative;
+    justify-self:right;
+    margin-right: 30px;
+    bottom: 50px;
+}
+.links{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+@media(max-width:600px){
+    .links{
+        display: grid;
+    }
+    .link{
+        color: white;
+        position: relative;
+        top: 0px;
+        justify-self: right;
+    }
+}
+@media(max-width:600px){
+    .links a{
+        color: white !important;
+        position: relative;
+    }
+}
+.links a{
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(3, 29, 180);
+    font-weight: 900;
+}
+.links a:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05) translateY(-5px);
+    color: purple;
+}
 .main{
     width: 83vw;
-    top: 100px;
+    top: 120px;
     transform: translate(10%);
     position: absolute;
     justify-self:center;

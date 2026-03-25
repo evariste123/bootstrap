@@ -10,6 +10,17 @@
 
     <header class="header">
         <a href="./index28.html"><h1><span>SQL</span> EduHub Database Complete</h1></a>
+        <div class="link">
+            <div class="links">
+            <a href="./index29.html">CSS</a>
+            <a href="./index30.html">JS</a>
+            <a href="./index32.html">Java</a>
+            <a href="./index31.html">Python</a>
+            <a href="./index33.html">C++</a>
+            <a href="./index34.html">PhP</a>
+            <a href="./index35.html">SQL</a>
+            </div>
+        </div>
     </header>
 
     <nav id="sidebar" class="navbar">
@@ -66,10 +77,10 @@
             <div class="card">
                 <h4>Commands</h4>
                 <pre class="item5">
-<span class="keyword">CREATE DATABASE</span> eduhub_db;  <span class="comment">-- Create a new DB</span>
-<span class="keyword">SHOW DATABASES</span>;             <span class="comment">-- List all DBs</span>
-<span class="keyword">USE</span> eduhub_db;              <span class="comment">-- Enter the DB</span>
-<span class="keyword">DROP DATABASE</span> eduhub_db;    <span class="comment">-- Delete DB</span></pre>
+<span class="keyword">CREATE DATABASE</span><br> eduhub_db;  <span class="comment"><br>-- Create a new DB</span>
+<span class="keyword">SHOW DATABASES</span>;    <br>         <span class="comment">-- List all DBs</span>
+<span class="keyword">USE</span> eduhub_db;         <br>     <span class="comment">-- Enter the DB</span>
+<span class="keyword">DROP DATABASE</span> eduhub_db;   <br> <span class="comment">-- Delete DB</span></pre>
             </div>
         </section>
 
@@ -79,12 +90,12 @@
             <div class="card">
                 <h4>Table Setup with Constraints</h4>
                 <pre class="item4">
-<span class="keyword">CREATE TABLE</span> users (
-    id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>,
-    username <span class="keyword">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT NULL</span>,
-    email <span class="keyword">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">UNIQUE</span>,
-    age <span class="keyword">INT DEFAULT</span> <span class="number">18</span>,
-    created_at <span class="keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>
+<span class="keyword">CREATE TABLE</span>users (
+id <span class="keyword">INT PRIMARY KEY<br>AUTO_INCREMENT</span>,
+username <span class="keyword">VARCHAR</span>(<span class="number">50</span>)<span class="keyword">NOT NULL</span>,
+email <span class="keyword">VARCHAR</span>(<span class="number">100</span>)<span class="keyword">UNIQUE</span>,
+age <span class="keyword">INT DEFAULT</span> <br><span class="number">18</span>,
+created_at <span class="keyword">TIMESTAMP DEFAULT<br>CURRENT_TIMESTAMP</span>
 );</pre>
             </div>
         </section>
@@ -95,13 +106,13 @@
             <div class="card">
                 <h4>Filtering and Sorting</h4>
                 <pre class="item3">
-<span class="comment">-- Select all users over 20 sorted by name</span>
+<span class="comment">-- Select all users <br> over 20 sorted by name</span>
 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> users 
 <span class="keyword">WHERE</span> age > <span class="number">20</span> 
 <span class="keyword">ORDER BY</span> username <span class="keyword">ASC</span>;
 
 <span class="comment">-- Pattern matching</span>
-<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> email <span class="keyword">LIKE</span> <span class="string">'%@gmail.com'</span>;</pre>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> <br> email <span class="keyword">LIKE</span> <span class="string">'%@gmail.com'</span>;</pre>
             </div>
         </section>
 
@@ -111,9 +122,9 @@
             <div class="card">
                 <h4>Inner Join Example</h4>
                 <pre class="item2">
-<span class="keyword">SELECT</span> orders.id, users.username
+<span class="keyword">SELECT</span> <br> orders.id, users.username
 <span class="keyword">FROM</span> orders
-<span class="keyword">INNER JOIN</span> users <span class="keyword">ON</span> orders.user_id = users.id;</pre>
+<span class="keyword">INNER JOIN</span> <br> users <span class="keyword">ON</span><br> orders.user_id = users.id;</pre>
             </div>
         </section>
 
@@ -123,9 +134,9 @@
             <div class="card">
                 <h4>Math & Grouping</h4>
                 <pre class="item">
-<span class="keyword">SELECT</span> <span class="func">COUNT</span>(id) <span class="keyword">AS</span> total_users <span class="keyword">FROM</span> users;
+<span class="keyword">SELECT</span> <span class="func">COUNT</span>(id) <span class="keyword">AS</span> total_users <br> <span class="keyword">FROM</span> users;
 <span class="keyword">SELECT</span> <span class="func">AVG</span>(age) <span class="keyword">FROM</span> users;
-<span class="keyword">SELECT</span> <span class="func">SUM</span>(price) <span class="keyword">FROM</span> orders <span class="keyword">GROUP BY</span> status;</pre>
+<span class="keyword">SELECT</span> <span class="func">SUM</span>(price) <span class="keyword">FROM</span> orders <span class="keyword"> <br>GROUP BY</span> status;</pre>
             </div>
         </section>
     </main>

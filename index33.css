@@ -26,6 +26,7 @@ body{
         background-color: #042c4d;
         width: 100vw;
         height: auto;
+        top: 0px;
     }
 }
 .header a{
@@ -96,6 +97,29 @@ body{
     cursor: pointer;
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0 0 20px cyan;
+}
+
+@media(max-width:600px){
+    .logo{
+        position: relative;
+        justify-self: left;
+    }
+    .menu{
+        position: relative;
+        justify-self: left;
+    }
+    .menu1{
+        position: relative;
+        justify-self: left;
+    }
+    .menu2{
+        position: relative;
+        justify-self: left;
+    }
+    .menu3{
+        position: relative;
+        justify-self: left;
+    }
 }
 .menu{
     display: grid;
@@ -202,6 +226,47 @@ body{
     margin-left: 20px;
 }
 
+.link{
+    position: relative;
+    justify-self:right;
+    margin-right: 30px;
+    bottom: 30px;
+    color: white !important;
+}
+.links{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+@media(max-width:600px){
+    .links{
+        display: grid;
+    }
+    .link{
+        color: white;
+        position: relative;
+        top: 0px;
+        justify-self: right;
+    }
+}
+@media(max-width:600px){
+    .links a{
+        color: white !important;
+        position: relative;
+    }
+}
+.links a{
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 900;
+}
+.links a:hover{
+    transition: all ease-in 0.3s;
+    transform: scale(1.05) translateY(-5px);
+    color: purple;
+}
 .main{
     width: 83vw;
     top: 101px;
