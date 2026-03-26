@@ -86,3 +86,548 @@ body{
     margin-right: 20px;
     bottom: 10px;
 }
+.menu a:hover{
+    transition: all ease-in 0.3s;
+    cursor:pointer;
+    transform: scale(1.05) translateY(-5px);
+    color: cyan;
+}
+.cooking{
+    padding: 20px;
+    width: 90vw;
+    background-color: whitesmoke;
+    justify-self: center;
+    position: relative;
+    top: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+.cooking h2{
+    color: blue;
+    text-align: center;
+    font: 20px bold;
+    font-weight: 900;
+    top: 0px;
+}
+.cooking p{
+    font: 20px bold;
+    
+}
+.card{
+    position: relative;
+    width: 20vw;
+    height:auto;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    justify-self: left;
+    margin-left: 20px;
+}
+.card h3{
+    position: relative;
+    text-align: center;
+    color: blue;
+}
+.card p{
+    position: relative;
+    margin-left: 10px;
+    font: 17px bold;
+}
+.image{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+.image img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px 5px 0 0;
+}
+.card:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+.card1{
+    position: absolute;
+    width: 20vw;
+    height:auto;
+    justify-self: center;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    top: 150px;
+}
+.card1:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+.card1 h3{
+    position: relative;
+    text-align: center;
+    color: blue;
+}
+.card1 p{
+    position: relative;
+    margin-left: 10px;
+    font: 17px bold;
+}
+.image1{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+.image1 img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px 5px 0 0;
+}
+
+.card2{
+    position: absolute;
+    width: 20vw;
+    height:auto;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    justify-self: right;
+    margin-right: 20px;
+    top: 150px;
+}
+.card2 h3{
+    position: relative;
+    text-align: center;
+    color: blue;
+}
+.card2 p{
+    position: relative;
+    margin-left: 10px;
+    font: 17px bold;
+}
+.image2{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+.image2 img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px 5px 0 0;
+}
+.card2:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+.card3{
+    position: relative;
+    width: 20vw;
+    height:auto;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    top: 10px;
+    justify-self: left;
+    margin-left: 20px;
+}
+.card3 h3{
+    position: relative;
+    text-align: center;
+    color: blue;
+}
+.card3 p{
+    position: relative;
+    margin-left: 10px;
+    font: 17px bold;
+}
+.image3{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+.image3 img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px 5px 0 0;
+}
+.card3:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+.sports{
+    padding: 20px;
+    width:95vw;
+    background-color:#000;
+    justify-self: center;
+    position: relative;
+    top: 20px;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid white;
+}
+
+.sports h2{
+    color: #ffffff;
+    text-align: center;
+    font: 20px bold;
+    font-weight: 900;
+    top: 0px;
+}
+.sports p{
+    font: 20px bold;
+    
+}
+.card4{
+    position: relative;
+    width: 20vw;
+    height:auto;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    top: 0px;
+    justify-self: left;
+    margin-left: 20px;
+}
+.card4 h3{
+    position: relative;
+    text-align: center;
+    color: blue;
+}
+.card4 p{
+    position: relative;
+    margin-left: 10px;
+    font: 17px bold;
+}
+.image4{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+.image4 img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px 5px 0 0;
+}
+.card4:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+
+.card5{
+    position: absolute;
+    width: 20vw;
+    height:auto;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    top: 150px;
+    justify-self: center;
+}
+.card5 h3{
+    position: relative;
+    text-align: center;
+    color: blue;
+}
+.card5 p{
+    position: relative;
+    margin-left: 10px;
+    font: 17px bold;
+}
+.image5{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+.image5 img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px 5px 0 0;
+}
+.card5:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+
+.card6{
+    position: absolute;
+    width: 20vw;
+    height:auto;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    top: 150px;
+    justify-self: right;
+    margin-right: 20px;
+}
+.card6 h3{
+    position: relative;
+    text-align: center;
+    color: blue;
+}
+.card6 p{
+    position: relative;
+    margin-left: 10px;
+    font: 17px bold;
+}
+.image6{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+.image6 img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px 5px 0 0;
+}
+.card6:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+
+.card7{
+    position: relative;
+    width: 20vw;
+    height:auto;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    top: 10px;
+    justify-self: left;
+    margin-left: 20px;
+}
+.card7 h3{
+    position: relative;
+    text-align: center;
+    color: blue;
+}
+.card7 p{
+    position: relative;
+    margin-left: 10px;
+    font: 17px bold;
+}
+.image7{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+.image7 img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px 5px 0 0;
+}
+.card7:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+.profit{
+    padding: 20px;
+    width:95vw;
+    background-color:#133d2d;
+    justify-self: center;
+    position: relative;
+    top: 20px;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid white;
+}
+.profit h2{
+    color: #ffffff;
+    text-align: center;
+    font: 20px bold;
+    font-weight: 900;
+    top: 0px;
+}
+.profit p{
+    font: 20px bold;
+    color: white;
+}
+.card8{
+    position: relative;
+    width: 30vw;
+    height: auto;
+    justify-self: left;
+    margin-left: 100px;
+    border: 2px solid cyan;
+    border-radius: 5px;
+}
+.image8{
+    text-align: center;
+    position: relative;
+}
+.image8 img{
+    width: 30vw;
+    height: 40vh;
+    opacity: 1;
+    border-radius: 5px 5px  0 0;
+}
+.card8 h3{
+    color: wheat;
+    font-weight: 900;
+    font: 20px bold;
+    text-align: center;
+}
+.card8 strong{
+    color:#000000;
+    margin-left: 0px;
+}
+.profit-badge1{
+    position: relative;
+    bottom: 10px;
+    padding: 10px;
+    margin-left: 60px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 900;
+    text-shadow:  0 0 20px hotpink;
+    background-color: rgb(2, 99, 2);
+}
+.card8:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+.card9{
+    position: absolute;
+    width: 30vw;
+    height: auto;
+    justify-self: center;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    top: 125px;
+    margin-left: 600px;
+}
+.card9:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    border: 2px solid cyan;
+}
+.image9{
+    text-align: center;
+    position: relative;
+}
+.image9 img{
+    width: 30vw;
+    height: 40vh;
+    opacity: 1;
+    border-radius: 5px 5px  0 0;
+}
+
+.card9 h3{
+    color: wheat;
+    font-weight: 900;
+    font: 20px bold;
+    text-align: center;
+}
+.card9 strong{
+    color:#000000;
+    margin-left: 0px;
+}
+.profit-badge{
+    position: relative;
+    bottom: 10px;
+    padding: 10px;
+    margin-left: 60px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 900;
+    text-shadow:  0 0 20px hotpink;
+    background-color: rgb(2, 99, 2);
+}
+
+.partner{
+    padding: 20px;
+    width:95vw;
+    background-color:transparent;
+    justify-self: center;
+    position: relative;
+    top: 20px;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid white;
+}
+.partner h2{
+    color: #0e0d0d;
+    text-align: center;
+    font: 20px bold;
+    font-weight: 900;
+    top: 0px;
+}
+.partner p{
+    font: 20px bold;
+    color: #070707;
+}
+.grid{
+    position: relative;
+    width: 40vw;
+    height: 30vh;
+    background-color: #0d1538;
+    border-radius: 5px;
+    justify-self: left;
+    margin-left: 20px;
+}
+.in1{
+    position: relative;
+    top: 20px;
+}
+.in1 label{
+    position: relative;
+    color: cyan;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+}
+.in1 input{
+    width: 30vw;
+    height: 4vh;
+    border: 1px solid black;
+    margin-left: 10px;
+    color: white;
+    position: relative;
+}
+.in1 input::placeholder{
+    font-weight: 900;
+    color: black;
+}
+.in2 label{
+    position: relative;
+    color: cyan;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+}
+.in2{
+    position: relative;
+    top: 50px;
+}
+.in2 input::placeholder{
+     font-weight: 900;
+    color: black;
+}
+.in2 input{
+    width: 30vw;
+    height: 4vh;
+    border: 1px solid black;
+    margin-left: 10px;
+    position: relative;
+}
