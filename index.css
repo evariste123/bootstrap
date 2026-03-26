@@ -52,6 +52,7 @@
                 background-image: url('./image/eva.png');
                 background-size: cover;
                  background-position: center;
+                 opacity: 1;
                  background-repeat: no-repeat;
                 padding: 20px;
                 border-radius: 8px;
@@ -223,7 +224,7 @@
                     }
                 }
                     .home {
-                         background-image: linear-gradient(to top, #772ed680, #2c9bbdcc),
+                         background-image: linear-gradient(to bottom, #65468f80, #437786cc),
                     url('./image/IMG_20251210_164950_618.jpg');
                         background-attachment: fixed;
                         width: 100vw;
@@ -378,7 +379,7 @@
                         }
                         @media(min-width: 769px) {
                             .about {
-                                background-color: #140d2c;
+                                background-color: #111111;
                                 padding: 40px 20px;
                                 border-radius: 0px;
                                 margin-bottom: 40px;
@@ -404,7 +405,7 @@
                                 .card3{
                                     width: 30vw;
                                     height: auto;
-                                    background-color: #162746;
+                                    background-color: #101d35;
                                     color: rgb(194, 195, 199);
                                     position: relative;
                                     overflow-wrap: break-word;
@@ -426,11 +427,12 @@
                                     }
                                 }
                                 .card3:hover{
-                                    background-color: #016391;
-                                    color: black;
-                                    border: 1px solid cyan;
+                                    background-color: #011118;
+                                    color: #fdfdfd;
+                                    border: 1px solid rgb(0, 255, 255);
                                     cursor: pointer;
                                     transition: all 0.3s ease;
+                                    transform: scale(1.02) translateY(-5px);
                                 }
                                 @media(max-width:600px){
                                     .card3{
@@ -488,10 +490,11 @@
                                     }
                                 }
                                 .card4:hover{
-                                    background-color: #009985;
-                                    color: black;
-                                    border: 1px solid cyan;
+                                    background-color: #011a16;
+                                    color: rgb(255, 255, 255);
+                                    border: 1px solid rgb(4, 134, 255);
                                     cursor: pointer;
+                                    transform: scale(1.02) translateY(-5px);
                                     transition: all 0.3s ease;
                                 }   
                                 .card4 p{
@@ -539,10 +542,11 @@
                                         border: 1px solid transparent;
                                     }
                                     .card1:hover{
-                                        background-color: #013b34;
-                                        color: black;
-                                        border: 1px solid cyan;
+                                        background-color: #011d1a;
+                                        color: #ffffff;
+                                        border: 1px solid rgb(0, 255, 255);
                                         cursor: pointer;
+                                        transform: scale(1.02) translateY(-5px);
                                         transition: all 0.3s ease;
                                     }
                                     @media(max-width:600px){
@@ -632,7 +636,8 @@
                                 .card2:hover{
                                     background-color: #00221d;
                                     color: rgb(66, 65, 65);
-                                    border: 1px solid cyan;
+                                    border: 1px solid rgb(3, 255, 242);
+                                    transform: scale(1.02) translateY(-5px);
                                     cursor: pointer;
                                     transition: all 0.3s ease;
                                 }
@@ -696,7 +701,7 @@
                                         opacity: 1;
                                         color: #014769;
                                         text-transform: capitalize;
-                                        box-shadow: 0 0 20px cyan;
+                                        box-shadow: 0 0 20px rgb(17, 17, 17);
                                     }
                                 }   
                                 @media(max-width:600px){
@@ -748,7 +753,7 @@
                                 .btn6:hover{
                                     background-color: #00221d;
                                     color: rgb(131, 128, 128);
-                                    border: 1px solid cyan;
+                                    transform: scale(1.02) translateY(-5px);
                                     cursor: pointer;
                                     transition: all 0.3s ease;
                                 }
@@ -790,7 +795,7 @@
                                     position: absolute;
                                     margin-left: 20px;
                                     height: auto;
-                                    border-left: 1px solid cyan;
+                                    border-left: 1px solid rgb(20, 20, 20);
                                     top: 30px;
                                     justify-self: center;
                                     border: none;
@@ -800,7 +805,7 @@
                                 .btn4:hover{
                                      background-color: #00221d;
                                     color: rgb(131, 128, 128);
-                                    border: 1px solid cyan;
+                                    transform: scale(1.02) translateY(-5px);
                                     cursor: pointer;
                                     transition:  0.3s ease;
                                 }
@@ -865,7 +870,7 @@
                                 .btn2:hover{
                                      background-color: #00221d;
                                     color: rgb(131, 128, 128);
-                                    border: 1px solid cyan;
+                                    transform: scale(1.03) translateX(-5px);
                                     cursor: pointer;
                                     transition: all 0.3s ease;
                                 }
@@ -922,6 +927,7 @@
                                     top: 520px;
                                     justify-self: center;
                                     border: none;
+                                    transform: translate(3%);
                                     border-radius: 5px;
                                     cursor: pointer;
                                    
@@ -929,7 +935,7 @@
                                 .btn:hover{
                                      background-color: #00221d;
                                     color: rgb(131, 128, 128);
-                                    border: 1px solid cyan;
+                                    transform: scale(1.02) translateY(-5px);
                                     cursor: pointer;
                                     transition:  0.3s ease;
                                 }
@@ -948,6 +954,7 @@
                                             top: 1670px;
                                             margin-left: 20px;
                                             justify-self: center;
+                                            transform: translate(0%);
                                             
                                         }   
                                     }
@@ -1296,6 +1303,7 @@
             .code6{
                 display: flex;
                 gap: 10px;
+                flex-wrap: wrap;
             }
             .code6 a{
                 position: relative;
@@ -1373,8 +1381,9 @@
             .item1:hover{
                 transition: ease 0.3s;
                 cursor: pointer;
-                border: 1px solid cyan;
                 background-color: #c0c2c7;
+                box-shadow: 0 0 10px cyan;
+                transform: scale(1.02) translateY(-5px);
             }
 
 
@@ -1417,7 +1426,8 @@
             .item4:hover{
                 transition: ease 0.3s;
                 cursor: pointer;
-                border: 1px solid cyan;
+                box-shadow: 0 0 10px cyan;
+                transform: scale(1.02) translateY(-5px);
                 background-color: #c0c2c7;
             }
 
@@ -1463,7 +1473,8 @@
             .item7:hover{
                 transition: ease 0.3s;
                 cursor: pointer;
-                border: 1px solid cyan;
+                box-shadow: 0 0 10px cyan;
+                transform: scale(1.02) translateY(-5px);
                 background-color: #c0c2c7;
             }
             .item0{

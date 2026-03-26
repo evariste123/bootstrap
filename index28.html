@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <section class="container">
+    <section class="container" id="container">
         <h1>DevSpace Multi-Lang IDE</h1>
         <div class="clock-container">
     <div id="local-time">00:00:00</div>
@@ -27,12 +27,13 @@
             </select>
 
             <!-- Action Buttons -->
-            <button type="button" class="btn-run" onclick="alert('Executing Code...')">▶ Run Code</button>
+            <button type="button" class="btn-run" onclick="asserts('Executing Code...')">▶ Run Code</button>
             <button type="button" class="btn-save">💾 Save</button>
             <button type="button" class="btn-clear">🗑️ Clear</button>
             <button type="button" class="btn-theme">🌙 Theme</button>
             <button type="button" class="btn-setting">⚙️ Settings</button>
             <button type="button" class="btn">⏬download</button>
+            <button type="button" class="btn-language">🌐Language</button>
         </div>
     </section>
 
@@ -87,22 +88,8 @@
     updateClock();
     setInterval(updateClock,1000);
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const btn7 = document.getElementById("btn7");
-
-    if (btn7) { 
-        btn7.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            alert('code Guide is opening whether you click ok button below 👇'); 
-            setTimeout(() => {
-                window.location.href = './index26.html';
-            }, 1000);
-        });
-    }
-});
-
     alert("before you start your journey to coding click the button below👇 to learn how you can make your code to build your project... the button is (code Guide html or other button you wish to click)");
 </script>
+<script src="./index28.js"></script>
 </body>
 </html>
