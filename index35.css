@@ -7,7 +7,7 @@ body{
     position: relative;
     width: 100%;
     padding: 10px;
-    background-color: hsl(0, 0%, 100%);
+    background-color:#353534;
     top: 0px;
 }
 @media(max-width:600px){
@@ -241,8 +241,9 @@ body{
     position: relative;
     text-decoration: none;
     cursor: pointer;
-    color: rgb(3, 29, 180);
+    color: #ffffff;
     font-weight: 900;
+    font: 20px bold;
 }
 .links a:hover{
     transition: all ease-in 0.3s;

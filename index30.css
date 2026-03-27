@@ -1,10 +1,10 @@
 body{
-    background-color: #353434;
+    background-color: #353534;
     margin: 0 auto;
     padding: 0;
 }
 .header{
-    background-color:white;
+    background-color:#353534;
     position: relative;
     padding: 10px;
     width: 100%;
@@ -239,8 +239,9 @@ body{
     position: relative;
     text-decoration: none;
     cursor: pointer;
-    color: rgb(3, 29, 180);
+    color: #ffffff;
     font-weight: 900;
+    font: 20px bold;
 }
 .links a:hover{
     transition: all ease-in 0.3s;
@@ -253,7 +254,7 @@ body{
     transform: translate(10%);
     position: absolute;
     justify-self:center;
-    background-color: #2b2a2a;
+    background-color: #353534;
 }
 @media(max-width:600px){
     .main{

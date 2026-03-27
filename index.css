@@ -183,6 +183,8 @@
                     margin-right: 30px;
                     border-radius: 4px;
                     transition: background-color 0.3s ease;
+                    font: 20px bold;
+                    font-weight: 900;
                 }
                 .nav-link:hover {
                     background-color: #0e1c1d;
@@ -197,6 +199,9 @@
                 }
                 .container {
                     margin-top: 80px; 
+                    background-color: black;
+                    position: relative;
+                    bottom: 20px;
                 }
                  @media(max-width: 768px) {
                     .collapse ul {
@@ -243,6 +248,7 @@
                         animation-iteration-count: 1;
                         animation-delay: 1s;
                         animation-direction: normal;
+                        top: 40px;
                     }
                     @media(max-width:600px){
                         .home{
@@ -315,14 +321,16 @@
                         white-space: nowrap;
                         overflow: hidden;
                         text-transform: uppercase;
-                         color: hsl(0, 0%, 1%);
-                         text-shadow: 0 0 10px #0affde, 0 0 20px #0affde, 0 0 30px #0affde;
+                        color: hsl(0, 0%, 1%);
+                        text-shadow: 0 0 10px #0affde, 0 0 20px #0affde, 0 0 30px #0affde;
                         text-align: center;
                         animation-duration: 2s;
                         animation-name: fadeInDown;
                         animation-iteration-count: 1;
                         animation-delay: 1s;
                         animation-direction: normal;
+                        position: relative;
+                        top: 20px;
                     }
                     @keyframes fadeInDown {
                         from {
@@ -470,7 +478,7 @@
                                     justify-self: center;
                                     border: none;
                                     position: absolute;
-                                    top: 950px;
+                                    top: 890px;
                                     margin-left: 20px;
                                     text-align: center;
                                     border-radius: 10px;
@@ -531,8 +539,8 @@
                                         width: 30vw;
                                         height: auto;
                                         position: absolute;
-                                         overflow-wrap: break-word;
-                                         top: 950px;
+                                        overflow-wrap: break-word;
+                                        top: 900px;
                                         background-color: #292828;
                                         color: rgb(156, 154, 154);
                                         justify-self: right;
@@ -625,7 +633,7 @@
                                     text-align: center;
                                     height:auto;
                                     justify-self: right;
-                                    top: 1300px;
+                                    top: 1250px;
                                     border-radius: 10px;
                                     background-color: #1b2130;
                                     overflow-wrap: break-word;
@@ -686,7 +694,7 @@
                                     margin: 20px auto;
                                 }
                                 .card5 span{
-                                    color: #ffffff;
+                                    color: hsl(0, 0%, 2%);
                                     font-size: 20px;
                                     font-weight: bold;
                                 }
@@ -717,8 +725,9 @@
                                 }
                                 .card5 i{
                                     position: relative;
-                                    top: 20px;
-                                    color: #0affde;
+                                    top: 40px;
+                                    color: #02302a;
+                                    font-weight: 900;
                                 }
                                 #services.service{
                                     position: relative;

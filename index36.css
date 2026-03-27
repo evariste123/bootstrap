@@ -1,11 +1,12 @@
 body{
     padding: 0;
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(36, 35, 35);
     margin: 0  auto;
 }
 .header{
     padding: 2px;
-    background-color: #ffffff;
+    background-color: #3a3939;
+    color: white;
 }
 .header h1{
     padding: 5px;
@@ -14,7 +15,8 @@ body{
     margin-left: 20px;
     position: relative;
     border-radius: 5px;
-    text-align: center;
+    color: black;
+    text-align:center;
     font: 20px bold;
     border: 1px solid darkgrey;
 }
@@ -94,16 +96,15 @@ body{
 }
 .cooking{
     padding: 20px;
-    width: 90vw;
-    background-color: whitesmoke;
+    width: 95vw;
+    background-color: #252525;
     justify-self: center;
     position: relative;
     top: 10px;
     border-radius: 5px;
-    border: 2px solid white;
 }
 .cooking h2{
-    color: blue;
+    color: rgb(245, 205, 27);
     text-align: center;
     font: 20px bold;
     font-weight: 900;
@@ -111,6 +112,7 @@ body{
 }
 .cooking p{
     font: 20px bold;
+    color: white;
     
 }
 .card{
@@ -132,6 +134,7 @@ body{
     position: relative;
     margin-left: 10px;
     font: 17px bold;
+    color: black;
 }
 .image{
     position: relative;
@@ -175,6 +178,7 @@ body{
     position: relative;
     margin-left: 10px;
     font: 17px bold;
+    color: black;
 }
 .image1{
     position: relative;
@@ -208,6 +212,7 @@ body{
     position: relative;
     margin-left: 10px;
     font: 17px bold;
+    color: black;
 }
 .image2{
     position: relative;
@@ -246,6 +251,7 @@ body{
     position: relative;
     margin-left: 10px;
     font: 17px bold;
+    color: black;
 }
 .image3{
     position: relative;
@@ -267,16 +273,15 @@ body{
 .sports{
     padding: 20px;
     width:95vw;
-    background-color:#000;
+    background-color:#1a1919;
     justify-self: center;
     position: relative;
     top: 20px;
     border-radius: 5px 5px 0 0;
-    border: 2px solid white;
 }
 
 .sports h2{
-    color: #ffffff;
+    color: rgb(245, 205, 27);
     text-align: center;
     font: 20px bold;
     font-weight: 900;
@@ -284,6 +289,7 @@ body{
 }
 .sports p{
     font: 20px bold;
+    color: white;
     
 }
 .card4{
@@ -306,6 +312,7 @@ body{
     position: relative;
     margin-left: 10px;
     font: 17px bold;
+    color: black;
 }
 .image4{
     position: relative;
@@ -344,6 +351,7 @@ body{
     position: relative;
     margin-left: 10px;
     font: 17px bold;
+    color: black;
 }
 .image5{
     position: relative;
@@ -443,15 +451,14 @@ body{
 .profit{
     padding: 20px;
     width:95vw;
-    background-color:#133d2d;
+    background-color:#252525;
     justify-self: center;
     position: relative;
     top: 20px;
     border-radius: 5px 5px 0 0;
-    border: 2px solid white;
 }
 .profit h2{
-    color: #ffffff;
+    color: rgb(245, 205, 27);
     text-align: center;
     font: 20px bold;
     font-weight: 900;
@@ -507,6 +514,11 @@ body{
     transform: scale(1.05) translateY(-5px);
     border: 2px solid cyan;
 }
+.card8 p{
+     font: bold;
+    color: #a19f9f;
+    font-style: italic;
+}
 .card9{
     position: absolute;
     width: 30vw;
@@ -544,6 +556,11 @@ body{
     color:#000000;
     margin-left: 0px;
 }
+.card9 p{
+    font: bold;
+    color: #a19f9f;
+    font-style: italic;
+}
 .profit-badge{
     position: relative;
     bottom: 10px;
@@ -564,10 +581,9 @@ body{
     position: relative;
     top: 20px;
     border-radius: 5px 5px 0 0;
-    border: 2px solid white;
 }
 .partner h2{
-    color: #0e0d0d;
+    color: rgb(245, 205, 27);
     text-align: center;
     font: 20px bold;
     font-weight: 900;
@@ -576,15 +592,18 @@ body{
 .partner p{
     font: 20px bold;
     color: #070707;
+    color: rgb(151, 148, 148);
 }
 .grid{
     position: relative;
     width: 40vw;
     height: 30vh;
-    background-color: #0d1538;
+    background-color: #202020;
     border-radius: 5px;
+    border: 2px solid rgb(36, 36, 35);
     justify-self: left;
     margin-left: 20px;
+    box-shadow:  0 0 20px black;
 }
 .in1{
     position: relative;
@@ -592,7 +611,7 @@ body{
 }
 .in1 label{
     position: relative;
-    color: cyan;
+    color: rgb(245, 205, 27);
     font-size: 20px;
     font-weight: 900;
     font-style: italic;
@@ -611,7 +630,7 @@ body{
 }
 .in2 label{
     position: relative;
-    color: cyan;
+    color: rgb(245, 205, 27);
     font-size: 20px;
     font-weight: 900;
     font-style: italic;
@@ -630,4 +649,257 @@ body{
     border: 1px solid black;
     margin-left: 10px;
     position: relative;
+}
+.in1 input:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+    transform: scale(1.02) translateY(-5px);
+}
+
+.in2 input:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+    transform: scale(1.02) translateY(-5px);
+}
+.grid2{
+    position: absolute;
+    justify-self: right;
+    margin-right: 30px;
+    background-color: rgb(46, 45, 45);
+    width: 40vw;
+    padding: 20px;
+    top: 150px;
+    box-shadow:  0 0 20px black;
+    border: 2px solid rgb(44, 44, 44);
+    border-radius: 5px;
+}
+.grid2 label{
+    position: relative;
+    color: rgb(245, 205, 27);
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+}
+.grid2 select{
+    width: 30vw;
+    height: 4vh;
+    border: 1px solid black;
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+.grid2 select::after{
+     font-weight: 900;
+    color: black;
+}
+.grid2 select:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+    transform: scale(1.02) translateY(-5px);
+}
+.grid2 textarea{
+     width: 30vw;
+    height: 10vh;
+    border: 1px solid black;
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 20px;
+}
+.grid2 textarea:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+    transform: scale(1.02) translateY(-5px);
+}
+.grid2 textarea::placeholder{
+    font: bold;
+    font-weight: 900;
+    color: black;
+}
+.grid2 textarea:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+    transform: scale(1.02) translateY(-5px);
+}
+.grid2 button{
+    position: relative;
+    top: 20px;
+    padding: 10px 10px;
+    background-color: #015301;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font: 20px bold;
+}
+.grid2 button:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    background-color: #013301;
+    transform: scale(1.01) translateY(-2px);
+}
+.footer{
+    padding: 10px 20px;
+    background-color: #070707;
+    top: 30px;
+    position: relative;
+    text-align: center;
+    color: rgb(180, 176, 176);
+}
+
+/* responsive design */
+
+@media(max-width:600px){
+    .card{
+        position: relative;
+        justify-self: center;
+        margin-left: 0px;
+        width: 80vw;
+        height: auto;
+    }
+    .image img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .card1{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        top: 10px;
+    }
+    .image1 img{
+        width: 80vw;
+        height: 30vh;
+    }
+    .card2{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        margin-right: 0px;
+        top: 20px;
+    }
+    .image2 img{
+        width: 80vw;
+        height: 30vh;
+    }
+    .card3{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        margin-left: 0px;
+        top: 30px;
+        justify-self: center;
+    }
+    .image3 img{
+        width: 80vw;
+        height: 30vh;
+    }
+
+    .card4{
+        position: relative;
+        justify-self: center;
+        margin-left: 0px;
+        width: 80vw;
+        height: auto;
+    }
+    .image4 img{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+    }
+    .card5{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        top: 10px;
+    }
+    .image5 img{
+        width: 80vw;
+        height: 30vh;
+    }
+    .card6{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        margin-right: 0px;
+        top: 20px;
+    }
+    .image6 img{
+        width: 80vw;
+        height: 30vh;
+    }
+    .card7{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        margin-left: 0px;
+        top: 30px;
+        justify-self: center;
+    }
+    .image7 img{
+        width: 80vw;
+        height: 30vh;
+    }
+    .card8{
+        position: relative;
+        margin-left: 0px;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+    }
+    .image8 img{
+        width: 80vw;
+        height: 30vh;
+    }
+    .card9{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+        top: 15px;
+        margin-left: 0px;
+    }
+    .image9 img{
+        width: 80vw;
+        height: 30vh;
+    }
+    .grid{
+        position: relative;
+        width: 80vw;
+        padding: 20px;
+        justify-self: center;
+        margin-left: 0px;
+    }
+    .grid input{
+        position: relative;
+        width: 60vw;
+        height: 4vh;
+    }
+    .grid2{
+        position: relative;
+        width: 80vw;
+        padding: 20px;
+        margin-right: 0px;
+        justify-self: center;
+        top: 20px;
+    }
+    .grid2 select{
+        position: relative;
+        width: 60vw;
+        height: 4vh;
+    }
+    .grid2 textarea{
+        width: 60vw;
+        height: 10vh;
+    }
 }
